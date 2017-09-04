@@ -283,11 +283,3 @@ $config[ 'cookie' ] = [
      */
     'httpOnly' => false,
 ];
-
-
-/**
- * Uploader Directory
- *
- * The directory path of uploaded files.
- */
-$config[ 'uploadDir' ] = PATH_PUBLIC . 'upload' . DIRECTORY_SEPARATOR;
