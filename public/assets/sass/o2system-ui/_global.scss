@@ -1,0 +1,82 @@
+body {
+	color: #2c2c2c;
+	font-size: 14px;
+	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+button, input, optgroup, select, textarea {
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+a {
+	text-decoration: none !important;
+	outline: 0 !important;
+	&:hover, &:active, &:visited, &:focus {
+		text-decoration: none !important;
+		outline: 0 !important;
+	}
+}
+input, select, .btn, .form-control, .dropdown-menu, .input-group-addon{
+	font-size: 0.8rem;
+}
+.btn-lg, .btn-group-lg > .btn{
+    font-size: 1.25rem;
+}
+.btn-sm, .btn-group-sm > .btn{
+    font-size: 0.75rem;
+}
+.btn-xs, .btn-group-xs > .btn{
+    font-size: 0.675rem;
+}
+.b-r{
+    border-right:1px solid #ddd;
+}
+.b-l{
+    border-left:1px solid #ddd;
+}
+
+.media{
+	.media-img {
+	    display: -ms-flexbox;
+	    display: flex;
+	    margin-right: 1rem;
+	}
+
+	.media-heading{
+		margin-top: 0;
+	}
+}
+.list-group-item {
+	.badge {
+		float: right;
+	}
+}
+.img-logo{
+	width: 25px !important;
+	height: auto;
+}
+#scrollUp{
+	height: 40px;
+	position: fixed;
+	bottom: 20%;
+	right: -55px;
+	background: $primary-color;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	box-shadow: 0 3px 10px rgba(0,0,0,.2);
+	font-size: 0.8rem;
+	cursor: pointer;
+	z-index: 9998;
+	padding: 0 15px;
+	transition: all .3s;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+	i {
+	    font-size: 1rem;
+	    margin-right: 10px;
+	}
+
+	&:hover{
+		right: 0;
+	}
+}

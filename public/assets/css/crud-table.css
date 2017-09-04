@@ -1,0 +1,94 @@
+[data-role="table-list-panel"] .panel-heading h3 {
+    padding: 2px 5px 3px 5px !important;
+    margin: 0px;
+}
+
+[data-role="table-list-panel"] .panel-heading .panel-options {
+    height: 20px;
+    margin-top: -4px;
+}
+
+[data-role="table-list-panel"] .label {
+    background: none;
+    font-size: 14px;
+    display: none;
+}
+
+[data-role="table-list-panel"] .form-group {
+    padding: 0px 15px;
+    margin-bottom: 0px;
+    float: left;
+    font-size: 12px;
+}
+
+[data-role="table-list-panel"] .form-group .form-control {
+    /* display: inline-block;
+    width: auto; */
+    vertical-align: middle;
+}
+
+[data-role="table-list-panel"] .checkbox {
+    margin: 0px;
+    width: 15px;
+    display: block;
+}
+
+[data-role="table-list-panel"] .checkbox [data-action="item-checkboxes"],
+[data-role="table-list-panel"] .checkbox [data-action="item-checkbox"] {
+    margin: 0px;
+    margin: 0px;
+    width: auto;
+    display: block;
+}
+
+[data-role="table-list-panel"] .checkbox label {
+    padding: 0px;
+}
+
+[data-role="table-list-panel"] .btn {
+    margin-bottom: 0px !important;
+}
+
+[data-role="table-list-panel"] th, [data-role="table-list-panel"] td {
+    vertical-align: middle;
+}
+
+[data-role="table-list-panel"] .selected {
+    background-color: #d9edf7;
+}
+
+[data-role="table-list-panel"] .col-tbody-images {
+    position: relative;
+    width: 35px !important;
+    height: 35px !important;
+    overflow: hidden;
+}
+
+[data-role="table-list-panel"] .col-tbody-images > img.img-thumbnail {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 35px !important;
+    height: 35px !important;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid #ebebeb;
+}
+
+[data-role="table-list-panel"] .col-tbody-images img.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+[data-role="table-list-panel"] th > input.input-sm {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+[data-role="table-list-pagination"] {
+    margin: 5px 0px 0px 0px;
+}

@@ -1,0 +1,103 @@
+server {
+
+	listen 80;
+	listen [::]:80;
+
+	root <path/to/o2system/public/folder>;
+	autoindex on;
+        index index.html index.php;
+
+	server_name <domain>;
+	server_alias *.<domain>;
+
+	access_log /var/log/nginx/<domain>-access.log;
+	error_log /var/log/nginx/<domain>-error.log;
+
+	# enforce www (exclude certain subdomains)
+    #if ($host !~* ^(www|subdomain))
+    #{
+    #   rewrite ^/(.*)$ $scheme://www.$host/$1 permanent;
+    #}
+
+    # enforce NO www
+    if ($host ~* ^www\.(.*))
+    {
+        set $host_without_www $1;
+        rewrite ^/(.*)$ $scheme://$host_without_www/$1 permanent;
+    }
+
+    # removes trailing slashes (prevents SEO duplicate content issues)
+    if (!-d $request_filename)
+    {
+    rewrite ^/(.+)/$ /$1 permanent;
+    }
+
+	# set expiration of assets to MAX for caching
+    location ~* \.(ico|css|js|gif|jpe?g|png)(\?[0-9]+)?$ {
+            expires max;
+            access_log off;
+            log_not_found off;
+            add_header Pragma public;
+            add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+    }
+
+    # unless the request is for a valid file (image, js, css, etc.), send to o2system
+    if (!-e $request_filename)
+    {
+        rewrite ^/(.*)$ /index.php?/$1 last;
+        break;
+    }
+
+    # canonicalize o2system url end points
+    # if your default controller is something other than "hello" you should change the following
+    if ($request_uri ~* ^(/hello(/index)?|/index(.php)?)/?$)
+    {
+        rewrite ^(.*)$ / permanent;
+    }
+
+    # catch all errors page
+    error_page 404 /index.php;
+    error_page 500 /index.php;
+    error_page 502 /index.php;
+    error_page 503 /index.php;
+
+    location / {
+
+        # Check if a file or directory index file exists, else route it to index.php.
+        try_files $uri $uri/ /index.php;
+
+        location = /index.php {
+
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_param  SCRIPT_FILENAME <path/to/o2system/public/folder>$fastcgi_script_name;
+            include        fastcgi_params;
+        }
+    }
+
+    # deny hidden files
+    location ~ /\. {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+
+    # deny .config file
+    location ~ /\.config$ {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+
+    # deny .vhost file
+    location ~ /\.config$ {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+
+    # for production server
+    #location ~ \.php$ {
+    #    return 444;
+    #}
+
+}

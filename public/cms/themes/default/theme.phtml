@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{$meta->title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    {{$assets->head}}
+</head>
+<body class="page-body demo-landing">
+{{$partials->navigation}}
+
+<div class="wrapper">
+    <div class="page-header">
+        {{$partials->header}}
+    </div>
+
+    <div id="main-content" class="main">
+        <div class="container">
+            {{$partials->content}}
+        </div>
+    </div>
+
+    <footer class="footer">
+        {{$partials->footer}}
+    </footer>
+</div>
+{{$assets->body}}
+</body>
+</html>

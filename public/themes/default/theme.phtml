@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{$meta->title}}</title>
+    <meta charset="UTF-8">
+    <meta name="module-controller" content="ui">
+    <meta name="module-parameter" content="app">
+    <meta name="subtitle" content="User Interface">
+    <meta name="url" content="ui.html">
+    <meta name="generator" content="O2CMS - Liquid Content Management System">
+    <meta name="language" content="en-US">
+    <title>Landing - User Interface</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    {{$assets->head}}
+</head>
+<body class="page-landing pb-0">
+
+    <div class="page-header">
+        {{$partials->header}}
+    </div>
+
+    <div id="page-content" class="page-content">
+        {{$partials->content}}
+    </div>
+
+    <footer class="page-footer">
+        {{$partials->footer}}
+    </footer>
+    {{$assets->body}}
+</body>
+</html>

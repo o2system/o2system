@@ -1,0 +1,16 @@
+{
+    "name": "o2system/o2system",
+    "description": "O2System PHP Framework.",
+    "keywords": ["framework", "o2system","boilerplate"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "o2system/framework": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

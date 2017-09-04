@@ -1,0 +1,10 @@
+{
+  "driver": "noodle",
+  "extension": ".tpl",
+  "assets":{
+    "packages":[
+      "tocify",
+      "highlight"
+    ]
+  }
+}

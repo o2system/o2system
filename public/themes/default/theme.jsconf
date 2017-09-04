@@ -1,0 +1,11 @@
+{
+  "driver": "noodle",
+  "extension": ".noodle.php",
+  "assets": {
+    "packages" : {
+      "owl-carousel": {
+        "themes": "default"
+      }
+    }
+  }
+}

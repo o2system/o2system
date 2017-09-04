@@ -1,0 +1,23 @@
+{
+  "name": "Base Application",
+  "created": "26 October 2016",
+  "version": "1.0.0",
+  "description": "Base application example",
+  "copyright": "Copyright (c) 2016 - Steeve Andrian Salim",
+  "authors": [
+    {
+      "name": "Steeve Andrian Salim",
+      "email": "steeven@o2system.io",
+      "homepage": "http://www.o2system.io",
+      "role": "Founder"
+    }
+  ],
+  "support": {
+    "email": "support@o2system.io",
+    "issues": "https://o2system.io/support"
+  },
+  "links": {
+    "info": "http://www.o2system.io/about",
+    "wiki": "http://www.o2system.io/wiki"
+  }
+}

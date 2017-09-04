@@ -1,0 +1,95 @@
+body {
+	color: #2c2c2c;
+	font-size: 14px;
+	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+
+pre {
+	border-radius: 4px;
+	background-color: #333 !important;
+	overflow: auto;
+	margin: 0;
+	padding: 1em;
+	code {
+		font: normal normal 12px/14px Monospace, Courier;
+		color: #fff;
+		display: block;
+		font-size: 95%;
+	}
+	.line-number {
+		font: normal normal 12px/14px Monospace, Courier;
+		color: #fff;
+		display: block;
+		float: left;
+		margin: 0 1em 0 -1em;
+		border-right: 1px solid;
+		text-align: right;
+		-webkit-user-select: none;
+		span {
+			display: block;
+			padding: 0 .5em 0 1em;
+		}
+	}
+	.clear-both {
+		display: block;
+		clear: both;
+	}
+}
+div.clear-both {
+	display: block;
+	clear: both;
+}
+
+.jumbotron.jumbotron-bg {
+	hr {
+		border-color: #ffffff;
+	}
+}
+.jumbotron {
+	p.lead {
+		font-size: 18px;
+	}
+	p {
+		font-size: 14px;
+	}
+}
+
+.gray-bg{
+	background: #f8f8f8;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+.section-basic {
+	padding: 100px 0px;
+	.section-basic-heading {
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.section-basic-lead {
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 16px;
+	}
+}
+
+.page-testing{
+	min-height: 58vh;
+
+	.container{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}

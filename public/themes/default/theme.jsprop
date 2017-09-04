@@ -1,0 +1,14 @@
+{
+  "name": "Default",
+  "version": "1.0.0",
+  "license": "MIT",
+  "copyright": "Copyright © 2017, Steeven Andrian Salim",
+  "description": "O2System Default Theme Sample",
+  "created": "23-02-2017",
+  "authors": {
+    "name": "Steeven Andrian Salim",
+    "email": "steeven@o2system.io",
+    "homepage": "http:\/\/www.o2system.io",
+    "role": "Founder"
+  }
+}

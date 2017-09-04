@@ -1,0 +1,456 @@
+<div class="jumbotron jumbotron-bg rounded-0 vertical-center text-center"
+     style="background-image: url('assets/img/bg-ui.jpg');">
+    <div class="container">
+        <img src="./assets/img/logo/logo-white-200px.png" style="margin: 50px 0px" class="logo">
+        <h1 class="display-4 text-uppercase">
+            O2System User Interface
+        </h1>
+        <p class="lead text-uppercase">
+            Based-On Bootstrap v4.0.0-alpha<br>
+        </p>
+        <p>
+            Enriched with built-in ui theme and generator.<br>
+        </p>
+    </div>
+</div>
+
+<div class="section section-basic">
+    <div class="container">
+        <h1 class="display-4">Basic Components</h1>
+        <div id="alerts" class="mb-5">
+            <h4 class="display-4">Alerts</h4>
+            <h6 class="display-6">Pick your color</h6>
+            <div class="row">
+                <div class="col-md-10">
+                    <?php foreach ( $alerts as $alert ): ?>
+                        <?php echo $alert; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="accordion" class="mb-5">
+            <h4 class="display-4">Accordion</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $accordion; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="badges" class="mb-5">
+            <h4 class="display-4">Badges</h4>
+            <div class="row mb-4">
+                <div class="col-md-1">
+                    <?php echo $badges[ 'link' ]; ?>
+                </div>
+                <div class="col-md-1">
+                    <?php echo $badges[ 'button' ]; ?>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <?php foreach ( $badges[ 'colors' ] as $badge ): ?>
+                        <?php echo $badge; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="breadcrumbs" class="mb-5">
+            <h4>Breadcrumbs</h4>
+            <div class="row">
+                <div class="col-md-10">
+                    <?php echo $breadcrumb; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="buttons" class="mb-5">
+            <h4 class="display-4">Buttons</h4>
+            <h6 class="display-6">Pick your style</h6>
+            <div class="row mb-4">
+                <div class="col-md-12 mb-2">
+                    <?php echo $buttons[ 'default' ]; ?>
+                    <?php echo $buttons[ 'active' ]; ?>
+                    <?php echo $buttons[ 'disabled' ]; ?>
+                </div>
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'outline' ]; ?>
+                    <?php echo $buttons[ 'rounded' ]; ?>
+                    <?php echo $buttons[ 'with-icon' ]; ?>
+                    <?php echo $buttons[ 'only-icon' ]; ?>
+                </div>
+            </div>
+            <h6 class="display-6">Pick your size</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php foreach ( $buttons[ 'sizes' ] as $button ): ?>
+                        <?php echo $button; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <h6 class="display-6">Pick your color</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php foreach ( $buttons[ 'colors' ] as $button ): ?>
+                        <?php echo $button; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Popover</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'popover' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Tooltip</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'tooltip' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Button Grouped</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'group' ]; ?>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="toolbars" class="mb-5">
+            <h4 class="display-4">Toolbar</h4>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'button-toolbar' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Nesting Toolbar</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'nesting-toolbar' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Mixed Toolbar</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'mixed-toolbar' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Vertical Variation</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $buttons[ 'vertical' ]; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="links" class="mb-5">
+            <h4 class="display-4">Links</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php foreach ( $buttons[ 'colors' ] as $button ): ?>
+                        <?php echo $button->contextLink(); ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="cards" class="mb-5">
+            <h4 class="display-4">Cards</h4>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'basic' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards with Image Overlay</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'with-overlay' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards with Custom Heading</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'with-heading' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards with Navigation</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'with-navigation' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards with List Group</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'with-list-group' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards Group</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'group' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards Deck</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'deck' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Cards Columns</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $cards[ 'columns' ]; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="carousel" class="mb-5">
+            <h4 class="display-4">Carousel</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $carousel; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="dropdowns" class="mb-5">
+            <h4 class="display-4">Dropdowns</h4>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $dropdowns[ 'basic' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Split Button Dropdown</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $dropdowns[ 'split-menu' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Dropup Variation</h6>
+            <div class="row">
+                <div class="col-md-2">
+                    <?php echo $dropdowns[ 'basic' ]->dropup(); ?>
+
+                </div>
+                <div class="col-md-2">
+                    <?php echo $dropdowns[ 'split-menu' ]->dropup(); ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="forms" class="mb-5">
+            <h4 class="display-4">Forms</h4>
+
+            <h6 class="display-6">Inputs</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $forms[ 'inputs' ]; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="jumbotron" class="mb-5">
+            <h4 class="display-4">Jumbotron</h4>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $jumbotron[ 'basic' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Fluid Jumbotron</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $jumbotron[ 'basic' ]->fluid(); ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Jumbotron with Image Background</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $jumbotron[ 'image' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Jumbotron with Video Background</h6>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $jumbotron[ 'video' ]; ?>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="list-group" class="mb-5">
+            <h4 class="display-4">List Group</h4>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $listGroup; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" class="mb-5">
+            <h4 class="display-4">Modal</h4>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#example-modal">
+                        Launch demo modal
+                    </button>
+                    <?php echo $modal; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="navs" class="mb-5">
+            <h4 class="display-4">Navs</h4>
+
+            <h6 class="display-6">Base Nav</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $navs[ 'base' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Pills Nav</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $navs[ 'pills' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Bullets Nav</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $navs[ 'bullets' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Tabs Nav</h6>
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <?php echo $navs[ 'tabs' ]; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar" class="mb-5">
+            <h4 class="display-4">Navbar</h4>
+
+            <div class="row mb-2">
+                <div class="col-md-12">
+                    <?php echo $navbar; ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php echo $navbar->dark()->bgPrimary(); ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="pagination" class="mb-5">
+            <h4 class="display-4">Pagination</h4>
+
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <?php echo $pagination; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="progress" class="mb-5">
+            <h4 class="display-4">Progress</h4>
+
+            <h6 class="display-6">Basic Progress</h6>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <?php echo $progress[ 'basic' ]; ?>
+                </div>
+            </div>
+
+            <h6 class="display-6">Multiple Progress</h6>
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <?php echo $progress[ 'multiple' ]; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="table" class="mb-5">
+            <h4 class="display-4">Table</h4>
+
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <?php echo $table; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="table" class="mb-5">
+            <h4 class="display-4">Embed</h4>
+
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <?php echo $embed; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="media" class="mb-5">
+            <h4 class="display-4">Media</h4>
+
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <?php echo $media; ?>
+                </div>
+            </div>
+        </div>
+
+        <div id="image" class="mb-5">
+            <h4 class="display-4">Image</h4>
+
+            <div class="row mb-5">
+                <div class="col-md-3">
+                    <p class="mb-2">Image Rounded</p>
+                    <?php echo $image->rounded(); ?>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="mb-2">Image Circle</p>
+                    <?php echo $image->circle(); ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="text-center mb-5">
+    <p class="trademark-text">O2System User Interface is Design By Teguh Rianto</p>
+    <div class="trademark-logo">
+        <img src="assets/img/teguh-rianto-autograf.png" style="height: 25px;">
+    </div>
+</div>

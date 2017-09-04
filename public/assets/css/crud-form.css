@@ -1,0 +1,91 @@
+.panel-group .panel i.fa {
+    font-size: 10px;
+    color: #ebebeb;
+}
+
+.panel-group .panel-heading {
+    border-bottom: 1px solid;
+}
+
+[data-role="content"] .panel-body,
+[data-role="excerpt"] .panel-body,
+[data-role="featured_image"] .panel-body {
+    padding: 0px;
+    border: none;
+}
+
+[data-role="content"] .panel-body .form-group,
+[data-role="excerpt"] .panel-body .form-group,
+[data-role="featured_image"] .panel-body .form-group {
+    margin-bottom: 0px;
+}
+
+[data-role="featured_image"] img {
+    width: 100% !important;
+}
+
+[data-role="featured_image"] .form-group, [data-role="featured_image"] .form-control {
+    padding: 0px;
+    border: none;
+    height: 100%;
+}
+
+[data-role="featured_image"] [data-role="featured-image"]{
+    position: relative;
+}
+
+[data-role="featured_image"] [data-role="featured-image"] .input-group{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity:0.0;
+    -khtml-opacity: 0.0;
+    opacity: 0.0;
+    transition: all 0.4s ease-in-out;
+}
+
+[data-role="featured_image"] [data-role="featured-image"]:hover .input-group{
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    -moz-opacity:0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+}
+
+[data-role="tags"] .panel-body .form-group {
+    margin-bottom: -10px;
+}
+
+[data-role="featured_image"] .input-group .input-group-btn .btn-file {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+[data-role="featured_image"] .input-group .input-group-btn .btn-file i{
+    color: #333;
+    font-size: 22px;
+}
+
+[data-role="featured_image"] .input-group .input-group-btn .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    cursor: inherit;
+    display: block;
+}
+[data-role="featured_image"] .input-group input[readonly] {
+    background-color: white !important;
+    cursor: text !important;
+    height: 34px !important;
+    font-size: x-small;
+    padding: 10px;
+}

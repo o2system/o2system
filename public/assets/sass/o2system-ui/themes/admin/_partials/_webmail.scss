@@ -1,0 +1,105 @@
+.card-inbox {
+    .list-group {
+        .list-group-item {
+            border: 0px;
+            border-radius: 0px;
+            border-left: 3px solid transparent;
+            a {
+                color: $gray-dark;
+            }
+            &.active,
+            &:hover {
+                background: $gray-lighter;
+                color: $gray-dark;
+                border-left: 3px solid $primary-color;
+            }
+        }
+
+        &.treeview{
+            position: relative;
+            ul{
+                padding-left: 1rem;
+                list-style: none;
+                position: relative;
+                &:before {
+                    content:"";
+                    display:block;
+                    width:0;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    border-left:1px solid;
+                    height: 100%;
+
+                    /* creates a more theme-ready standard for the bootstrap themes */
+                    bottom:15px;
+                }
+
+                ul{
+                    padding-left: 2rem;
+                }
+
+                li{
+                    list-style: none;
+                    margin-top: 0.75rem;
+                    position: relative;
+
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+
+                    &:before {
+                        content:"";
+                        display:block;
+                        width:10px;
+                        height:0;
+                        border-top:1px solid;
+                        margin-top:-1px;
+                        position:absolute;
+                        top:9px;
+                        left:-1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.inbox-center {
+    .unread td {
+        font-weight: 400;
+    }
+    td {
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+    .max-texts {
+
+    }
+    a {
+        color: $gray-dark;
+        overflow: hidden;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+    }
+    .checkbox {
+        margin-top: -13px;
+        height: 20px;
+    }
+}
+
+#task-done{
+    .table{
+        opacity: 0.6;
+        tr{
+            td{
+                text-decoration: line-through !important;
+
+                a{
+                    text-decoration: line-through !important;
+                }
+            }
+        }
+    }
+}

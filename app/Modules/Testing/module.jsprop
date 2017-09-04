@@ -1,0 +1,25 @@
+{
+  "name": "Testing Module",
+  "namespace": "Testing\\",
+  "created": "26 October 2016",
+  "version": "1.0.0",
+  "description": "Testing Module",
+  "license": "Free",
+  "copyright": "Copyright (c) 2016 - Steeve Andrian Salim",
+  "authors": [
+    {
+      "name": "Steeve Andrian Salim",
+      "email": "steeven@o2system.io",
+      "homepage": "http://www.o2system.io",
+      "role": "Founder"
+    }
+  ],
+  "support": {
+    "email": "support@yukbisnis.com",
+    "issues": "https://yukbisnis.com/support"
+  },
+  "links": {
+    "info": "http://www.yukbisnis.com/about",
+    "wiki": "http://www.yukbisnis.com/wiki"
+  }
+}
