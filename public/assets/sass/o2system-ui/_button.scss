@@ -1,4 +1,58 @@
 /** UI - Buttons **/
+.btn{
+	&.btn-icon {
+  		position: relative;
+  		padding-right: 45px;
+
+  		i {
+	  		position: absolute;
+	  		right: 0;
+	  		top: 0;
+	  		height: 100%;
+	  		padding: 9px;
+  		}
+  	}
+
+  	&.btn-xs{
+		&.btn-icon {
+	  		padding-right: 35px;
+
+	  		i {
+		  		padding: 3px 7px;
+	  		}
+	  	}
+  	}
+
+  	&.btn-sm{
+		&.btn-icon {
+	  		padding-right: 40px;
+
+	  		i {
+		  		padding: 8px;
+	  		}
+	  	}
+  	}
+
+  	&.btn-lg{
+  		&.btn-icon {
+	  		padding-right: 55px;
+
+	  		i {
+		  		padding: 11px;
+	  		}
+	  	}
+  	}
+
+  	&.btn-xl{
+  		&.btn-icon {
+	  		padding-right: 95px;
+
+	  		i {
+		  		padding: 20px;
+	  		}
+	  	}
+  	}
+}
 .btn-primary{
 	background: $brand-primary;
 	border-color: $brand-primary;
@@ -11,6 +65,12 @@
 	&:focus, &:active, &.active{
 		background: darken($brand-primary, 5%);
 		border-color: darken($brand-primary, 5%);
+	}
+
+	&.btn-icon {
+		i{
+			background: darken($brand-primary, 5%);
+		}
 	}
 }
 
@@ -30,6 +90,12 @@
 		border-color: darken($brand-secondary, 5%);
 		color: #fff;
 	}
+
+	&.btn-icon {
+		i{
+			background: darken($brand-secondary, 5%);
+		}
+	}
 }
 
 .btn-success{
@@ -44,6 +110,12 @@
 	&:focus, &:active, &.active{
 		background: darken($brand-success, 5%);
 		border-color: darken($brand-success, 5%);
+	}
+
+	&.btn-icon {
+		i{
+			background: darken($brand-success, 5%);
+		}
 	}
 }
 
@@ -60,20 +132,35 @@
 		background: darken($brand-info, 5%);
 		border-color: darken($brand-info, 5%);
 	}
+
+	&.btn-icon {
+		i{
+			background: darken($brand-info, 5%);
+		}
+	}
 }
 
 .btn-warning{
 	background: $brand-warning;
 	border-color: $brand-warning;
+	color: $white;
 
 	&:hover{
 		background: lighten($brand-warning, 5%);
 		border-color: lighten($brand-warning, 5%);
+		color: $white;
 	}
 
 	&:focus, &:active, &.active{
 		background: darken($brand-warning, 5%);
 		border-color: darken($brand-warning, 5%);
+		color: $white;
+	}
+
+	&.btn-icon {
+		i{
+			background: darken($brand-warning, 5%);
+		}
 	}
 }
 
@@ -89,6 +176,36 @@
 	&:focus, &:active, &.active{
 		background: darken($brand-danger, 5%);
 		border-color: darken($brand-danger, 5%);
+	}
+
+	&.btn-icon {
+		i{
+			background: darken($brand-danger, 5%);
+		}
+	}
+}
+
+.btn-default{
+	&.btn-icon {
+		i{
+			background: #ddd;
+		}
+	}
+}
+
+.btn-light{
+	&.btn-icon {
+		i{
+			background: #e2e6ea;
+		}
+	}
+}
+
+.btn-dark{
+	&.btn-icon {
+		i{
+			background: #23272b;
+		}
 	}
 }
 

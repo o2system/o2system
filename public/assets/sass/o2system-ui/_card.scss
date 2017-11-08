@@ -39,7 +39,7 @@
 	.card-badge{
 		position: relative;
 
-		.card-badge-wrap{
+		.card-badge-container{
 			position: absolute;
 			bottom: 0px;
 
@@ -81,113 +81,158 @@
 		}
 	}
 
-	.card-badge-ribbon{
-		position: absolute;
-		top: -5px;
-		z-index: 1;
-		overflow: hidden;
-		width: 75px;
-		height: 75px;
-		text-align: right;
-		span {
-			font-size: 11px;
-			color: #FFF;
-			text-transform: uppercase;
-			text-align: center;
-			line-height: 20px;
-			width: 100px;
-			display: block;
-			background: $brand-primary;
-			background: linear-gradient($brand-primary 0%, $brand-primary 100%);
+	.card-ribbon{
+		position: relative;
+
+		.card-ribbon-container{
 			position: absolute;
-			top: 19px;
-			&::before {
-				content: "";
+			top: -5px;
+			z-index: 1;
+			overflow: hidden;
+			width: 75px;
+			height: 75px;
+			text-align: right;
+			span.ribbon {
+				font-size: 11px;
+				color: #FFF;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 20px;
+				width: 100px;
+				display: block;
+				background: $gray-light;
+				background: linear-gradient($gray-light 0%, $gray-light 100%);
 				position: absolute;
-				left: 0px;
-				top: 100%;
-				z-index: -1;
-				border-left: 3px solid $brand-primary;
-				border-right: 3px solid transparent;
-				border-bottom: 3px solid transparent;
-				border-top: 3px solid $brand-primary;
-			}
-			&::after {
-				content: "";
-				position: absolute;
-				right: 0px;
-				top: 100%;
-				z-index: -1;
-				border-left: 3px solid transparent;
-				border-right: 3px solid $brand-primary;
-				border-bottom: 3px solid transparent;
-				border-top: 3px solid $brand-primary;
-			}
-		}
-
-		&.right{
-			right: -5px;
-			span {
-				transform: rotate(45deg);
-				-webkit-transform: rotate(45deg);
-				right: -21px;
-			}
-		}
-
-		&.left {
-			left: -5px;
-			span {
-				transform: rotate(-45deg);
-				-webkit-transform: rotate(-45deg);
-				left: -21px;
-			}
-		}
-
-		&.success{
-			span {
-				background: $brand-success;
-				background: linear-gradient($brand-success 0%, $brand-success 100%);
+				top: 19px;
 				&::before {
-					border-left: 3px solid $brand-success;
+					content: "";
+					position: absolute;
+					left: 0px;
+					top: 100%;
+					z-index: -1;
+					border-left: 3px solid $gray-light;
 					border-right: 3px solid transparent;
 					border-bottom: 3px solid transparent;
-					border-top: 3px solid $brand-success;
+					border-top: 3px solid $gray-light;
 				}
 				&::after {
+					content: "";
+					position: absolute;
+					right: 0px;
+					top: 100%;
+					z-index: -1;
 					border-left: 3px solid transparent;
-					border-right: 3px solid $brand-success;
+					border-right: 3px solid $gray-light;
 					border-bottom: 3px solid transparent;
-					border-top: 3px solid $brand-success;
+					border-top: 3px solid $gray-light;
+				}
+
+				&.ribbon-primary{
+					background: $brand-primary;
+					background: linear-gradient($brand-primary 0%, $brand-primary 100%);
+					&::before {
+						border-left: 3px solid $brand-primary;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-primary;
+					}
+					&::after {
+							border-right: 3px solid $brand-primary;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-primary;
+					}
+				}
+
+				&.ribbon-info{
+					background: $brand-info;
+					background: linear-gradient($brand-info 0%, $brand-info 100%);
+					&::before {
+						border-left: 3px solid $brand-info;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-info;
+					}
+					&::after {
+							border-right: 3px solid $brand-info;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-info;
+					}
+				}
+
+				&.ribbon-secondary{
+					background: $brand-secondary;
+					background: linear-gradient($brand-secondary 0%, $brand-secondary 100%);
+					&::before {
+						border-left: 3px solid $brand-secondary;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-secondary;
+					}
+					&::after {
+							border-right: 3px solid $brand-secondary;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-secondary;
+					}
+				}
+
+				&.ribbon-success{
+					background: $brand-success;
+					background: linear-gradient($brand-success 0%, $brand-success 100%);
+					&::before {
+						border-left: 3px solid $brand-success;
+						border-right: 3px solid transparent;
+						border-bottom: 3px solid transparent;
+						border-top: 3px solid $brand-success;
+					}
+					&::after {
+							border-right: 3px solid $brand-success;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-success;
+					}
+				}
+
+				&.ribbon-warning{
+					background: $brand-warning;
+					background: linear-gradient($brand-warning 0%, $brand-warning 100%);
+					&::before {
+						border-left: 3px solid $brand-warning;
+						border-top: 3px solid $brand-warning;
+					}
+					&::after {
+						border-right: 3px solid $brand-warning;
+						border-top: 3px solid $brand-warning;
+					}
+				}
+
+				&.ribbon-danger{
+					background: $brand-danger;
+					background: linear-gradient($brand-danger 0%, $brand-danger 100%);
+					&::before {
+						border-left: 3px solid $brand-danger;
+						border-top: 3px solid $brand-danger;
+					}
+					&::after {
+						border-right: 3px solid $brand-danger;
+						border-top: 3px solid $brand-danger;
+					}
 				}
 			}
-		}
 
-		&.warning{
-			span {
-				background: $brand-warning;
-				background: linear-gradient($brand-warning 0%, $brand-warning 100%);
-				&::before {
-					border-left: 3px solid $brand-warning;
-					border-top: 3px solid $brand-warning;
-				}
-				&::after {
-					border-right: 3px solid $brand-warning;
-					border-top: 3px solid $brand-warning;
+			&.right{
+				right: -5px;
+				span {
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					right: -21px;
 				}
 			}
-		}
 
-		&.danger{
-			span {
-				background: $brand-danger;
-				background: linear-gradient($brand-danger 0%, $brand-danger 100%);
-				&::before {
-					border-left: 3px solid $brand-danger;
-					border-top: 3px solid $brand-danger;
-				}
-				&::after {
-					border-right: 3px solid $brand-danger;
-					border-top: 3px solid $brand-danger;
+			&.left {
+				left: -5px;
+				span {
+					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					left: -21px;
 				}
 			}
 		}
@@ -245,10 +290,10 @@
 	}
 
 	.card-author, .card-store{
-		padding: 0.75rem 1.25rem;
+		padding: 0.75rem 0;
 		border-top: 1px solid rgba(0, 0, 0, 0.125);
 
-		.card-avatar{
+		.card-avatar, .card-logo{
 			float: left;
 			width: 60px;
 			height: 60px;

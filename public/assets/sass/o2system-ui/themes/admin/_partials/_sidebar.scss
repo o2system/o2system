@@ -2,25 +2,29 @@
 Main sidebar
 ******************/
 
-.left-sidebar {
+.sidebar {
     position: absolute;
     width: 240px;
     height: 100%;
     top: 0px;
     z-index: 20;
-    padding-top: 70px;
+    padding-top: 60px;
     background: $sidebar;
     /*box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);*/
+
+    .slimScrollDiv{
+        overflow: visible !important;
+    }
 }
 
-.fix-sidebar .left-sidebar{
+.fix-sidebar .sidebar{
     position: fixed;
 }
 /*******************
 use profile section
 ******************/
 
-#sidebar-cover{
+.account-cover{
     width: 100%;
     height: 130px;
     overflow: hidden;
@@ -32,21 +36,22 @@ use profile section
     background-size: cover !important;
     background-position: center center !important;
 
-    .sidebar-cover-avatar{
-        @include avatar(70px);
+    .account-cover-avatar{
+        @include avatar(50px);
         position: absolute;
         bottom: 15px;
-        left: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.3);
+        left: 20px;
+        border: 3px solid $white;
         border-radius: 3px;
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.3);
         background-color: #fff;
+        border-radius: 50%;
     }
 
-    .sidebar-cover-name{
+    .account-cover-name{
         position: absolute;
-        bottom: 45px;
-        left: 90px;
+        bottom: 23px;
+        left: 85px;
         max-width: 150px;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -57,7 +62,7 @@ use profile section
             font-weight: 500;
             line-height: 18px;
             position: relative;
-            color: #FFF;
+            color: $white;
             text-rendering: optimizelegibility;
             text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
             padding-right: 30px;
@@ -66,12 +71,12 @@ use profile section
 
         small{
             a{
-                font-size: 12px;
+                font-size: 11px;
             }
         }
     }
 
-    .sidebar-cover-action{
+    .account-cover-action{
         position: absolute;
         bottom: 15px;
         left: 90px;
@@ -185,7 +190,7 @@ sidebar footer
 sidebar navigation
 ******************/
 
-.scroll-sidebar {
+.sidebar-scroll {
     padding-bottom: 60px;
     padding-top: 0px;
 }
@@ -202,27 +207,38 @@ sidebar navigation
         li {
             list-style: none;
             a {
-                color: $gray-light;
+                color: $white;
                 padding: 10px 35px 10px 15px;
                 display: block;
                 font-size: 0.8rem;
                 white-space: nowrap;
                 &.active,
                 &:hover {
-                    color: $primary-color;
+                    color: $white;
                 }
                 &.active {
-                    font-weight: 400;
-                    color: $white;
+                    background-color: #304047;
+                }
+                &:hover {
+                    background-color: $primary-color;
                 }
             }
             ul {
-                padding-left: 30px;
-                li a {
-                    padding: 10px 35px 10px 15px;
-                }
-                ul {
-                    padding-left: 20px;
+                background: rgba(0,0,0,.2);
+                li {
+                    a {
+                        padding: 10px 35px 10px 40px;
+                        i {
+                            width: 25px;
+                        }
+                    }
+                    ul {
+                        li {
+                            a {
+                                padding: 10px 35px 10px 68px;
+                            }
+                        }
+                    }
                 }
             }
             &.nav-small-cap {
@@ -241,27 +257,18 @@ sidebar navigation
     }
     > ul > li {
         &.active > a {
-            border-left: 3px solid $primary-color;
-            color: $primary-color;
+            color: $white;
             i {
-                color: $primary-color;
+                color: $white;
             }
         }
     }
     > ul > li > a {
-        border-left: 3px solid $sidebar;
-        &.active,
-        &:hover {
-            border-left: 3px solid $primary-color;
-            i {
-                color: $primary-color;
-            }
-        }
         i {
             width: 25px;
             font-size: 1rem;
             display: inline-block;
-            color: $sidebar-icons;
+            color: $white;
         }
         img{
             display: inline-block;
@@ -270,10 +277,6 @@ sidebar navigation
         .label {
             float: right;
             margin-top: 6px;
-        }
-        &.active {
-            font-weight: 400;
-            color: $primary-color;
         }
     }
 }
@@ -287,7 +290,7 @@ sidebar navigation
         height: .4em;
         border-width: 1px 0 0 1px;
         border-style: solid;
-        border-color: $gray;
+        border-color: $white;
         right: 1em;
         -webkit-transform: rotate(-45deg) translate(0, -50%);
         -ms-transform: rotate(-45deg) translate(0, -50%);
@@ -357,19 +360,20 @@ When click on sidebar toggler and also for tablet
 
 @media(min-width:768px) {
     .mini-sidebar{
-        #sidebar-cover{
+        .account-cover{
             width: 60px;
             height: 70px;
 
-            .sidebar-cover-avatar{
+            .account-cover-avatar{
                 @include avatar(40px);
+                left: 10px;
             }
         }
     }
-    .mini-sidebar .sidebar-nav #sidebarnav li {
+    .mini-sidebar .sidebar-nav #sidebar-navigation li {
         position: relative;
     }
-    .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+    .mini-sidebar .sidebar-nav #sidebar-navigation > li > ul {
         position: absolute;
         left: 60px;
         /* top: 51px; */
@@ -379,27 +383,27 @@ When click on sidebar toggler and also for tablet
         display: none;
         padding-left: 1px;
     }
-    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul {
+    .mini-sidebar .sidebar-nav #sidebar-navigation > li:hover > ul {
         height: auto !important;
 
         overflow: auto;
     }
-    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul,
-    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul.collapse {
+    .mini-sidebar .sidebar-nav #sidebar-navigation > li:hover > ul,
+    .mini-sidebar .sidebar-nav #sidebar-navigation > li:hover > ul.collapse {
         display: block;
     }
-    .mini-sidebar .sidebar-nav #sidebarnav > li > a.has-arrow:after {
+    .mini-sidebar .sidebar-nav #sidebar-navigation > li > a.has-arrow:after {
         display: none;
     }
     .mini-sidebar {
-        .left-sidebar {
+        .sidebar {
             width: 60px;
         }
         .user-profile {
             padding-bottom: 30px;
             width: 60px;
         }
-        .scroll-sidebar{
+        .sidebar-scroll{
             padding-bottom: 0px;
             position: absolute;
         }
@@ -413,11 +417,12 @@ When click on sidebar toggler and also for tablet
             width: 60px;
             }
         .sidebar-nav{ background: transparent;}
-        .sidebar-nav #sidebarnav > li > a{
-            padding: 14px 15px;
+        .sidebar-nav #sidebar-navigation > li > a{
+            padding: 10px 15px 10px 15px;
             width: 60px;
+            text-align: center;
         }
-        .sidebar-nav #sidebarnav > li:hover > a {
+        .sidebar-nav #sidebar-navigation > li:hover > a {
             width: 260px;
             background: $primary-color;
             color: $white;
@@ -429,7 +434,7 @@ When click on sidebar toggler and also for tablet
                 display: inline;
             }
         }
-        .sidebar-nav #sidebarnav > li.active > a{
+        .sidebar-nav #sidebar-navigation > li.active > a{
             border-color:transparent;
             &.active{
                 border-color:$primary-color;
@@ -439,20 +444,20 @@ When click on sidebar toggler and also for tablet
 }
 @media(max-width:767px) {
     .mini-sidebar{
-        .left-sidebar{position: fixed;}
-        .left-sidebar, .sidebar-footer{
+        .sidebar{position: fixed;}
+        .sidebar, .sidebar-footer{
             left:-240px;
         }
-        #sidebar-cover{
+        .account-cover{
             width: 100%;
             height: 130px;
 
-            .sidebar-cover-avatar{
+            .account-cover-avatar{
                 @include avatar(70px);
             }
         }
         &.show-sidebar{
-           .left-sidebar, .sidebar-footer{
+           .sidebar, .sidebar-footer{
                 left:0px;
             }
         }

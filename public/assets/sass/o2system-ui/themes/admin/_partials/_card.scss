@@ -119,22 +119,6 @@
 	    color: $gray-light;
 	}
 
-	.card-author, .card-store{
-		.card-avatar{
-			float: left;
-			width: 60px;
-			height: 60px;
-			overflow: hidden;
-			border-radius: 3px;
-			margin-right: 10px;
-			border: 1px solid rgba(0, 0, 0, 0.125);
-
-			img{
-				width: 100%;
-			}
-		}
-	}
-
 	.card-attenders{
 		.card-title{
 			font-size: 1rem;
@@ -334,5 +318,15 @@
 
 	.card-footer{
 		background-color: #fff;
+	}
+}
+
+.landing-ui{
+	.card{
+		margin-bottom: 0;
+
+		img{
+			width: 100%;
+		}
 	}
 }

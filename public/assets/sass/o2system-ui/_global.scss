@@ -1,5 +1,5 @@
 body {
-	color: #2c2c2c;
+	color: $gray-dark;
 	font-size: 14px;
 	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
@@ -17,13 +17,13 @@ a {
 input, select, .btn, .form-control, .dropdown-menu, .input-group-addon{
 	font-size: 0.8rem;
 }
-.btn-lg, .btn-group-lg > .btn{
+.btn-lg, .btn-group-lg > .btn, .form-control-lg{
     font-size: 1.25rem;
 }
-.btn-sm, .btn-group-sm > .btn{
+.btn-sm, .btn-group-sm > .btn, .form-control-sm{
     font-size: 0.75rem;
 }
-.btn-xs, .btn-group-xs > .btn{
+.btn-xs, .btn-group-xs > .btn, .form-control-xs{
     font-size: 0.675rem;
 }
 .b-r{
@@ -53,11 +53,40 @@ input, select, .btn, .form-control, .dropdown-menu, .input-group-addon{
 	width: 25px !important;
 	height: auto;
 }
+blockquote.alert{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+
+	i{
+		display: flex;
+		font-size: 2.5rem;
+		margin-right: 1rem;
+	}
+
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.alert{
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
 #scrollUp{
 	height: 40px;
 	position: fixed;
 	bottom: 20%;
-	right: -55px;
+	right: -56px;
 	background: $primary-color;
 	color: #fff;
 	text-align: center;
