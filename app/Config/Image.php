@@ -22,7 +22,7 @@ use O2System\Image\Datastructures\Config;
 $image = new Config([
     'driver'              => 'gd', // gd | imagick | gmagick
     'maintainAspectRatio' => true,
-    'focus'               => 'CENTER',
+    'focus'               => 'NORTHWEST',
     'orientation'         => 'AUTO',
     'quality'             => 100,
     'cached'              => true,

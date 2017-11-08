@@ -15,6 +15,13 @@ use O2System\Kernel\Datastructures\Config;
 $presenter = new Config( [], Config::STD_OFFSET );
 
 /**
+ * Presenter Enabled
+ *
+ * Auto start presenter as framework service.
+ */
+$presenter->enabled = true;
+
+/**
  * Presenter Debug Toolbar
  *
  * @var bool
@@ -65,7 +72,6 @@ $presenter->assets = [
             'js' => [
                 'jquery.js',
                 'jquery-migrate.js',
-                'system.js',
                 'holder.js',
             ],
         ],

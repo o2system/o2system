@@ -11,6 +11,15 @@
 // ------------------------------------------------------------------------
 
 /**
+ * Default App
+ *
+ * This determine which application set is used by default.
+ *
+ * @var string|null
+ */
+$config[ 'app' ] = null;
+
+/**
  * Default Character Set
  *
  * This determines which character set is used by default in various methods

@@ -10,16 +10,18 @@
  */
 // ------------------------------------------------------------------------
 
-use O2System\Framework\Http\Router\Routes;
+use O2System\Framework\Http\Router\Addresses;
 
-$routes = new Routes();
+$addresses = new Addresses();
 
 // ------------------------------------------------------------------------
 
-// Route to default controller
-$routes->get(
+// Example Route To Default Controller
+$addresses->get(
     '/',
     function () {
         return new \App\Controllers\Hello();
     }
 );
+
+// ------------------------------------------------------------------------

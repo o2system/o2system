@@ -17,6 +17,13 @@ $view = new Config();
 // ------------------------------------------------------------------------
 
 /**
+ * View Enabled
+ *
+ * Auto start view as framework service.
+ */
+$view->enabled = true;
+
+/**
  * View File Extensions
  *
  * @var array
@@ -68,15 +75,4 @@ $view->output = [
      * @var bool
      */
     'beautify' => false,
-
-    // --------------------------------------------------------------------
-
-    /**
-     * Profiler Output
-     *
-     * Add profiler information commented at your HTML output.
-     *
-     * @var bool
-     */
-    'profiler' => true,
 ];

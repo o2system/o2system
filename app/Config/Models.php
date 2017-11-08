@@ -22,3 +22,7 @@
 |
 |	$models[ 'options' ] = 'O2System\Framework\Models\Options';
 */
+
+$models = [
+    //'options' => 'O2System\Framework\Models\Options',
+];
