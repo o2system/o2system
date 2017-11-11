@@ -42,15 +42,6 @@ $view->extensions = [
  */
 $view->output = [
     /**
-     * Compress view HTML output using zlib compression
-     *
-     * @var bool
-     */
-    'compress' => false,
-
-    // --------------------------------------------------------------------
-
-    /**
      * Minify view HTML output
      *
      * Removes extra characters (usually unnecessary spaces) from your output for faster page load speeds.
