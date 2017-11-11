@@ -15,6 +15,7 @@ namespace App\Controllers;
 // ------------------------------------------------------------------------
 
 use App\Http\Controller;
+use O2System\Framework\Libraries\Ui\Contents;
 use O2System\Framework\Libraries\Ui\Components;
 
 /**
@@ -26,8 +27,9 @@ class Ui extends Controller
 {
     public function index()
     {
-        config()->getItem( 'presenter' )->debugToolBar = false;
-        presenter()->page->setHeader( 'User Interface' );
+        presenter()->page
+            ->setHeader( 'User Interface' )
+            ->setDescription( 'Demo User Interface' );
 
         /**
          * Alerts
@@ -67,13 +69,23 @@ class Ui extends Controller
         /**
          * Badges
          */
-        $badges[ 'link' ] = new Components\Link( 'Inbox', '#' );
+        $badges[ 'link' ] = new Contents\Link( 'Inbox', '#' );
         $badges[ 'link' ]->childNodes->push( new Components\Badge( 42 ) );
 
-        $badges[ 'button' ] = new Components\Button( 'Messages', Components\Button::PRIMARY_CONTEXT );
+        $badges[ 'button' ] = new Components\Button( 'Messages', [], Components\Button::PRIMARY_CONTEXT );
         $badges[ 'button' ]->childNodes->push( new Components\Badge( 4 ) );
 
-        $contextualClasses = [ 'default', 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark' ];
+        $contextualClasses = [
+            'default',
+            'primary',
+            'secondary',
+            'success',
+            'info',
+            'warning',
+            'danger',
+            'light',
+            'dark',
+        ];
 
         $badges[ 'colors' ] = [];
         foreach ( $contextualClasses as $contextualClass ) {
@@ -90,8 +102,8 @@ class Ui extends Controller
         $buttons[ 'outline' ] = ( new Components\Button( 'Outline' ) )->contextOutline();
         $buttons[ 'rounded' ] = ( new Components\Button( 'Round' ) )->rounded();
         $buttons[ 'with-icon' ] = ( new Components\Button( 'With Icon' ) )->setIcon( [
-            'nucleo-outline-icons',
-            'ui-2_favourite-28',
+            'fa',
+            'fa-star',
         ] )->rounded();
         $buttons[ 'only-icon' ] = ( new Components\Button() )->setIcon( [
             'fa',
@@ -166,6 +178,7 @@ class Ui extends Controller
         $buttonGroup->createButton( '1' );
         $buttonGroup->createButton( '2' );
         $buttonGroup->createButton( $buttons[ 'dropdown' ] );
+
         $inputGroup = $buttons[ 'mixed-toolbar' ]->createInputGroup();
         $inputGroup->createAddon( '@' );
         $inputGroup->createInput( [ 'placeholder' => 'Input group example' ] );
@@ -180,9 +193,9 @@ class Ui extends Controller
          * Breadcrumb
          */
         $breadcrumb = new Components\Breadcrumb();
-        $breadcrumb->createList( ( new Components\Link( 'Home', base_url() ) ) );
-        $breadcrumb->createList( ( new Components\Link( 'Library', '#' ) ) );
-        $breadcrumb->createList( ( new Components\Link( 'Data', current_url() ) ) );
+        $breadcrumb->createList( ( new Contents\Link( 'Home', base_url() ) ) );
+        $breadcrumb->createList( ( new Contents\Link( 'Library', '#' ) ) );
+        $breadcrumb->createList( ( new Contents\Link( 'Data', current_url() ) ) );
 
         /**
          * Cards
@@ -201,7 +214,8 @@ class Ui extends Controller
         $cards[ 'basic' ]->footer->textContent->push( '2 days ago' );
 
         $cards[ 'with-overlay' ] = new Components\Card();
-        $image = $cards[ 'with-overlay' ]->createImage( PATH_THEME . 'assets/img/ui/karimun-java-monument.jpg', 'Karimun Java Monument' );
+        $image = $cards[ 'with-overlay' ]->createImage( PATH_THEME . 'assets/img/ui/karimun-java-monument.jpg',
+            'Karimun Java Monument' );
         $overlay = $image->createOverlay();
         $overlay->setTitle( 'Karimun Java Monument' );
         $overlay->createParagraph( 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.' );
@@ -310,6 +324,36 @@ class Ui extends Controller
         $blockquote = $block->createBlockquote( 'New Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' );
         $blockquote->setAuthor( 'Some Person', '#' )->setSource( 'From Source', '#' );
 
+        $cards[ 'customs' ] = new Components\Card\Deck();
+
+        // Card with badge
+        $card = $cards[ 'customs' ]->createCard();
+        $card->createImage( PATH_THEME . 'assets/img/ui/landscape1.jpg', 'Card custom with badges' );
+
+        $card->createBadge( 'Left' );
+        $card->createBadge( 'Right', Components\Card\Badge::SUCCESS_CONTEXT, Components\Card\Badge::RIGHT_BADGE );
+
+        $block = $card->createBody();
+        $block->setTitle( 'Card with Badges' );
+        $block->setSubTitle( 'Card badges on left and right' );
+        $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+        $block->createLink( 'Card link', '#' );
+        $block->createLink( 'Another card link', '#' );
+
+        // Card with badge
+        $card = $cards[ 'customs' ]->createCard();
+        $card->createImage( PATH_THEME . 'assets/img/ui/landscape2.jpg', 'Card custom with ribbons' );
+
+        $card->createRibbon( 'Left' );
+        $card->createRibbon( 'Right', Components\Card\Ribbon::SUCCESS_CONTEXT, Components\Card\Ribbon::RIGHT_RIBBON );
+
+        $block = $card->createBody();
+        $block->setTitle( 'Card with Ribbons' );
+        $block->setSubTitle( 'Card ribbons on left and right' );
+        $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+        $block->createLink( 'Card link', '#' );
+        $block->createLink( 'Another card link', '#' );
+
         /**
          * Carousel
          */
@@ -322,7 +366,8 @@ class Ui extends Controller
                 $slide->active();
             }
 
-            $slide->createImage( PATH_THEME . 'assets/img/ui/landscape' . $number . '.jpg', 'Landscape Photography ' . $number );
+            $slide->createImage( PATH_THEME . 'assets/img/ui/landscape' . $number . '.jpg',
+                'Landscape Photography ' . $number );
         }
 
         /**
@@ -348,7 +393,7 @@ class Ui extends Controller
          */
         $forms[ 'inputs' ] = new Components\Form();
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Text' );
         $group->createInput( [
             'type'        => 'text',
@@ -356,7 +401,7 @@ class Ui extends Controller
             'placeholder' => 'text',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Search' );
         $group->createInput( [
             'type'        => 'search',
@@ -364,7 +409,7 @@ class Ui extends Controller
             'placeholder' => 'search here',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Email Address' );
         $group->createInput( [
             'type'        => 'email',
@@ -372,7 +417,7 @@ class Ui extends Controller
             'placeholder' => 'email@domain.com',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Password' );
         $group->createInput( [
             'type'        => 'password',
@@ -380,7 +425,7 @@ class Ui extends Controller
             'placeholder' => 'password',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Url' );
         $group->createInput( [
             'type'        => 'url',
@@ -388,7 +433,7 @@ class Ui extends Controller
             'placeholder' => 'https://o2system.id',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Telephone' );
         $group->createInput( [
             'type'        => 'tel',
@@ -396,7 +441,7 @@ class Ui extends Controller
             'placeholder' => '1-(777)-777-777',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Number' );
         $group->createInput( [
             'type'        => 'number',
@@ -404,7 +449,7 @@ class Ui extends Controller
             'placeholder' => '23',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Date and Time' );
         $group->createInput( [
             'type'  => 'datetime-local',
@@ -412,7 +457,7 @@ class Ui extends Controller
             'value' => date( 'Y-m-d' ) . 'T' . date( 'H:m:s' ),
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Date' );
         $group->createInput( [
             'type'  => 'date',
@@ -420,7 +465,7 @@ class Ui extends Controller
             'value' => date( 'Y-m-d' ),
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Month' );
         $group->createInput( [
             'type'  => 'month',
@@ -428,7 +473,7 @@ class Ui extends Controller
             'value' => date( 'Y-m' ),
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Week' );
         $group->createInput( [
             'type'  => 'week',
@@ -436,7 +481,7 @@ class Ui extends Controller
             'value' => date( 'Y' ) . '-W' . date( 'W' ),
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Time' );
         $group->createInput( [
             'type'  => 'time',
@@ -444,7 +489,7 @@ class Ui extends Controller
             'value' => date( 'H:m:s' ),
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Color' );
         $group->createInput( [
             'type'  => 'color',
@@ -456,7 +501,7 @@ class Ui extends Controller
          * http://www.hongkiat.com/blog/html5-form-input-type/
          */
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Range' );
         $group->createInput( [
             'type'  => 'range',
@@ -466,7 +511,7 @@ class Ui extends Controller
             'max'   => 100,
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'File' );
         $group->createInput( [
             'type'  => 'file',
@@ -474,7 +519,7 @@ class Ui extends Controller
             'value' => null,
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Checkbox' );
         $group->createInput( [
             'type'  => 'checkbox',
@@ -482,7 +527,7 @@ class Ui extends Controller
             'value' => 1,
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Radio' );
         $group->createInput( [
             'type'  => 'radio',
@@ -490,7 +535,7 @@ class Ui extends Controller
             'value' => 1,
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Select' );
         $group->createSelect( [
             'Yes' => 'yes',
@@ -500,7 +545,7 @@ class Ui extends Controller
         ] );
 
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Multiple Select' );
         $group->createSelect( [
             'Yes' => 'yes',
@@ -509,61 +554,61 @@ class Ui extends Controller
             'name' => 'select',
         ] )->multiple();
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Textarea' );
         $group->createTextarea( [
             'name' => 'textarea',
         ] );
 
-        $group = $forms[ 'inputs' ]->createGroup();
+        $group = $forms[ 'inputs' ]->createFormGroup();
         $group->createLabel( 'Input Group' );
         $inputGroup = $group->createInputGroup( [
             'name' => 'group-text',
         ] );
-        $inputGroup->createAddon( '@', Components\Form\Input\AddOn::ADDON_LEFT );
+        $inputGroup->createAddon( '@', Components\Form\Input\Group\AddOn::ADDON_LEFT );
 
         /**
          * Jumbotron
          */
-        $jumbotron['basic'] = new Components\Jumbotron();
-        $jumbotron['basic']->createHeader( 'Hello World!' );
-        $jumbotron['basic']->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
+        $jumbotron[ 'basic' ] = new Components\Jumbotron();
+        $jumbotron[ 'basic' ]->createHeader( 'Hello World!' );
+        $jumbotron[ 'basic' ]->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
             [ 'class' => 'lead' ] );
-        $jumbotron['basic']->createHorizontalRule();
-        $jumbotron['basic']->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
-        $jumbotron['basic']->createParagraph()->createLink( 'Learn More', '#' );
+        $jumbotron[ 'basic' ]->createHorizontalRule();
+        $jumbotron[ 'basic' ]->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
+        $jumbotron[ 'basic' ]->createParagraph()->createLink( 'Learn More', '#' );
 
-        $jumbotron['image'] = new Components\Jumbotron();
-        $jumbotron['image']->setImageBackground(PATH_THEME . 'assets/img/bg-galaxy.jpg');
-        $jumbotron['image']->createHeader( 'Hello World!' );
-        $jumbotron['image']->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
+        $jumbotron[ 'image' ] = new Components\Jumbotron();
+        $jumbotron[ 'image' ]->setImageBackground( PATH_THEME . 'assets/img/bg-galaxy.jpg' );
+        $jumbotron[ 'image' ]->createHeader( 'Hello World!' );
+        $jumbotron[ 'image' ]->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
             [ 'class' => 'lead' ] );
-        $jumbotron['image']->createHorizontalRule();
-        $jumbotron['image']->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
-        $jumbotron['image']->createParagraph()->createLink( 'Learn More', '#' );
+        $jumbotron[ 'image' ]->createHorizontalRule();
+        $jumbotron[ 'image' ]->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
+        $jumbotron[ 'image' ]->createParagraph()->createLink( 'Learn More', '#' );
 
-        $jumbotron['video'] = new Components\Jumbotron();
-        $jumbotron['video']->setVideoBackground(PATH_THEME . 'assets/media/explore.webm');
-        $jumbotron['video']->createHeader( 'Hello World!' );
-        $jumbotron['video']->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
+        $jumbotron[ 'video' ] = new Components\Jumbotron();
+        $jumbotron[ 'video' ]->setVideoBackground( PATH_THEME . 'assets/media/explore.webm' );
+        $jumbotron[ 'video' ]->createHeader( 'Hello World!' );
+        $jumbotron[ 'video' ]->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
             [ 'class' => 'lead' ] );
-        $jumbotron['video']->createHorizontalRule();
-        $jumbotron['video']->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
-        $jumbotron['video']->createParagraph()->createLink( 'Learn More', '#' );
+        $jumbotron[ 'video' ]->createHorizontalRule();
+        $jumbotron[ 'video' ]->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
+        $jumbotron[ 'video' ]->createParagraph()->createLink( 'Learn More', '#' );
 
-        $jumbotron['carousel'] = new Components\Jumbotron();
-        $jumbotron['carousel']->setCarousel( $carousel );
-        $jumbotron['carousel']->createHeader( 'Hello World!' );
-        $jumbotron['carousel']->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
+        $jumbotron[ 'carousel' ] = new Components\Jumbotron();
+        $jumbotron[ 'carousel' ]->setCarousel( $carousel );
+        $jumbotron[ 'carousel' ]->createHeader( 'Hello World!' );
+        $jumbotron[ 'carousel' ]->createParagraph( 'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information',
             [ 'class' => 'lead' ] );
-        $jumbotron['carousel']->createHorizontalRule();
-        $jumbotron['carousel']->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
-        $jumbotron['carousel']->createParagraph()->createLink( 'Learn More', '#' );
+        $jumbotron[ 'carousel' ]->createHorizontalRule();
+        $jumbotron[ 'carousel' ]->createParagraph( 'It uses utility classes for typography and spacing to space content out within the larger container.' );
+        $jumbotron[ 'carousel' ]->createParagraph()->createLink( 'Learn More', '#' );
 
         /**
          * List  Group
          */
-        $listGroup = new Components\Lists\Group();
+        $listGroup = new Components\ListGroup();
         $listGroup->createList( 'This is an active item example' )->active();
         $listGroup->createList( 'This is a disabled item example' )->disabled();
         $listGroup->createList( 'This is example item with badge' )->childNodes->push( new Components\Badge( 2 ) );
@@ -629,8 +674,7 @@ class Ui extends Controller
          */
         $progress[ 'basic' ] = new Components\Progress( 2 );
 
-        $progress[ 'multiple' ] = new Components\Progress( 35, 0, 100,
-            Components\Progress\Bar::SUCCESS_CONTEXT );
+        $progress[ 'multiple' ] = new Components\Progress( 35, 0, 100 );
         $progress[ 'multiple' ]->addBar( ( new Components\Progress\Bar( 20, 0, 100,
             Components\Progress\Bar::WARNING_CONTEXT ) )->striped()->animate() );
         $progress[ 'multiple' ]->addBar( 10, 0, 100, Components\Progress\Bar::DANGER_CONTEXT );
@@ -638,7 +682,7 @@ class Ui extends Controller
         /**
          * Table
          */
-        $table = new Components\Table();
+        $table = new Contents\Table();
         $table->header->createRow()->createColumns( [
             'First Name',
             'Last Name',
@@ -710,7 +754,7 @@ Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum so
 
 Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.' );
 
-        $image = new Components\Image();
+        $image = new Contents\Image();
         $image->setSrc( PATH_THEME . 'assets/img/ui/zha-avatar.jpg' );
         $image->setWidth( 200 );
 

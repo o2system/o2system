@@ -682,6 +682,7 @@ Form Pickers
     column-count:4;
     column-gap:15px;
     list-style: none;
+    padding-left: 0;
 }
 
 .form-check-column-3{
@@ -694,6 +695,7 @@ Form Pickers
     column-count:3;
     column-gap:15px;
     list-style: none;
+    padding-left: 0;
 }
 
 .form-check-column-2{
@@ -706,16 +708,65 @@ Form Pickers
     column-count:2;
     column-gap:15px;
     list-style: none;
+    padding-left: 0;
 }
 
 .upload{
-    margin-bottom: 1.5rem;
 
     .progress, .filename{
         margin-bottom: 0.5rem;
     }
     .progress-bar{
         height: 0.3rem;
+    }
+}
+
+.upload-multiple{
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    position: relative;
+
+    .progress-bar{
+        height: 0.3rem;
+    }
+
+    &.file{
+        &:before{
+            position: absolute;
+            content: "Browse or Drag Files";
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            font-size: 2rem;
+            color: #ddd;
+            text-align: center;
+        }
+    }
+
+    &.image{
+        &:before{
+            position: absolute;
+            content: "Browse or Drag Images";
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            font-size: 2rem;
+            color: #ddd;
+            text-align: center;
+        }
+    }
+
+    table{
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        margin-bottom: 0;
     }
 }
 

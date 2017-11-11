@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-bg rounded-0 vertical-center text-center"
      style="background-image: url('assets/img/bg-ui.jpg');">
     <div class="container">
-        <img src="./assets/img/logo/logo-white-200px.png" style="margin: 50px 0px" class="logo">
+        <img src="assets/img/logo/logo-white-200px.png" style="margin: 50px 0px" class="logo">
         <h1 class="display-4 text-uppercase">
             O2System User Interface
         </h1>
@@ -14,437 +14,1579 @@
     </div>
 </div>
 
-<div class="section section-basic">
-    <div class="container">
-        <h1 class="display-4">Basic Components</h1>
-        <div id="alerts" class="mb-5">
-            <h4 class="display-4">Alerts</h4>
-            <h6 class="display-6">Pick your color</h6>
-            <div class="row">
-                <div class="col-md-10">
-                    <?php foreach ( $alerts as $alert ): ?>
-                        <?php echo $alert; ?>
-                    <?php endforeach; ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 landing-ui">
+            <div class="card-body">
+                <h3 class="title">
+                    Basic Components
+                </h3>
+                <div id="alerts" class="mb-5">
+                    <h4>
+                        Alerts
+                    </h4>
+                    <p class="category">Pick your color</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <?php foreach ( $alerts as $alert ): ?>
+                                <?php echo $alert; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion" class="mb-5">
+                    <h4>
+                        Accordion
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $accordion; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="badges" class="mb-5">
+                    <h4>
+                        Badges
+                    </h4>
+                    <div class="row mb-4">
+                        <div class="col-md-1">
+                            <?php echo $badges[ 'link' ]; ?>
+                        </div>
+                        <div class="col-md-1">
+                            <?php echo $badges[ 'button' ]; ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php foreach ( $badges[ 'colors' ] as $badge ): ?>
+                                <?php echo $badge; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="breadcrumbs" class="mb-5">
+                    <h4>
+                        Breadcrumbs
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <?php echo $breadcrumb; ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <?php echo $breadcrumb->style( 'arrow' ); ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <?php echo $breadcrumb->style( 'dot' ); ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <?php echo $breadcrumb->style( 'bar' ); ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="buttons" class="mb-5">
+                    <h4>
+                        Buttons
+                    </h4>
+                    <p class="category">Pick your style</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12 mb-2">
+                            <?php echo $buttons[ 'default' ]; ?>
+                            <?php echo $buttons[ 'active' ]; ?>
+                            <?php echo $buttons[ 'disabled' ]; ?>
+                            <?php echo $buttons[ 'outline' ]; ?>
+                            <?php echo $buttons[ 'rounded' ]; ?>
+                            <?php echo $buttons[ 'with-icon' ]; ?>
+                            <?php echo $buttons[ 'only-icon' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Pick your size</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php foreach ( $buttons[ 'sizes' ] as $button ): ?>
+                                <?php echo $button; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <p class="category">Pick your color</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php foreach ( $buttons[ 'colors' ] as $button ): ?>
+                                <?php echo $button; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <p class="category">Popover</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'popover' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Tooltip</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'tooltip' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Button Grouped</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'group' ]; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="toolbars" class="mb-5">
+                    <h4>
+                        Toolbar
+                    </h4>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'button-toolbar' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Nesting Toolbar</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'nesting-toolbar' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Mixed Toolbar</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'mixed-toolbar' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Vertical Variation</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $buttons[ 'vertical' ]; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="links" class="mb-5">
+                    <h4>
+                        Links
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php foreach ( $buttons[ 'colors' ] as $button ): ?>
+                                <?php echo $button->contextLink(); ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="cards" class="mb-5">
+                    <h4>
+                        Cards
+                    </h4>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'basic' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards with Image Overlay</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'with-overlay' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards with Custom Heading</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'with-heading' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards with Navigation</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'with-navigation' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards with List Group</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'with-list-group' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards Group</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'group' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards Deck</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'deck' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Cards Columns</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'columns' ]; ?>
+                        </div>
+                    </div>
+
+                    <p class="category">Cards with Badges and Ribbons</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $cards[ 'customs' ]; ?>
+                        </div>
+                    </div>
+
+                    <p class="category">Cards Custom</p>
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="card card-outline-default">
+                                <div class="card-header">
+                                    Card Testimony
+                                    <div class="card-options">
+                                        <a href="#" data-rel="collapse"><i class="fa fa-chevron-down"></i></a>
+                                        <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                        <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-bodyquote">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                            erat a ante.
+                                        </p>
+                                    </div>
+                                    <div class="card-author">
+                                        <div class="card-avatar">
+                                            <a href="#"><img src="assets/img/avatar.jpg"></a>
+                                        </div>
+                                        <div class="card-profile">
+                                            <h4><a href="#">Mr. Otz</a></h4>
+                                            <span><a href="#">Highest Director</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card card-outline-default">
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">Product Title</a>
+                                    </h4>
+                                    <div class="card-price">
+                                        <span class="reguler">Rp. 200.000</span>
+                                        <span class="discount">Rp. 300.000</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">
+                                        Add to Cart
+                                    </a>
+                                    <a href="#" class="btn btn-secondary">
+                                        Detail
+                                    </a>
+
+                                    <div class="card-store">
+                                        <div class="card-avatar">
+                                            <a href="#"><img src="assets/img/avatar.jpg"></a>
+                                        </div>
+                                        <div class="card-profile">
+                                            <h4><a href="#">Olshop Hitz</a></h4>
+                                            <span>Still the Same</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card card-outline-default">
+                                <div class="card-header">
+                                    Card Icon
+                                    <div class="card-options">
+                                        <a href="#" data-rel="collapse"><i class="fa fa-chevron-down"></i></a>
+                                        <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                        <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-icon">
+                                    <div class="card-icon-image">
+                                        <img src="assets/img/avatar.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <!-- OR -->
+                                    <div class="card-icon-i">
+                                        <i class="fa fa-cogs"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        Card Title 2
+                                    </h4>
+                                    <h6 class="card-subtitle">
+                                        Card Sub-Title 2
+
+                                    </h6>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the
+                                        card's content for card 2.
+                                    </p>
+                                    <a href="#" class="card-link">
+                                        Card link
+                                    </a>
+                                    <a href="#" class="card-link">
+                                        Another card link
+                                    </a>
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-tags float-left">
+                                        <a href="#" class="btn btn-primary btn-xs">Tag1</a>
+                                        <a href="#" class="btn btn-primary btn-xs">Tag2</a>
+                                        <a href="#" class="btn btn-primary btn-xs">Tag3</a>
+                                    </div>
+                                    <div class="card-footer-options float-right">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p class="category">Cards Carousel</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <div class="card card-outline-default">
+                                <div class="card-carousel">
+                                    <?php echo $carousel; ?>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        Card Title 4
+
+                                    </h4>
+                                    <h6 class="card-subtitle">
+                                        Card Sub-Title 4
+
+                                    </h6>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of
+                                        the
+                                        card's content for card 4.
+                                    </p>
+                                    <a href="#" class="card-link">
+                                        Card link
+                                    </a>
+                                    <a href="#" class="card-link">
+                                        Another card link
+                                    </a>
+
+                                </div>
+                                <div class="card-footer">
+                                    4 days ago
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel" class="mb-5">
+                    <h4>
+                        Carousel
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $carousel; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="dropdowns" class="mb-5">
+                    <h4>
+                        Dropdowns
+                    </h4>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $dropdowns[ 'basic' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Split Button Dropdown</p>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $dropdowns[ 'split-menu' ]; ?>
+                        </div>
+                    </div>
+                    <p class="category">Dropup Variation</p>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <?php echo $dropdowns[ 'basic' ]->dropup(); ?>
+
+                        </div>
+                        <div class="col-md-2">
+                            <?php echo $dropdowns[ 'split-menu' ]->dropup(); ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="forms" class="mb-5">
+                    <h4>
+                        Forms
+                    </h4>
+                    <p class="category">Inputs</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form role="form">
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="text">
+                                        Text
+                                    </label>
+                                    <input class="form-control" type="text" name="text" id="input-text"
+                                           placeholder="text">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="search">
+                                        Search
+                                    </label>
+                                    <input class="form-control" type="search" name="search" id="input-search"
+                                           placeholder="search here">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="email">
+                                        Email Address
+                                    </label>
+                                    <input class="form-control" type="email" name="email" id="input-email"
+                                           placeholder="email@domain.com">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="password">
+                                        Password
+                                    </label>
+                                    <input class="form-control" type="password" name="password" id="input-password"
+                                           placeholder="password">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="url">
+                                        Url
+                                    </label>
+                                    <input class="form-control" type="url" name="url" id="input-url"
+                                           placeholder="https://o2system.id">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="tel">
+                                        Telephone
+                                    </label>
+                                    <input class="form-control" type="tel" name="tel" id="input-tel"
+                                           placeholder="1-(777)-777-777">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="number">
+                                        Number
+                                    </label>
+                                    <input class="form-control" type="number" name="number" id="input-number"
+                                           placeholder="23">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="datetime-local">
+                                        Date and Time
+                                    </label>
+                                    <input class="form-control" type="datetime-local" name="datetime-local"
+                                           id="input-datetime-local" value="2017-07-21T17:07:35">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="date">
+                                        Date
+                                    </label>
+                                    <input class="form-control" type="date" name="date" id="input-date"
+                                           value="2017-07-21">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="month">
+                                        Month
+                                    </label>
+                                    <input class="form-control" type="month" name="month" id="input-month"
+                                           value="2017-07">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="week">
+                                        Week
+                                    </label>
+                                    <input class="form-control" type="week" name="week" id="input-week"
+                                           value="2017-W29">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="time">
+                                        Time
+                                    </label>
+                                    <input class="form-control" type="time" name="time" id="input-time"
+                                           value="17:07:35">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="color">
+                                        Color
+                                    </label>
+                                    <input class="form-control" type="color" name="color" id="input-color"
+                                           value="#f00000">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="range">
+                                        Range
+                                    </label>
+                                    <input class="form-control" type="range" name="range" id="input-range"
+                                           value="10"
+                                           min="0" max="100">
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="custom-file">
+                                        <input class="form-control custom-file-input" type="file" name="file"
+                                               id="input-file" value="">
+                                        <span class="custom-file-control"></span>
+
+                                    </label>
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="custom-control custom-checkbox">
+                                        <input class="form-control custom-control-input" type="checkbox"
+                                               name="checkbox"
+                                               id="input-checkbox" value="1">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Checkbox</span>
+
+                                    </label>
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="custom-control custom-radio">
+                                        <input class="form-control custom-control-input" type="radio" name="radio"
+                                               id="input-radio" value="1">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">Radio</span>
+
+                                    </label>
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="select">
+                                        Select
+                                    </label>
+                                    <select class="form-control" name="select" id="select-select">
+                                        <option value="yes">
+                                            Yes
+                                        </option>
+                                        <option value="no" selected>
+                                            No
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="select">
+                                        Multiple Select
+                                    </label>
+                                    <select class="form-control" name="select" id="select-select" multiple>
+                                        <option value="yes">
+                                            Yes
+                                        </option>
+                                        <option value="no" selected>
+                                            No
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="textarea">
+                                        Textarea
+                                    </label>
+                                    <textarea class="form-control" name="textarea"
+                                              id="textarea-textarea"></textarea>
+                                </div>
+                                <div class="form-group" role="group">
+                                    <label class="form-label-control" for="input-group">
+                                        Input Group
+                                    </label>
+                                    <div class="input-group" role="group">
+                                        <span class="input-group-addon">@</span>
+                                        <input class="form-control" name="group-text" id="input-group-text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="jumbotron" class="mb-5">
+                    <h4 class="display-4">Jumbotron</h4>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $jumbotron[ 'basic' ]; ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Fluid Jumbotron</h6>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $jumbotron[ 'basic' ]->fluid(); ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Jumbotron with Image Background</h6>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $jumbotron[ 'image' ]; ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Jumbotron with Video Background</h6>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $jumbotron[ 'video' ]; ?>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="list-group" class="mb-5">
+                    <h4 class="display-4">List Group</h4>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $listGroup; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="modal" class="mb-5">
+                    <h4 class="display-4">Modal</h4>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#example-modal">
+                                Launch demo modal
+                            </button>
+                            <?php echo $modal; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="navs" class="mb-5">
+                    <h4 class="display-4">Navs</h4>
+
+                    <h6 class="display-6">Base Nav</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $navs[ 'base' ]; ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Pills Nav</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $navs[ 'pills' ]; ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Bullets Nav</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $navs[ 'bullets' ]; ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Tabs Nav</h6>
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <?php echo $navs[ 'tabs' ]; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs">
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <p class="category">Tabs Standard</p>
+                            <ul class="nav nav-tabs tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#messages1" role="tab">Messages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#settings1" role="tab">Settings</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content tabs">
+                                <div class="tab-pane active" id="home1" role="tabpanel">
+                                    <p>1. This is Photoshop's version of Lorem IpThis is Photoshop's version of
+                                        Lorem
+                                        Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                        lorem
+                                        quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                                        elit.
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                        ligula
+                                        eget dolor.
+                                        Aenean mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                </div>
+                                <div class="tab-pane" id="profile1" role="tabpanel">
+                                    <p>2.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor
+                                        interdum
+                                        praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et
+                                        imperdiet felis amet.</p>
+                                </div>
+                                <div class="tab-pane" id="messages1" role="tabpanel">
+                                    <p>3. This is Photoshop's version of Lorem IpThis is Photoshop's version of
+                                        Lorem
+                                        Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                        lorem
+                                        quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                                        elit.
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                        ligula
+                                        eget dolor.
+                                        Aenean mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                </div>
+                                <div class="tab-pane" id="settings1" role="tabpanel">
+                                    <p>4.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor
+                                        interdum
+                                        praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et
+                                        imperdiet felis amet.</p></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="category">Tabs Bottom</p>
+                            <div class="tab-content tab-content-below tabs">
+                                <div class="tab-pane active" id="home2" role="tabpanel">
+                                    <p>1. This is Photoshop's version of Lorem IpThis is Photoshop's version of
+                                        Lorem
+                                        Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                        lorem
+                                        quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                                        elit.
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                        ligula
+                                        eget dolor.
+                                        Aenean mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                </div>
+                                <div class="tab-pane" id="profile2" role="tabpanel">
+                                    <p>2.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor
+                                        interdum
+                                        praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et
+                                        imperdiet felis amet.</p>
+                                </div>
+                                <div class="tab-pane" id="messages2" role="tabpanel">
+                                    <p>3. This is Photoshop's version of Lorem IpThis is Photoshop's version of
+                                        Lorem
+                                        Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                        lorem
+                                        quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                                        elit.
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                        ligula
+                                        eget dolor.
+                                        Aenean mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                </div>
+                                <div class="tab-pane" id="settings2" role="tabpanel">
+                                    <p>4.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor
+                                        interdum
+                                        praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et
+                                        imperdiet felis amet.</p></div>
+                            </div>
+                            <ul class="nav nav-tabs tab-below tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home2" role="tab">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile2" role="tab">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#messages2" role="tab">Messages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#settings2" role="tab">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="category">Tabs Left</p>
+                            <div class="tabs-vertical-wrap">
+                                <ul class="nav nav-tabs tabs tabs-vertical"><!-- available classes "right" -->
+                                    <li class="nav-item"><a href="#v-home" class="nav-link"
+                                                            data-toggle="tab">Home</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#v-profile" class="nav-link"
+                                                            data-toggle="tab">Profile</a></li>
+                                    <li class="nav-item"><a href="#v-messages" class="nav-link" data-toggle="tab">Messages</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#v-settings" class="nav-link active"
+                                                            data-toggle="tab">Settings</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="v-home">
+                                        <p>Carriage quitting securing be appetite it declared. High eyes kept so
+                                            busy
+                                            feel call in. Would day nor ask walls known. But preserved advantage are
+                                            but
+                                            and certainty earnestly enjoyment. Passage weather as up am exposed. And
+                                            natural related man subject. Eagerness get situation his was
+                                            delighted. </p>
+                                    </div>
+                                    <div class="tab-pane" id="v-profile">
+                                        <p>Fulfilled direction use continual set him propriety continued. Saw met
+                                            applauded favourite deficient engrossed concealed and her. Concluded boy
+                                            perpetual old supposing. Farther related bed and passage comfort
+                                            civilly.
+                                            Dashwoods see frankness objection abilities the. As hastened oh produced
+                                            prospect formerly up am. Placing forming nay looking old married few
+                                            has.
+                                            Margaret disposed add screened rendered six say his striking
+                                            confined. </p>
+                                    </div>
+                                    <div class="tab-pane" id="v-messages">
+                                        <p>When be draw drew ye. Defective in do recommend suffering. House it seven
+                                            in
+                                            spoil tiled court. Sister others marked fat missed did out use.
+                                            Alteration
+                                            possession dispatched collecting instrument travelling he or on. Snug
+                                            give
+                                            made at spot or late that mr. </p>
+                                    </div>
+                                    <div class="tab-pane active" id="v-settings">
+                                        <p>Luckily friends do ashamed to do suppose. Tried meant mr smile so.
+                                            Exquisite
+                                            behaviour as to middleton perfectly. Chicken no wishing waiting am. Say
+                                            concerns dwelling graceful six humoured. Whether mr up savings talking
+                                            an.
+                                            Active mutual nor father mother exeter change six did all. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="category">Tabs Right</p>
+                            <div class="tabs-vertical-wrap">
+                                <ul class="nav nav-tabs tabs tabs-vertical right">
+                                    <li class="nav-item"><a href="#v-home" class="nav-link active"
+                                                            data-toggle="tab">Home</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#v2-profile" class="nav-link" data-toggle="tab">Profile</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#v2-messages" class="nav-link" data-toggle="tab">Messages</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#v2-settings" class="nav-link" data-toggle="tab">Settings</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="v2-home">
+                                        <p>Carriage quitting securing be appetite it declared. High eyes kept so
+                                            busy
+                                            feel call in. Would day nor ask walls known. But preserved advantage are
+                                            but
+                                            and certainty earnestly enjoyment. Passage weather as up am exposed. And
+                                            natural related man subject. Eagerness get situation his was
+                                            delighted. </p>
+                                    </div>
+                                    <div class="tab-pane" id="v2-profile">
+                                        <p>Fulfilled direction use continual set him propriety continued. Saw met
+                                            applauded favourite deficient engrossed concealed and her. Concluded boy
+                                            perpetual old supposing. Farther related bed and passage comfort
+                                            civilly.
+                                            Dashwoods see frankness objection abilities the. As hastened oh produced
+                                            prospect formerly up am. Placing forming nay looking old married few
+                                            has.
+                                            Margaret disposed add screened rendered six say his striking
+                                            confined. </p>
+                                    </div>
+                                    <div class="tab-pane" id="v2-messages">
+                                        <p>When be draw drew ye. Defective in do recommend suffering. House it seven
+                                            in
+                                            spoil tiled court. Sister others marked fat missed did out use.
+                                            Alteration
+                                            possession dispatched collecting instrument travelling he or on. Snug
+                                            give
+                                            made at spot or late that mr. </p>
+                                    </div>
+                                    <div class="tab-pane" id="v2-settings">
+                                        <p>Luckily friends do ashamed to do suppose. Tried meant mr smile so.
+                                            Exquisite
+                                            behaviour as to middleton perfectly. Chicken no wishing waiting am. Say
+                                            concerns dwelling graceful six humoured. Whether mr up savings talking
+                                            an.
+                                            Active mutual nor father mother exeter change six did all. </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="navbar" class="mb-5">
+                    <h4>
+                        Navbar
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $navbar->light(); ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php echo $navbar->dark(); ?>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-12">
+                            <?php echo $navbar->backgroundPrimary(); ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="pagination" class="mb-5">
+                    <h4 class="display-4">Pagination</h4>
+
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <?php echo $pagination; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="progress" class="mb-5">
+                    <h4 class="display-4">Progress</h4>
+
+                    <h6 class="display-6">Basic Progress</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <?php echo $progress[ 'basic' ]; ?>
+                        </div>
+                    </div>
+
+                    <h6 class="display-6">Multiple Progress</h6>
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <?php echo $progress[ 'multiple' ]; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="table" class="mb-5">
+                    <h4 class="display-4">Table</h4>
+
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <?php echo $table; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="pricing-table" class="mb-5">
+                    <h4>Pricing Table</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row pricing-plan">
+                                <div class="col-md-3 col-xs-12 col-sm-6 no-padding radius">
+                                    <div class="pricing-box">
+                                        <div class="pricing-body b-l">
+                                            <div class="pricing-header">
+                                                <h4 class="text-center">Silver</h4>
+                                                <h2 class="text-center"><span class="price-sign">$</span>24</h2>
+                                                <p class="uppercase">per month</p>
+                                            </div>
+                                            <div class="price-table-content">
+                                                <div class="price-row"><i class="icon-user"></i> 3 Members</div>
+                                                <div class="price-row"><i class="icon-screen-smartphone"></i> Single
+                                                    Device
+                                                </div>
+                                                <div class="price-row"><i class="icon-drawar"></i> 50GB Storage
+                                                </div>
+                                                <div class="price-row"><i class="icon-refresh"></i> Monthly Backups
+                                                </div>
+                                                <div class="price-row">
+                                                    <button class="btn btn-success m-t-20">Sign up</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 col-sm-6 no-padding radius">
+                                    <div class="pricing-box b-l">
+                                        <div class="pricing-body">
+                                            <div class="pricing-header">
+                                                <h4 class="text-center">Gold</h4>
+                                                <h2 class="text-center"><span class="price-sign">$</span>34</h2>
+                                                <p class="uppercase">per month</p>
+                                            </div>
+                                            <div class="price-table-content">
+                                                <div class="price-row"><i class="icon-user"></i> 5 Members</div>
+                                                <div class="price-row"><i class="icon-screen-smartphone"></i> Single
+                                                    Device
+                                                </div>
+                                                <div class="price-row"><i class="icon-drawar"></i> 80GB Storage
+                                                </div>
+                                                <div class="price-row"><i class="icon-refresh"></i> Monthly Backups
+                                                </div>
+                                                <div class="price-row">
+                                                    <button class="btn btn-success m-t-20">Sign up</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 col-sm-6 no-padding radius">
+                                    <div class="pricing-box featured-plan">
+                                        <div class="pricing-body">
+                                            <div class="pricing-header">
+                                                <h4 class="price-lable text-white bg-warning"> Popular</h4>
+                                                <h4 class="text-center">Platinum</h4>
+                                                <h2 class="text-center"><span class="price-sign">$</span>45</h2>
+                                                <p class="uppercase">per month</p>
+                                            </div>
+                                            <div class="price-table-content">
+                                                <div class="price-row"><i class="icon-user"></i> 10 Members</div>
+                                                <div class="price-row"><i class="icon-screen-smartphone"></i> Single
+                                                    Device
+                                                </div>
+                                                <div class="price-row"><i class="icon-drawar"></i> 120GB Storage
+                                                </div>
+                                                <div class="price-row"><i class="icon-refresh"></i> Monthly Backups
+                                                </div>
+                                                <div class="price-row">
+                                                    <button class="btn btn-lg btn-info m-t-20">Sign up</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 col-sm-6 no-padding radius">
+                                    <div class="pricing-box">
+                                        <div class="pricing-body b-r">
+                                            <div class="pricing-header">
+                                                <h4 class="text-center">Dimond</h4>
+                                                <h2 class="text-center"><span class="price-sign">$</span>54</h2>
+                                                <p class="uppercase">per month</p>
+                                            </div>
+                                            <div class="price-table-content">
+                                                <div class="price-row"><i class="icon-user"></i> 15 Members</div>
+                                                <div class="price-row"><i class="icon-screen-smartphone"></i> Single
+                                                    Device
+                                                </div>
+                                                <div class="price-row"><i class="icon-drawar"></i> 1TB Storage</div>
+                                                <div class="price-row"><i class="icon-refresh"></i> Monthly Backups
+                                                </div>
+                                                <div class="price-row">
+                                                    <button class="btn btn-success m-t-20">Sign up</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="category">Compare</p>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-responsve">
+                                        <table class="table table-striped table-hover">
+                                            <thead class="thead-inverse">
+                                            <tr>
+                                                <th class="col-sm-4"></th>
+                                                <th class="col-sm-2">Basic</th>
+                                                <th class="col-sm-2">Standard</th>
+                                                <th class="col-sm-2">Premium</th>
+                                                <th class="col-sm-2">Managed</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="col-sm-4 option">HDD Storage</td>
+                                                <td class="col-sm-2">500 MB</td>
+                                                <td class="col-sm-2">1 GB</td>
+                                                <td class="col-sm-2">2 GB</td>
+                                                <td class="col-sm-2">upto 5 TB</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">Web Server</td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">Mail Server</td>
+                                                <td>-</td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">DNS</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">Database</td>
+                                                <td>-</td>
+                                                <td>optional</td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">Backups</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">Tech Support</td>
+                                                <td>None</td>
+                                                <td>$50/incident</td>
+                                                <td>$35/incident</td>
+                                                <td>24/7 included</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="option">Custom Servers</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td><i class="fa fa-check"></i></td>
+                                                <td><i class="fa fa-check"></i></td>
+                                            </tr>
+                                            <tr class="text-uppercase font-weight-bold">
+                                                <td></td>
+                                                <td>Free</td>
+                                                <td>$99/mo</td>
+                                                <td>$179/mo</td>
+                                                <td><a href>Contact us</a></td>
+                                            </tr>
+                                            </tbody>
+                                            <tfoot class="thead-inverse">
+                                            <tr>
+                                                <th class="col-sm-4"></th>
+                                                <th class="col-sm-2">
+                                                    <button class="btn btn-primary">Sign-up</button>
+                                                </th>
+                                                <th class="col-sm-2">
+                                                    <button class="btn btn-primary">Buy Now</button>
+                                                </th>
+                                                <th class="col-sm-2">
+                                                    <button class="btn btn-primary">Buy Now</button>
+                                                </th>
+                                                <th class="col-sm-2"></th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="table" class="mb-5">
+                    <h4 class="display-4">Embed</h4>
+
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <?php echo $embed; ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="media" class="mb-5">
+                    <h4 class="display-4">Media</h4>
+
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <?php echo $media; ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="image" class="mb-5">
+                    <h4 class="display-4">Image</h4>
+
+                    <div class="row mb-5">
+                        <div class="col-md-3">
+                            <p class="mb-2">Image Rounded</p>
+                            <?php echo $image->rounded(); ?>
+                        </div>
+
+                        <div class="col-md-3">
+                            <p class="mb-2">Image Circle</p>
+                            <?php echo $image->circle(); ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="timeline" class="mb-5">
+                    <h4>
+                        Timeline
+                    </h4>
+                    <p class="category">Timeline Horizontal</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="timeline timeline-horizontal">
+                                <li class="timeline-item">
+                                    <div class="timeline-badge primary"><i class="fa fa-check"></i></div>
+                                    <div class="timeline-card">
+                                        <div class="card card-outline-default">
+                                            <div class="card-header">
+                                                Card Badge
+
+                                                <div class="card-options">
+                                                    <a href="#" data-rel="collapse"><i
+                                                                class="fa fa-chevron-down"></i></a>
+                                                    <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                                    <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-badge">
+                                                <div class="card-badge-wrap left"> or add class .right
+                                                    <span class="badge badge-default">
+                                                        Default
+                                                    </span>
+                                                    <span class="badge badge-primary">
+                                                        Primary
+                                                    </span>
+                                                </div>
+                                                <div class="card-badge-ribbon right">
+                                                    <span>RIBBON</span>
+                                                </div>
+                                                <img src="assets/img/ui/stone-mask-hut.jpg" alt="Card image 2"
+                                                     class="card-img-top">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    Card Title 2
+
+                                                </h4>
+                                                <h6 class="card-subtitle">
+                                                    Card Sub-Title 2
+
+                                                </h6>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up
+                                                    the
+                                                    bulk of the card's content for card 2.
+                                                </p>
+                                                <a href="#" class="card-link">
+                                                    Card link
+                                                </a>
+                                                <a href="#" class="card-link">
+                                                    Another card link
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge success"><i class="fa fa-check"></i></div>
+                                    <div class="timeline-card">
+                                        <div class="card card-outline-default">
+                                            <div class="card-header">
+                                                Card Badge
+
+                                                <div class="card-options">
+                                                    <a href="#" data-rel="collapse"><i
+                                                                class="fa fa-chevron-down"></i></a>
+                                                    <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                                    <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-badge">
+                                                <div class="card-badge-wrap left"> or add class .right
+                                                    <span class="badge badge-default">
+                                                        Default
+                                                    </span>
+                                                    <span class="badge badge-primary">
+                                                        Primary
+                                                    </span>
+                                                </div>
+                                                <div class="card-badge-ribbon right">
+                                                    <span>RIBBON</span>
+                                                </div>
+                                                <img src="assets/img/ui/stone-mask-hut.jpg" alt="Card image 2"
+                                                     class="card-img-top">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    Card Title 2
+
+                                                </h4>
+                                                <h6 class="card-subtitle">
+                                                    Card Sub-Title 2
+
+                                                </h6>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up
+                                                    the
+                                                    bulk of the card's content for card 2.
+                                                </p>
+                                                <a href="#" class="card-link">
+                                                    Card link
+                                                </a>
+                                                <a href="#" class="card-link">
+                                                    Another card link
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge info"><i class="fa fa-check"></i></div>
+                                    <div class="timeline-card">
+                                        <div class="card card-outline-default">
+                                            <div class="card-header">
+                                                Card Badge
+
+                                                <div class="card-options">
+                                                    <a href="#" data-rel="collapse"><i
+                                                                class="fa fa-chevron-down"></i></a>
+                                                    <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                                    <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-badge">
+                                                <div class="card-badge-wrap left"> or add class .right
+                                                    <span class="badge badge-default">
+                                                        Default
+                                                    </span>
+                                                    <span class="badge badge-primary">
+                                                        Primary
+                                                    </span>
+                                                </div>
+                                                <div class="card-badge-ribbon right">
+                                                    <span>RIBBON</span>
+                                                </div>
+                                                <img src="assets/img/ui/stone-mask-hut.jpg" alt="Card image 2"
+                                                     class="card-img-top">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    Card Title 2
+
+                                                </h4>
+                                                <h6 class="card-subtitle">
+                                                    Card Sub-Title 2
+
+                                                </h6>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up
+                                                    the
+                                                    bulk of the card's content for card 2.
+                                                </p>
+                                                <a href="#" class="card-link">
+                                                    Card link
+                                                </a>
+                                                <a href="#" class="card-link">
+                                                    Another card link
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="category">Timeline Vertical</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="timeline">
+                                <li class="timeline-item">
+                                    <div class="timeline-badge primary"><i class="fa fa-check"></i></div>
+                                    <div class="timeline-card">
+                                        <div class="card card-outline-default">
+                                            <div class="card-header">
+                                                Card Badge
+
+                                                <div class="card-options">
+                                                    <a href="#" data-rel="collapse"><i
+                                                                class="fa fa-chevron-down"></i></a>
+                                                    <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                                    <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-badge">
+                                                <div class="card-badge-wrap left"> <!-- or add class .right -->
+                                                    <span class="badge badge-default">
+                                                        Default
+                                                    </span>
+                                                    <span class="badge badge-primary">
+                                                        Primary
+                                                    </span>
+                                                </div>
+                                                <div class="card-badge-ribbon right">
+                                                    <span>RIBBON</span>
+                                                </div>
+                                                <img src="assets/img/ui/stone-mask-hut.jpg" alt="Card image 2"
+                                                     class="card-img-top">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    Card Title 2
+
+                                                </h4>
+                                                <h6 class="card-subtitle">
+                                                    Card Sub-Title 2
+
+                                                </h6>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up
+                                                    the
+                                                    bulk of the card's content for card 2.
+                                                </p>
+                                                <a href="#" class="card-link">
+                                                    Card link
+                                                </a>
+                                                <a href="#" class="card-link">
+                                                    Another card link
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge success"><i class="fa fa-check"></i></div>
+                                    <div class="timeline-card">
+                                        <div class="card card-outline-default">
+                                            <div class="card-header">
+                                                Card Badge
+
+                                                <div class="card-options">
+                                                    <a href="#" data-rel="collapse"><i
+                                                                class="fa fa-chevron-down"></i></a>
+                                                    <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                                    <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-badge">
+                                                <div class="card-badge-wrap left"> <!-- or add class .right -->
+                                                    <span class="badge badge-default">
+                                                        Default
+                                                    </span>
+                                                    <span class="badge badge-primary">
+                                                        Primary
+                                                    </span>
+                                                </div>
+                                                <div class="card-badge-ribbon right">
+                                                    <span>RIBBON</span>
+                                                </div>
+                                                <img src="assets/img/ui/landscape3.jpg" alt="Card image 2"
+                                                     class="card-img-top">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    Card Title 2
+
+                                                </h4>
+                                                <h6 class="card-subtitle">
+                                                    Card Sub-Title 2
+
+                                                </h6>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up
+                                                    the
+                                                    bulk of the card's content for card 2.
+                                                </p>
+                                                <a href="#" class="card-link">
+                                                    Card link
+                                                </a>
+                                                <a href="#" class="card-link">
+                                                    Another card link
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-badge info"><i class="fa fa-check"></i></div>
+                                    <div class="timeline-card">
+                                        <div class="card card-outline-default">
+                                            <div class="card-header">
+                                                Card Badge
+
+                                                <div class="card-options">
+                                                    <a href="#" data-rel="collapse"><i
+                                                                class="fa fa-chevron-down"></i></a>
+                                                    <a href="#" data-rel="reload"><i class="fa fa-refresh"></i></a>
+                                                    <a href="#" data-rel="close"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-badge">
+                                                <div class="card-badge-wrap left"> <!-- or add class .right -->
+                                                    <span class="badge badge-default">
+                                                        Default
+                                                    </span>
+                                                    <span class="badge badge-primary">
+                                                        Primary
+                                                    </span>
+                                                </div>
+                                                <div class="card-badge-ribbon right">
+                                                    <span>RIBBON</span>
+                                                </div>
+                                                <img src="assets/img/ui/white-stone-harbor.jpg"
+                                                     alt="Card image 2"
+                                                     class="card-img-top">
+                                            </div>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    Card Title 2
+
+                                                </h4>
+                                                <h6 class="card-subtitle">
+                                                    Card Sub-Title 2
+
+                                                </h6>
+                                                <p class="card-text">
+                                                    Some quick example text to build on the card title and make up
+                                                    the
+                                                    bulk of the card's content for card 2.
+                                                </p>
+                                                <a href="#" class="card-link">
+                                                    Card link
+                                                </a>
+                                                <a href="#" class="card-link">
+                                                    Another card link
+                                                </a>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div id="accordion" class="mb-5">
-            <h4 class="display-4">Accordion</h4>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $accordion; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="badges" class="mb-5">
-            <h4 class="display-4">Badges</h4>
-            <div class="row mb-4">
-                <div class="col-md-1">
-                    <?php echo $badges[ 'link' ]; ?>
-                </div>
-                <div class="col-md-1">
-                    <?php echo $badges[ 'button' ]; ?>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <?php foreach ( $badges[ 'colors' ] as $badge ): ?>
-                        <?php echo $badge; ?>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="breadcrumbs" class="mb-5">
-            <h4>Breadcrumbs</h4>
-            <div class="row">
-                <div class="col-md-10">
-                    <?php echo $breadcrumb; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="buttons" class="mb-5">
-            <h4 class="display-4">Buttons</h4>
-            <h6 class="display-6">Pick your style</h6>
-            <div class="row mb-4">
-                <div class="col-md-12 mb-2">
-                    <?php echo $buttons[ 'default' ]; ?>
-                    <?php echo $buttons[ 'active' ]; ?>
-                    <?php echo $buttons[ 'disabled' ]; ?>
-                </div>
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'outline' ]; ?>
-                    <?php echo $buttons[ 'rounded' ]; ?>
-                    <?php echo $buttons[ 'with-icon' ]; ?>
-                    <?php echo $buttons[ 'only-icon' ]; ?>
-                </div>
-            </div>
-            <h6 class="display-6">Pick your size</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php foreach ( $buttons[ 'sizes' ] as $button ): ?>
-                        <?php echo $button; ?>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-            <h6 class="display-6">Pick your color</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php foreach ( $buttons[ 'colors' ] as $button ): ?>
-                        <?php echo $button; ?>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Popover</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'popover' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Tooltip</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'tooltip' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Button Grouped</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'group' ]; ?>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="toolbars" class="mb-5">
-            <h4 class="display-4">Toolbar</h4>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'button-toolbar' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Nesting Toolbar</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'nesting-toolbar' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Mixed Toolbar</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'mixed-toolbar' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Vertical Variation</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $buttons[ 'vertical' ]; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="links" class="mb-5">
-            <h4 class="display-4">Links</h4>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php foreach ( $buttons[ 'colors' ] as $button ): ?>
-                        <?php echo $button->contextLink(); ?>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="cards" class="mb-5">
-            <h4 class="display-4">Cards</h4>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'basic' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards with Image Overlay</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'with-overlay' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards with Custom Heading</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'with-heading' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards with Navigation</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'with-navigation' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards with List Group</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'with-list-group' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards Group</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'group' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards Deck</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'deck' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Cards Columns</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $cards[ 'columns' ]; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="carousel" class="mb-5">
-            <h4 class="display-4">Carousel</h4>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $carousel; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="dropdowns" class="mb-5">
-            <h4 class="display-4">Dropdowns</h4>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $dropdowns[ 'basic' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Split Button Dropdown</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $dropdowns[ 'split-menu' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Dropup Variation</h6>
-            <div class="row">
-                <div class="col-md-2">
-                    <?php echo $dropdowns[ 'basic' ]->dropup(); ?>
-
-                </div>
-                <div class="col-md-2">
-                    <?php echo $dropdowns[ 'split-menu' ]->dropup(); ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="forms" class="mb-5">
-            <h4 class="display-4">Forms</h4>
-
-            <h6 class="display-6">Inputs</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $forms[ 'inputs' ]; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="jumbotron" class="mb-5">
-            <h4 class="display-4">Jumbotron</h4>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $jumbotron[ 'basic' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Fluid Jumbotron</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $jumbotron[ 'basic' ]->fluid(); ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Jumbotron with Image Background</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $jumbotron[ 'image' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Jumbotron with Video Background</h6>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $jumbotron[ 'video' ]; ?>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="list-group" class="mb-5">
-            <h4 class="display-4">List Group</h4>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $listGroup; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="modal" class="mb-5">
-            <h4 class="display-4">Modal</h4>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#example-modal">
-                        Launch demo modal
-                    </button>
-                    <?php echo $modal; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="navs" class="mb-5">
-            <h4 class="display-4">Navs</h4>
-
-            <h6 class="display-6">Base Nav</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $navs[ 'base' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Pills Nav</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $navs[ 'pills' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Bullets Nav</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $navs[ 'bullets' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Tabs Nav</h6>
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <?php echo $navs[ 'tabs' ]; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="navbar" class="mb-5">
-            <h4 class="display-4">Navbar</h4>
-
-            <div class="row mb-2">
-                <div class="col-md-12">
-                    <?php echo $navbar; ?>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <?php echo $navbar->dark()->bgPrimary(); ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="pagination" class="mb-5">
-            <h4 class="display-4">Pagination</h4>
-
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <?php echo $pagination; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="progress" class="mb-5">
-            <h4 class="display-4">Progress</h4>
-
-            <h6 class="display-6">Basic Progress</h6>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <?php echo $progress[ 'basic' ]; ?>
-                </div>
-            </div>
-
-            <h6 class="display-6">Multiple Progress</h6>
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <?php echo $progress[ 'multiple' ]; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="table" class="mb-5">
-            <h4 class="display-4">Table</h4>
-
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <?php echo $table; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="table" class="mb-5">
-            <h4 class="display-4">Embed</h4>
-
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <?php echo $embed; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="media" class="mb-5">
-            <h4 class="display-4">Media</h4>
-
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <?php echo $media; ?>
-                </div>
-            </div>
-        </div>
-
-        <div id="image" class="mb-5">
-            <h4 class="display-4">Image</h4>
-
-            <div class="row mb-5">
-                <div class="col-md-3">
-                    <p class="mb-2">Image Rounded</p>
-                    <?php echo $image->rounded(); ?>
-                </div>
-
-                <div class="col-md-3">
-                    <p class="mb-2">Image Circle</p>
-                    <?php echo $image->circle(); ?>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
