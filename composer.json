@@ -1,12 +1,13 @@
 {
-    "name": "o2system/o2system",
-    "description": "O2System PHP Framework.",
-    "keywords": ["framework", "o2system","boilerplate"],
+    "name": "o2system/webrestful",
+    "description": "O2System Framework Web-Restful Application Boilerplate.",
+    "keywords": ["framework", "o2system"],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "o2system/framework": "*"
+        "o2system/framework": "*",
+        "phpoffice/phpexcel": "^1.8"
     },
     "autoload": {
         "psr-4": {

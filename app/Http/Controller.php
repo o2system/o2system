@@ -29,7 +29,7 @@ class Controller extends \O2System\Framework\Http\Controller
     public function __construct()
     {
         presenter()->meta->title->prepend( 'O2System5' );
-        presenter()->meta->offsetSet( 'generator', 'O2CMS - Liquid Content Management System' );
+        presenter()->meta->offsetSet( 'generator', 'O2System PHP Framework' );
         language()->loadFile( 'app' );
         presenter()->store( 'page', new Page() );
 
