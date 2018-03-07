@@ -7,7 +7,7 @@
 footer{
 	position: relative;
 	padding: 35px 20px;
-	background: #f8f8f8;
+	border-top: 1px solid rgba(120, 130, 140, 0.13);
 
 	ul{
 		margin: 25px auto 35px;
@@ -31,4 +31,15 @@ footer{
 		color: $gray-light;
 	}
 
+}
+
+@media(max-width:767px) {
+	footer{
+		ul{
+			li{
+				margin: 1rem !important;
+				display: block !important;
+			}
+		}
+	}
 }

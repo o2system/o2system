@@ -13,7 +13,7 @@
 $database[ 'default' ] = [
     'driver'       => 'mysql',
     'dsn'          => '',
-    'hostname'     => '127.0.0.1',
+    'hostname'     => 'localhost',
     'port'         => 3306,
     'username'     => '',
     'password'     => '',

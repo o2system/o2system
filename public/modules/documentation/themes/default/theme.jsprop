@@ -1,0 +1,13 @@
+{
+  "name": "Documentation",
+  "version": "1.0.0",
+  "copyright": "Copyright © Teguh Rianto",
+  "description": "Documentation Module Template",
+  "created": "01-03-2017",
+  "authors": {
+    "name": "Teguh Rianto",
+    "email": "teguh@o2system.io",
+    "homepage": "http:\/\/www.o2system.io",
+    "role": "Web Designer"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{$meta->title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    {{$assets->head}}
+</head>
+<body class="page-dashboard fix-header fix-sidebar">
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+</div>
+
+<section class="login-register">
+    <div class="login-box card bg-transparent border-0">
+        <div class="card-body">
+            {{$partials->content}}
+        </div>
+
+        <div class="card-footer bg-transparent border-0 text-center">
+            Copyright &copy; 2011 - {{date('Y')}}, O2System Framework
+        </div>
+    </div>
+</section>
+
+{{$assets->body}}
+</body>
+</html>

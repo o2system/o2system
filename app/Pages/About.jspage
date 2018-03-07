@@ -1,0 +1,10 @@
+{
+  "settings":{
+    "title":"About Framework"
+  },
+  "vars":{
+    "title":"About Framework",
+  	"username":"zimam",
+  	"products":[{"name":"Tas","price":1000},{"name":"Tas","price":1000}]
+  }
+}

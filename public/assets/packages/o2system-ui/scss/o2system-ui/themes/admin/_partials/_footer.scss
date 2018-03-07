@@ -1,0 +1,37 @@
+.footer {
+    bottom: 0;
+    color: $gray-dark;
+    left: 0px;
+    padding: 10px 15px;
+    position: absolute;
+    right: 0;
+    border-top: 1px solid $border;
+    background: $white;
+    font-size: 0.7rem;
+}
+
+@media(min-width:1024px) {
+   .footer{
+        left: 240px;
+    }
+}
+
+@media(max-width:1023px) {
+   .footer{
+        left: 60px;
+  	}
+}
+
+@media(min-width:768px) {
+	.mini-sidebar {
+        .footer{
+            left: 60px;
+        }
+    }
+}
+
+@media(max-width:767px) {
+	.footer{
+        left: 0px;
+    }
+}

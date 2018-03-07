@@ -1,0 +1,25 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Teguh Rianto
+ * @copyright      Copyright (c) http://teguhrianto.com 
+*/
+.form-banner2{
+    .nav-tabs{
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        .nav-item{
+            border-top-left-radius: .25rem;
+            border-top-right-radius: .25rem;
+        }
+        .nav-link{
+            color: $gray-dark;
+            border-top: 5px solid transparent;
+
+            &.active{
+                border-top: 5px solid $primary-color;
+            }
+        }  
+    } 
+}

@@ -26,7 +26,7 @@ $presenter->enabled = true;
  *
  * @var bool
  */
-$presenter->debugToolBar = true;
+$presenter->debugToolBar = false;
 
 /**
  * Presenter Theme
@@ -78,11 +78,12 @@ $presenter->assets = [
         'packages' => [
             'bootstrap' => [
                 'libraries' => [
-                    'popper',
-                    'tether'
+                    'popper'
                 ]
             ],
-            'o2system-ui'
+            'o2system-ui' => [
+                'themes' => 'multipurpose'
+            ]
         ]
     ],
 

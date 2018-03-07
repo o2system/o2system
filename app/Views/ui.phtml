@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-bg rounded-0 vertical-center text-center"
      style="background-image: url('assets/img/bg-ui.jpg');">
     <div class="container">
-        <img src="assets/img/logo/logo-white-200px.png" style="margin: 50px 0px" class="logo">
+        <img src="./assets/img/logo/logo-white-200px.png" style="margin: 50px 0px" class="logo">
         <h1 class="display-4 text-uppercase">
             O2System User Interface
         </h1>
@@ -232,7 +232,7 @@
                         </div>
                     </div>
 
-                    <p class="category">Cards with Badges and Ribbons</p>
+                    <p class="category">Cards Customs</p>
                     <div class="row mb-4">
                         <div class="col-md-12">
                             <?php echo $cards[ 'customs' ]; ?>
@@ -357,42 +357,6 @@
                         </div>
 
                     </div>
-
-                    <p class="category">Cards Carousel</p>
-                    <div class="row mb-4">
-                        <div class="col-md-12">
-                            <div class="card card-outline-default">
-                                <div class="card-carousel">
-                                    <?php echo $carousel; ?>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        Card Title 4
-
-                                    </h4>
-                                    <h6 class="card-subtitle">
-                                        Card Sub-Title 4
-
-                                    </h6>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the
-                                        card's content for card 4.
-                                    </p>
-                                    <a href="#" class="card-link">
-                                        Card link
-                                    </a>
-                                    <a href="#" class="card-link">
-                                        Another card link
-                                    </a>
-
-                                </div>
-                                <div class="card-footer">
-                                    4 days ago
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div id="carousel" class="mb-5">
                     <h4>
@@ -437,176 +401,7 @@
                     <p class="category">Inputs</p>
                     <div class="row">
                         <div class="col-md-12">
-                            <form role="form">
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="text">
-                                        Text
-                                    </label>
-                                    <input class="form-control" type="text" name="text" id="input-text"
-                                           placeholder="text">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="search">
-                                        Search
-                                    </label>
-                                    <input class="form-control" type="search" name="search" id="input-search"
-                                           placeholder="search here">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="email">
-                                        Email Address
-                                    </label>
-                                    <input class="form-control" type="email" name="email" id="input-email"
-                                           placeholder="email@domain.com">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="password">
-                                        Password
-                                    </label>
-                                    <input class="form-control" type="password" name="password" id="input-password"
-                                           placeholder="password">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="url">
-                                        Url
-                                    </label>
-                                    <input class="form-control" type="url" name="url" id="input-url"
-                                           placeholder="https://o2system.id">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="tel">
-                                        Telephone
-                                    </label>
-                                    <input class="form-control" type="tel" name="tel" id="input-tel"
-                                           placeholder="1-(777)-777-777">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="number">
-                                        Number
-                                    </label>
-                                    <input class="form-control" type="number" name="number" id="input-number"
-                                           placeholder="23">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="datetime-local">
-                                        Date and Time
-                                    </label>
-                                    <input class="form-control" type="datetime-local" name="datetime-local"
-                                           id="input-datetime-local" value="2017-07-21T17:07:35">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="date">
-                                        Date
-                                    </label>
-                                    <input class="form-control" type="date" name="date" id="input-date"
-                                           value="2017-07-21">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="month">
-                                        Month
-                                    </label>
-                                    <input class="form-control" type="month" name="month" id="input-month"
-                                           value="2017-07">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="week">
-                                        Week
-                                    </label>
-                                    <input class="form-control" type="week" name="week" id="input-week"
-                                           value="2017-W29">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="time">
-                                        Time
-                                    </label>
-                                    <input class="form-control" type="time" name="time" id="input-time"
-                                           value="17:07:35">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="color">
-                                        Color
-                                    </label>
-                                    <input class="form-control" type="color" name="color" id="input-color"
-                                           value="#f00000">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="range">
-                                        Range
-                                    </label>
-                                    <input class="form-control" type="range" name="range" id="input-range"
-                                           value="10"
-                                           min="0" max="100">
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="custom-file">
-                                        <input class="form-control custom-file-input" type="file" name="file"
-                                               id="input-file" value="">
-                                        <span class="custom-file-control"></span>
-
-                                    </label>
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="custom-control custom-checkbox">
-                                        <input class="form-control custom-control-input" type="checkbox"
-                                               name="checkbox"
-                                               id="input-checkbox" value="1">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Checkbox</span>
-
-                                    </label>
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="custom-control custom-radio">
-                                        <input class="form-control custom-control-input" type="radio" name="radio"
-                                               id="input-radio" value="1">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Radio</span>
-
-                                    </label>
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="select">
-                                        Select
-                                    </label>
-                                    <select class="form-control" name="select" id="select-select">
-                                        <option value="yes">
-                                            Yes
-                                        </option>
-                                        <option value="no" selected>
-                                            No
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="select">
-                                        Multiple Select
-                                    </label>
-                                    <select class="form-control" name="select" id="select-select" multiple>
-                                        <option value="yes">
-                                            Yes
-                                        </option>
-                                        <option value="no" selected>
-                                            No
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="textarea">
-                                        Textarea
-                                    </label>
-                                    <textarea class="form-control" name="textarea"
-                                              id="textarea-textarea"></textarea>
-                                </div>
-                                <div class="form-group" role="group">
-                                    <label class="form-label-control" for="input-group">
-                                        Input Group
-                                    </label>
-                                    <div class="input-group" role="group">
-                                        <span class="input-group-addon">@</span>
-                                        <input class="form-control" name="group-text" id="input-group-text">
-                                    </div>
-                                </div>
-                            </form>
+                            <?php echo $forms['inputs']; ?>
                         </div>
                     </div>
                 </div>

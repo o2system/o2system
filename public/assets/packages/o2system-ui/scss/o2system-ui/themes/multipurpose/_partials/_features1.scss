@@ -1,0 +1,121 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Teguh Rianto
+ * @copyright      Copyright (c) http://teguhrianto.com 
+*/
+.feature1-box {
+	.card-body {
+		padding: 40px;
+	}
+}
+.feature2-box {
+	.card-body {
+		padding: 40px;
+	}
+}
+.feature3-box {
+	.card{
+		margin-bottom: 1.5rem;
+	}
+	.card-body {
+		padding: 40px;
+		.feature-icon-space {
+			padding: 0px 40px 20px 0px;
+			font-size: 3rem;
+		}
+	}
+}
+.feature4-box {
+	.feature-icon-round {
+		font-size: 45px;
+		width: 80px;
+		color: $white;
+		line-height: 80px;
+		text-align: center;
+		display: inline-block;
+		margin: 20px 0 30px;
+		border-radius: 100%;
+	}
+}
+.feature5-box {
+	.card-body {
+		padding: 30px;
+		.feature-icon-space {
+			padding: 0px 30px 20px 0px;
+			font-size: 45px;
+			margin: 0px;
+		}
+		p {
+			margin-bottom: 0px;
+		}
+	}
+}
+.feature6-box {
+	-webkit-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+	.card-body {
+		padding: 30px;
+		.link {
+			color: $white;
+			&:hover {
+				color: $gray-dark;
+			}
+		}
+		p {
+			opacity: 0.8;
+		}
+	}
+	&:hover {
+		-webkit-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+.feature7-box {
+	margin-bottom: 30px;
+}
+.feature8 {
+	.list-block {
+		padding: 0;
+		margin: 0;
+		li {
+			font-weight: 400;
+			color: $gray-dark;
+			list-style: none;
+			padding: 5px 0;
+		}
+	}
+}
+.feature9-box {
+	.card-body {
+		padding: 40px 40px 0px;
+		.feature-icon-space {
+			padding: 0px 40px 20px 0px;
+			font-size: 3rem;
+		}
+	}
+}
+.feature10-box {
+	padding: 100px 20px;
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto;
+	color: $white;
+	i{
+		font-size: 3rem;
+	}
+	p {
+		margin: 30px 0 40px;
+	}
+	.box-title {
+		color: $white;
+		font-weight: 400;
+	}
+}
+
+.feature-icon-space {
+    margin: 20px 0;
+}

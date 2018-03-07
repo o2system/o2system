@@ -204,12 +204,12 @@ class Ui extends Controller
         $cards[ 'basic' ]->createImage( PATH_THEME . 'assets/img/ui/white-stone-harbor.jpg', 'White Stone Harbor' );
         $cards[ 'basic' ]->header->textContent->push( 'Card Header Title' );
 
-        $block = $cards[ 'basic' ]->createBody();
-        $block->setTitle( 'White Stone Harbour' );
-        $block->setSubTitle( 'Karimun Java' );
-        $block->setParagraph( 'The freedom memorial of someone that i love anchored!' );
-        $block->createLink( 'Card link', '#' );
-        $block->createLink( 'Another card link', '#' );
+        $body = $cards[ 'basic' ]->createBody();
+        $body->setTitle( 'White Stone Harbour' );
+        $body->setSubTitle( 'Karimun Java' );
+        $body->setParagraph( 'The freedom memorial of someone that i love anchored!' );
+        $body->createLink( 'Card link', '#' );
+        $body->createLink( 'Another card link', '#' );
 
         $cards[ 'basic' ]->footer->textContent->push( '2 days ago' );
 
@@ -224,8 +224,8 @@ class Ui extends Controller
         $cards[ 'with-heading' ]->header->tagName = 'h3';
         $cards[ 'with-heading' ]->header->textContent->push( 'Custom Header' );
 
-        $block = $cards[ 'with-heading' ]->createBody();
-        $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' );
+        $body = $cards[ 'with-heading' ]->createBody();
+        $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' );
 
         $cards[ 'with-navigation' ] = new Components\Card();
         $headerNav = $cards[ 'with-navigation' ]->header->createNav();
@@ -233,25 +233,25 @@ class Ui extends Controller
         $headerNav->createLink( 'Link', '#' );
         $headerNav->createList( ( new Components\Card\Header\Nav\Link( 'Disabled', '#' ) )->disabled() );
 
-        $block = $cards[ 'with-navigation' ]->createBody();
-        $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' );
+        $body = $cards[ 'with-navigation' ]->createBody();
+        $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content.' );
 
         $cards[ 'with-list-group' ] = new Components\Card();
         $cards[ 'with-list-group' ]->createImage( PATH_THEME . 'assets/img/ui/stone-mask-hut.jpg', 'Stone Mask Hut' );
 
-        $block = $cards[ 'with-list-group' ]->createBody();
-        $block->setTitle( 'Stone Mask Hut' );
-        $block->setSubTitle( 'Karimun Java' );
-        $block->setParagraph( 'The hut where the longing for a freedom from someone i love is laid off.' );
+        $body = $cards[ 'with-list-group' ]->createBody();
+        $body->setTitle( 'Stone Mask Hut' );
+        $body->setSubTitle( 'Karimun Java' );
+        $body->setParagraph( 'The hut where the longing for a freedom from someone i love is laid off.' );
 
         $list = $cards[ 'with-list-group' ]->createListGroup();
         $list->createList( 'Everything is beautiful' );
         $list->createList( 'In His Time' );
         $list->createList( 'I\'ll set you free' );
 
-        $block = $cards[ 'with-list-group' ]->createBody();
-        $block->createLink( 'Card link', '#' );
-        $block->createLink( 'Another card link', '#' );
+        $body = $cards[ 'with-list-group' ]->createBody();
+        $body->createLink( 'Card link', '#' );
+        $body->createLink( 'Another card link', '#' );
 
         $cards[ 'group' ] = new Components\Card\Group();
         foreach ( range( 1, 3 ) as $number ) {
@@ -259,12 +259,12 @@ class Ui extends Controller
             $card->createImage( PATH_THEME . 'assets/img/ui/landscape' . $number . '.jpg', 'Card image ' . $number );
             $card->header->textContent->push( 'Featured ' . $number );
 
-            $block = $card->createBody();
-            $block->setTitle( 'Card Title ' . $number );
-            $block->setSubTitle( 'Card Sub-Title ' . $number );
-            $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
-            $block->createLink( 'Card link', '#' );
-            $block->createLink( 'Another card link', '#' );
+            $body = $card->createBody();
+            $body->setTitle( 'Card Title ' . $number );
+            $body->setSubTitle( 'Card Sub-Title ' . $number );
+            $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+            $body->createLink( 'Card link', '#' );
+            $body->createLink( 'Another card link', '#' );
             $card->footer->textContent->push( $number . ' days ago' );
         }
 
@@ -274,12 +274,12 @@ class Ui extends Controller
             $card->createImage( PATH_THEME . 'assets/img/ui/landscape' . $number . '.jpg', 'Card image ' . $number );
             $card->header->textContent->push( 'Featured ' . $number );
 
-            $block = $card->createBody();
-            $block->setTitle( 'Card Title ' . $number );
-            $block->setSubTitle( 'Card Sub-Title ' . $number );
-            $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
-            $block->createLink( 'Card link', '#' );
-            $block->createLink( 'Another card link', '#' );
+            $body = $card->createBody();
+            $body->setTitle( 'Card Title ' . $number );
+            $body->setSubTitle( 'Card Sub-Title ' . $number );
+            $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+            $body->createLink( 'Card link', '#' );
+            $body->createLink( 'Another card link', '#' );
 
             $card->footer->textContent->push( $number . ' days ago' );
         }
@@ -289,12 +289,12 @@ class Ui extends Controller
             $card = $cards[ 'columns' ]->createCard();
             $card->createImage( PATH_THEME . 'assets/img/ui/landscape' . $number . '.jpg', 'Card image ' . $number );
 
-            $block = $card->createBody();
-            $block->setTitle( 'Card Title ' . $number );
-            $block->setSubTitle( 'Card Sub-Title ' . $number );
-            $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
-            $block->createLink( 'Card link', '#' );
-            $block->createLink( 'Another card link', '#' );
+            $body = $card->createBody();
+            $body->setTitle( 'Card Title ' . $number );
+            $body->setSubTitle( 'Card Sub-Title ' . $number );
+            $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+            $body->createLink( 'Card link', '#' );
+            $body->createLink( 'Another card link', '#' );
 
             $card->footer->textContent->push( $number . ' days ago' );
         }
@@ -303,28 +303,28 @@ class Ui extends Controller
             $card = $cards[ 'columns' ]->createCard();
             $card->header->textContent->push( 'Featured ' . $number );
 
-            $block = $card->createBody();
-            $block->setTitle( 'Card Title ' . $number );
-            $block->setSubTitle( 'Card Sub-Title ' . $number );
-            $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
-            $block->createLink( 'Card link', '#' );
-            $block->createLink( 'Another card link', '#' );
+            $body = $card->createBody();
+            $body->setTitle( 'Card Title ' . $number );
+            $body->setSubTitle( 'Card Sub-Title ' . $number );
+            $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+            $body->createLink( 'Card link', '#' );
+            $body->createLink( 'Another card link', '#' );
 
             $card->footer->textContent->push( $number . ' days ago' );
         }
 
         $card = $cards[ 'columns' ]->createCard();
-        $block = $card->createBody();
+        $body = $card->createBody();
 
-        $blockquote = $block->createBlockquote( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' );
-        $blockquote->setAuthor( 'Some Person' )->setSource( 'From Source' );
+        $bodyquote = $body->createBlockquote( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' );
+        $bodyquote->setAuthor( 'Some Person' )->setSource( 'From Source' );
 
         $card = $cards[ 'columns' ]->createCard( Components\Card::PRIMARY_CONTEXT, true );
-        $block = $card->createBody();
-        $blockquote = $block->createBlockquote( 'New Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' );
-        $blockquote->setAuthor( 'Some Person', '#' )->setSource( 'From Source', '#' );
+        $body = $card->createBody();
+        $bodyquote = $body->createBlockquote( 'New Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' );
+        $bodyquote->setAuthor( 'Some Person', '#' )->setSource( 'From Source', '#' );
 
-        $cards[ 'customs' ] = new Components\Card\Deck();
+        $cards[ 'customs' ] = new Components\Card\Columns();
 
         // Card with badge
         $card = $cards[ 'customs' ]->createCard();
@@ -333,12 +333,12 @@ class Ui extends Controller
         $card->createBadge( 'Left' );
         $card->createBadge( 'Right', Components\Card\Badge::SUCCESS_CONTEXT, Components\Card\Badge::RIGHT_BADGE );
 
-        $block = $card->createBody();
-        $block->setTitle( 'Card with Badges' );
-        $block->setSubTitle( 'Card badges on left and right' );
-        $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
-        $block->createLink( 'Card link', '#' );
-        $block->createLink( 'Another card link', '#' );
+        $body = $card->createBody();
+        $body->setTitle( 'Card with Badges' );
+        $body->setSubTitle( 'Card badges on left and right' );
+        $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+        $body->createLink( 'Card link', '#' );
+        $body->createLink( 'Another card link', '#' );
 
         // Card with badge
         $card = $cards[ 'customs' ]->createCard();
@@ -347,12 +347,58 @@ class Ui extends Controller
         $card->createRibbon( 'Left' );
         $card->createRibbon( 'Right', Components\Card\Ribbon::SUCCESS_CONTEXT, Components\Card\Ribbon::RIGHT_RIBBON );
 
-        $block = $card->createBody();
-        $block->setTitle( 'Card with Ribbons' );
-        $block->setSubTitle( 'Card ribbons on left and right' );
-        $block->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
-        $block->createLink( 'Card link', '#' );
-        $block->createLink( 'Another card link', '#' );
+        $body = $card->createBody();
+        $body->setTitle( 'Card with Ribbons' );
+        $body->setSubTitle( 'Card ribbons on left and right' );
+        $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card ' . $number . '.' );
+        $body->createLink( 'Card link', '#' );
+        $body->createLink( 'Another card link', '#' );
+
+        // Card with Testimonial
+        $card = $cards[ 'customs' ]->createCard();
+        $body = $card->createBody();
+        $body->createTestimonial('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.');
+
+        $author = $body->createAuthor();
+        $author->setPhoto( PATH_THEME . 'assets/img/ui/zha-avatar.jpg' );
+        $author->setPerson('Zha Lim', 'http://facebook.com/differentce');
+        $author->setJobTitle('Public Relation');
+        $author->setCompany('O2System Framework', 'http://o2system.id');
+
+        // Card with Product
+        $card = $cards[ 'customs' ]->createCard();
+        $card->createImage( PATH_THEME . 'assets/img/ui/landscape2.jpg', 'Card custom with product' );
+
+        $body = $card->createBody();
+        $body->setTitle('Card with Product');
+        $body->setSubTitle('Create a card for product');
+        $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card' );
+
+        //$product = $card->createProduct();
+        //$product->setName('Product Card');
+        //$product->setDescription('Some quick example text to build on the product card');
+        //$product->setPrice(100000, 'IDR');
+        //$product->setDiscount('10000', 'IDR');
+
+        // Card with Carousel
+        $card = $cards[ 'customs' ]->createCard();
+
+        $carousel = $card->createCarousel();
+        foreach ( range( 1, 3 ) as $number ) {
+            $slide = $carousel->slides->createSlide();
+
+            if ( $number == 1 ) {
+                $slide->active();
+            }
+
+            $slide->createImage( PATH_THEME . 'assets/img/ui/landscape' . $number . '.jpg',
+                'Landscape Photography ' . $number );
+        }
+
+        $body = $card->createBody();
+        $body->setTitle('Card with Carousel');
+        $body->setSubTitle( 'Create a card with multiple image carousel');
+        $body->setParagraph( 'Some quick example text to build on the card title and make up the bulk of the card\'s content for card' );
 
         /**
          * Carousel

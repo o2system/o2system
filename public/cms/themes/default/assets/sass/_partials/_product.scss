@@ -1,0 +1,27 @@
+.card-product{
+	text-align: center;
+	.card-title{
+		margin-bottom: 0;
+		font-size: 1.2rem;
+
+		a{
+			color: $gray-dark;
+
+			&:hover, &:focus{
+				color: $primary-color;
+			}
+		}
+	}
+
+	.card-price {
+		span.reguler {
+	    	color: $primary-color;
+	    	font-size: 1rem;
+	    }
+
+	    span.discount{
+	    	color: $gray-light;
+	    	font-size: 0.8rem;
+	    }
+	}
+}

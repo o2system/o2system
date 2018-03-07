@@ -8,6 +8,7 @@
  * @author         Steeve Andrian Salim
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
+
 // ------------------------------------------------------------------------
 
 use O2System\Kernel\Datastructures\Config;
@@ -49,7 +50,7 @@ $view->output = [
      *
      * @var bool
      */
-    'minify'   => false,
+    'minify'   => true,
 
     // --------------------------------------------------------------------
 

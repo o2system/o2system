@@ -160,7 +160,7 @@ $config[ 'uri' ][ 'permittedChars' ] = 'a-z 0-9~%.:_\-@#';
  *
  * @var string Usually fill with .html or .htm
  */
-$config[ 'uri' ][ 'suffix' ] = '.html';
+$config[ 'uri' ][ 'suffix' ] = '';
 
 /**
  * Security Encryption Key
@@ -190,27 +190,6 @@ $config[ 'security' ][ 'protection' ][ 'xss' ] = false;
  * @var bool
  */
 $config[ 'security' ][ 'protection' ][ 'csrf' ] = false;
-
-/**
- * Security Access Login Attempts
- *
- * Enables protection against brute force login attempts.
- *
- * @var bool
- */
-$config[ 'security' ][ 'access' ][ 'loginAttempts' ] = 3;
-
-/**
- * Security Access Login with REAL
- *
- * Enables protection against direct password and salt changes in the database.
- * REAL is a short from Re-Hash After Login. When set to TRUE, after access login
- * is successful the security access protocol will automatically update the successful access
- * password and salt.
- *
- * @var bool
- */
-$config[ 'security' ][ 'access' ][ 'realEnabled' ] = false;
 
 /**
  * Units Currency
@@ -245,7 +224,7 @@ $config[ 'cookie' ] = [
      *
      * @var int
      */
-    'prefix'   => 'o2_',
+    'prefix'   => 'o2',
 
     /**
      * Cookie Lifetime

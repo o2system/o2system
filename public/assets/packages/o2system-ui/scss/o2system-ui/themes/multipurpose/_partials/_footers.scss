@@ -1,0 +1,210 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Teguh Rianto
+ * @copyright      Copyright (c) http://teguhrianto.com 
+*/
+.footer1 {
+    color: $gray-light;
+    .topbar {
+        border-bottom: 1px dashed rgba(120, 130, 140, 0.13);
+        .navbar {
+            padding: 0px;
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $gray-light;
+                        display: block;
+                        padding: 15px 13px;
+                    }
+                    &:hover {
+                        .nav-link {
+                            color: $primary-color;
+                        }
+                    }
+                }
+                .nav-item.active {
+                    .nav-link {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    .middle {
+        padding: 40px 0;
+    }
+    .bottom-bar {
+        padding: 20px 0;
+        border-top: 1px solid rgba(120, 130, 140, 0.13);
+    }
+}
+.footer2 {
+    padding: 60px 0;
+    color: $gray-lighter;
+    .topbar {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+    }
+    .middle {
+        padding-top: 40px;
+    }
+    .link {
+        color: $gray-lighter;
+        padding: 10px 15px 10px 0;
+    }
+    .general-listing {
+        li {
+            a {
+                color: $gray-lighter;
+                i {
+                    font-size: 9px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .info-box {
+        .d-flex {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+        }
+
+        a{
+            color: $gray-lighter;
+        }
+    }
+    .subscribe-box {
+        background: rgba(120, 130, 140, 0.13);
+        padding: 25px;
+        .form-control {
+            background: transparent;
+            padding: 10px 0;
+            border: 0px;
+            border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+            color: $white;
+            border-radius: 0px;
+            &:focus {
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+}
+.footer3 {
+    padding-top: 50px;
+    color: $gray-light;
+    .topbar {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+        .input-group {
+            .form-control {
+                font-size: 16px;
+            }
+            .btn {
+                padding: 15px 20px;
+            }
+        }
+    }
+    .middle {
+        padding-top: 40px;
+    }
+    .thumb{
+        img{
+            width: 60px;
+            height: auto;
+        }
+    }
+    .general-listing {
+        li {
+            &:hover {
+                a {
+                    color: $white;
+                }
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .link {
+        color: $gray-light;
+        &:hover {
+            color: $white;
+        }
+    }
+    .bottom-bar {
+        background: rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        .link {
+            padding: 0 12px;
+        }
+    }
+}
+.footer4 {
+    padding: 50px 0;
+    .bottom-bar {
+        padding-top: 10px;
+        margin-top: 20px;
+        border-top: 1px solid rgba(120, 130, 140, 0.13);
+    }
+    .bottom-bar {
+        padding-top: 10px;
+        margin-top: 20px;
+        a {
+            color: $gray-light;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .social {
+        a {
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            border-radius: 50%;
+            &:hover {
+                background: $primary-color;
+            }
+        }
+    }
+}
+.footer5 {
+    .form-control {
+        background: $white;
+    }
+    .social-links {
+        margin: 20px 0;
+        a {
+            color: $gray-light;
+            opacity: 0.5;
+            padding: 0 15px 0 0;
+            &:hover {
+                color: $primary-color;
+                opacity: 1;
+            }
+        }
+    }
+}
+.footer6 {
+    padding: 50px 0;
+    font-size: 1rem;
+    color: $gray-light;
+    .round-social {
+        a {
+            background: rgba(120, 130, 140, 0.13);
+            color: $gray-light;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .copyright{
+        border-top: 1px solid rgba(120, 130, 140, 0.13);
+    }
+}

@@ -1,0 +1,235 @@
+.col-sortable{
+    cursor: pointer;
+}
+table{
+    .form-check{
+        margin: 0;
+        height: 22px;
+        width: 17px;
+
+        /* .custom-control{
+            margin: 0;
+            padding: 0;
+        } */
+    }
+}
+/*******************
+Table-Data Table
+******************/
+.dt-buttons{
+    display: inline-block;
+    padding-top: 5px;
+    .dt-button{
+        padding: 5px 15px;
+        border-radius: 3px;
+        background: $primary-color;
+        color:$white;
+        margin-right: 3px;
+        &:hover{
+            background: $black;
+        }
+    }
+}
+.dataTables_info, .dataTables_length{
+    display: inline-block;
+}
+.dataTables_filter{
+    float:right;
+    input{
+        /* border:1px solid $form-brd; */
+    }
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    background: transparent;
+}
+
+table.dataTable thead .sorting_asc:after {
+    content: "\f0de";
+    margin-left: 10px;
+    font-family: fontawesome;
+    cursor: pointer;
+}
+
+table.dataTable thead .sorting_desc:after {
+    content: "\f0dd";
+    margin-left: 10px;
+    font-family: fontawesome;
+    cursor: pointer;
+}
+
+table.dataTable thead .sorting:after {
+    content: "\f0dc";
+    margin-left: 10px;
+    font-family: fontawesome;
+    cursor: pointer;
+    color: rgba(50, 50, 50, .5);
+}
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    text-align: right;
+    padding-top: 0.25em
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    *cursor: hand;
+    color: $gray-dark;
+    border: 1px solid transparent;
+    border-radius: 2px
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: $white;
+    border: 1px solid $brand-info;
+    background-color: $brand-info;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    cursor: default;
+    color: $gray-dark;
+    border: 1px solid transparent;
+    background: transparent;
+    box-shadow: none
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white;
+    border: 1px solid $brand-primary;
+    background-color: $brand-primary;
+
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+    outline: none;
+    background-color: $gray-dark;
+
+}
+.dataTables_wrapper .dataTables_paginate .ellipsis {
+    padding: 0 1em
+}
+/*******************
+Table- responsive
+******************/
+.tablesaw-bar .btn-group label{
+    color:$gray-dark;
+}
+
+/*******************
+Table- editable table
+******************/
+.dt-bootstrap{
+    display: block;
+}
+.paging_simple_numbers{
+    .pagination{
+        .paginate_button{
+            padding: 0px;
+            background: $white;
+            &:hover{
+                background: $white;
+            }
+            a{
+              padding: 5px 10px;
+                border-radius: 3px;
+                border:0px;
+            }
+            &.active a, &:hover a{
+                background: $brand-info;
+                color:$white;
+
+            }
+        }
+    }
+
+}
+
+.tab-content{
+    .dataTables_info, .dataTables_length {
+        display: inline-block;
+        width: 40%;
+    }
+
+    .dataTables_wrapper .dataTables_paginate{
+        float: none;
+        display: inline-block;
+        width: 60%;
+    }
+}
+
+.grid-table{
+    .date{
+        background: #ddd;
+        text-align: center;
+        font-size: 18px;
+        height: 100px;
+        padding-top: 20px;
+
+        h4{
+            font-size: 28px;
+            margin-bottom: 0;
+        }
+    }
+    .avatar{
+        @include avatar(83px);
+        margin-right: 0;
+        border-radius: 3px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .avatar-60{
+        @include avatar(60px);
+        margin-right: 0;
+        border-radius: 3px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .avatar-115{
+        @include avatar(115px);
+        margin-right: 0;
+        border-radius: 3px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .grid-heading{
+        padding-bottom: 7px;
+        border-bottom: 1px solid #eee;
+        h3{
+            margin-top: 3px;
+            font-size: 20px;
+
+            span{
+                font-weight: 400;
+                font-size: 16px;
+                color: #888;
+            }
+        }
+    }
+
+    .grid-footer{
+
+        span{
+            color: #1A8FBF;
+
+            &.not{
+                color: #DF5D5D;
+            }
+        }
+
+        i{
+            margin-right: 5px;
+        }
+    }
+}

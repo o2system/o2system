@@ -4,9 +4,15 @@ body {
 	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase !important;
-    font-weight: 700 !important;
+h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.multipurpose{
+	h1, h2, h3, h4, h5, h6 {
+    	text-transform: none;
+    }
 }
 
 pre {
