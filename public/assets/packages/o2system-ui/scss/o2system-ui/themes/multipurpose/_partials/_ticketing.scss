@@ -1,0 +1,94 @@
+.bus{
+	border: 1px solid #ddd;
+	width: 100%;
+	padding: 0.5rem;
+	border-radius: 4px;
+
+	&.seat2-3, &.seat2-2{
+		.seats{
+			.seat{
+				&:nth-child(2) {
+			    	margin-right: 14.28571428571429%;
+			  	}
+			}
+		}
+	}
+
+	&.seat3-2{
+		.seats{
+			.seat{
+				&:nth-child(3) {
+			    	margin-right: 14.28571428571429%;
+			  	}
+			}
+		}
+	}
+}
+.seats {
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: nowrap;
+  	-ms-flex-pack: center !important;
+	justify-content: center !important;
+  	padding: 0;
+  	margin-bottom: 2px;
+
+  	.seat {
+	  	display: flex;
+	  	flex: 0 0 14.28571428571429%;
+	  	padding: 3px;
+	  	position: relative;
+
+	  	label {
+			border-radius: 4px;
+			background: $primary-color;
+			padding: 0;
+			width: 25px;
+			height: 25px;
+			margin-bottom: 0.1rem;
+			display: inline-block;
+			font-size: 0.7rem;
+		}
+
+		input[type="radio"] {
+			display: none !important;
+			+ {
+				label {
+					border-radius: 4px;
+					background: $primary-color;
+					text-align: center;
+					cursor: pointer;
+					display: inline-block;
+					padding: 4px;
+					color: $white;
+				}
+			}
+			&:hover {
+				+ {
+					label {
+
+					}
+				}
+			}
+			&:checked {
+				+ {
+					label {
+						background: $brand-success;
+
+						&:after{
+							background: none;
+						}
+					}
+				}
+			}
+			&:disabled{
+				+ {
+					label {
+						cursor: not-allowed;
+						background: $brand-danger;
+					}
+				}
+			}
+		}
+	}
+}

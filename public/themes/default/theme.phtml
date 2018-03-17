@@ -9,23 +9,24 @@
     <meta name="url" content="ui.html">
     <meta name="generator" content="O2CMS - Liquid Content Management System">
     <meta name="language" content="en-US">
-    <title>Landing - User Interface</title>
+    <title>Multipurpose</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     {{$assets->head}}
 </head>
-<body class="page-landing pb-0">
+<body class="multipurpose">
 
-    <div class="page-header">
-        {{$partials->header}}
-    </div>
+<div class="page-header fixed-top">
+    {{$partials->header}}
+</div>
 
-    <div id="page-content" class="page-content">
-        {{$partials->content}}
-    </div>
+<div id="page-content" class="page-content">
+    {{$partials->content}}
+</div>
 
-    <footer class="page-footer">
-        {{$partials->footer}}
-    </footer>
-    {{$assets->body}}
+<footer class="page-footer">
+    {{$partials->footer}}
+</footer>
+<a class="scroll-to-top" href="#top"><i class="fas fa-long-arrow-alt-up"></i>To Top</a>
+{{$assets->body}}
 </body>
 </html>

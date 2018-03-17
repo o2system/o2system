@@ -14,6 +14,9 @@ body {
 h6 {
     font-weight: 400;
 }
+a{
+	color: $gray-dark;
+}
 .title{
 	margin: 20px 0 15px;
 	font-size: 2rem;
@@ -148,3 +151,12 @@ section {
 	}
 }
 
+.table{
+	td, th{
+		vertical-align: middle;
+	}
+}
+
+select.form-control:not([size]):not([multiple]){
+	height: auto;
+}

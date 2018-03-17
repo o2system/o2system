@@ -1,0 +1,9 @@
+{
+  "settings":{
+    "title":"Page Example"
+  },
+  "vars":{
+    "title":"Page Example",
+    "key": "the value from Example.jspage"
+  }
+}

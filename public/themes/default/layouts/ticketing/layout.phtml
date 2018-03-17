@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{$meta->title}}</title>
+    <meta charset="UTF-8">
+    <meta name="module-controller" content="ui">
+    <meta name="module-parameter" content="app">
+    <meta name="subtitle" content="User Interface">
+    <meta name="url" content="ui.html">
+    <meta name="generator" content="O2CMS - Liquid Content Management System">
+    <meta name="language" content="en-US">
+    <title>Multipurpose</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    {{$assets->head}}
+</head>
+<body class="multipurpose">
+
+    <div class="page-header fixed-top">
+        {{$partials->header}}
+    </div>
+
+    <div id="page-content" class="page-content" style="padding-top: 76px;">
+        {{$partials->content}}
+    </div>
+
+    <footer class="page-footer">
+        {{$partials->footer}}
+    </footer>
+    <a class="scroll-to-top" href="#top"><i class="fas fa-long-arrow-alt-up"></i>To Top</a>
+    {{$assets->body}}
+</body>
+</html>

@@ -1,9 +1,0 @@
-{
-  "driver": "noodle",
-  "extension": ".tpl",
-  "assets":{
-    "packages":[
-     	"jstree"
-    ]
-  }
-}

@@ -206,30 +206,105 @@ sidebar navigation
         padding: 0px;
         li {
             list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-shrink: 0;
+            position: relative;
             a {
-                color: $white;
+                color: $gray-dark;
                 padding: 10px 35px 10px 15px;
                 display: block;
                 font-size: 0.8rem;
                 white-space: nowrap;
-                &.active,
-                &:hover {
+                &.active, &:hover {
+                    background-color: transparent;
+                }
+
+                &:hover{
+                    color: $gray-dark;
+                }
+
+                &:first-child{
+                    -webkit-box-flex: 1;
+                    -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
+                    width: 0;
+                }
+
+                &.sidebar-button{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    position: relative;
+                    -ms-flex-item-align: center;
+                    align-self: center;
+                    box-sizing: border-box;
+                    overflow: visible;
+                    padding: 2px 8px 3px 8px;
+                    height: 24px;
+                    margin-right: 8px;
+                    line-height: 18px;
+                    background-color: #f3f6f8;
+                    color: #4f748e;
+                    font-size: 12px;
+                    border-radius: 3px;
+                    border: 1px solid #c8d7e1;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-tap-highlight-color: rgba(46,68,83,0.2);
+                }
+            }
+
+            &:hover{
+                background-color: darken($sidebar, 5%);
+            }
+
+            &.active{
+                background-color: $primary-color;
+                a{
+                    background-color: transparent;
                     color: $white;
+
+                    i{
+                        color: $white;
+                    }
+
+                    &.sidebar-button{
+                        background-color: #f3f6f8;
+                        color: $primary-color;
+                    }
                 }
-                &.active {
-                    background-color: #304047;
-                }
-                &:hover {
-                    background-color: $primary-color;
+
+                ul{
+                    li{
+                        a{
+                            background-color: transparent;
+                        }
+
+                        &:hover, &.active{
+                            background-color: $primary-color;
+                            a{
+                                background-color: transparent;
+                                color: $white;
+
+                                i{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             ul {
-                background: rgba(0,0,0,.2);
+                background: none;
                 li {
                     a {
                         padding: 10px 35px 10px 40px;
                         i {
                             width: 25px;
+                            color: $gray-blue;
                         }
                     }
                     ul {
@@ -244,8 +319,12 @@ sidebar navigation
             &.nav-small-cap {
                 font-size: 0.7rem;
                 padding: 15px 14px 10px 20px;
-                color: $gray-lighter;
+                color: $gray-blue;
                 font-weight: 500;
+
+                &:hover{
+                    background-color: transparent;
+                }
             }
             &.nav-devider{
                 height: 1px;
@@ -268,7 +347,7 @@ sidebar navigation
             width: 25px;
             font-size: 1rem;
             display: inline-block;
-            color: $white;
+            color: $gray-blue;
         }
         img{
             display: inline-block;
@@ -290,7 +369,7 @@ sidebar navigation
         height: .4em;
         border-width: 1px 0 0 1px;
         border-style: solid;
-        border-color: $white;
+        border-color: $gray-blue;
         right: 1em;
         -webkit-transform: rotate(-45deg) translate(0, -50%);
         -ms-transform: rotate(-45deg) translate(0, -50%);
@@ -314,25 +393,28 @@ sidebar navigation
     -ms-transform: rotate(-135deg) translate(0, -50%);
     -o-transform: rotate(-135deg) translate(0, -50%);
     transform: rotate(-135deg) translate(0, -50%);
+    border-color: $white;
 }
 
 
 .right-sidebar{
     position: fixed;
-    right: -240px;
-    width: 240px;
-    display: none;
+    right: -270px;
+    width: 270px;
+    display: block;
     z-index: 1100;
     background: $white;
     padding-bottom: 20px;
     height: 100%;
     box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    top: 60px;
+    padding-bottom: 85px;
 
     .top-title{
         position: relative;
         padding: 15px;
-        background: #ddd;
+        background: darken($sidebar, 5%);
         z-index: 1100;
 
         h6{
@@ -344,19 +426,122 @@ sidebar navigation
         a{
             color: $gray-dark;
             font-size: 0.9rem;
+            position: absolute;
+            right: 5%;
+            top: 25%;
         }
+    }
+
+    .card{
+        margin-bottom: 0;
+        box-shadow: 0 -1px 0 #dce5ec,0 1px 0 #dce5ec;
+        margin-top: 1px;
+        position: relative;
+        border-radius: 0;
+        border: none;
+
+        .card-header{
+            border: none;
+            cursor: pointer;
+            border-radius: 0;
+            position: relative;
+
+            h5{
+                font-size: 0.8rem;
+                a{
+                    color: $gray-dark;
+                }
+            }
+
+            &[aria-expanded="false"]{
+                &:after {
+                    font-family: 'FontAwesome';
+                    content: "\f0d7";
+                    position: absolute;
+                    right: 5%;
+                    top: 25%;
+                }
+            }
+
+            &[aria-expanded="true"]{
+                &:after {
+                    font-family: 'FontAwesome';
+                    content: "\f0d8";
+                    position: absolute;
+                    right: 5%;
+                    top: 25%;
+                }
+
+                &:hover{
+                    background-color: transparent;
+                    h5{
+                        a{
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            &:hover{
+                h5{
+                    a{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .card-body{
+            padding: 0.5rem 1rem;
+        }
+
+    }
+
+    .dropzone{
+        border: 1px solid $sidebar;
     }
 }
 
 .show-rightside {
     right: 0px;
-    width: 240px;
+    width: 270px;
     display: block;
+}
+
+.editor-sidebar-toggle{
+    position: absolute;
+    width: 54px;
+    height: 50px;
+    top: 20%;
+    left: -48px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: $white;
+    color: $gray-dark;
+    font-size: 1.5rem;
+    box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
+}
+
+.editor-sidebar-showing{
+    .right-sidebar{
+        right: 0px;
+        width: 270px;
+        display: block;
+    }
 }
 
 /****************
 When click on sidebar toggler and also for tablet
 *****************/
+
+@media(min-width:1024px) {
+    .editor-sidebar-showing{
+        .main{
+            margin-right: 270px;
+        }
+    }
+}
 
 @media(min-width:768px) {
     .mini-sidebar{

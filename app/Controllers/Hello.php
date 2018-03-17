@@ -31,21 +31,6 @@ class Hello extends Controller
     {
         presenter()->page->setHeader( 'Hello World' );
 
-        view(
-            'hello',
-            [
-                'file' => new SplArrayObject(
-                    [
-                        'view'       => 'app/Views/hello.phtml',
-                        'controller' => 'app/Controllers/Hello.php',
-                    ]
-                ),
-            ]
-        );
-    }
-
-    public function sampleCamelCase()
-    {
-        print_out( __METHOD__ );
+        view('hello');
     }
 }

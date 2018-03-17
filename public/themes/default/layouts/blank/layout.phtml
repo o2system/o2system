@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{$meta->title}}</title>
+    <meta charset="UTF-8">
+    <meta name="module-controller" content="ui">
+    <meta name="module-parameter" content="app">
+    <meta name="subtitle" content="User Interface">
+    <meta name="url" content="ui.html">
+    <meta name="generator" content="O2CMS - Liquid Content Management System">
+    <meta name="language" content="en-US">
+    <title>Multipurpose</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    {{$assets->head}}
+</head>
+<body class="multipurpose">
+
+<div class="page-header fixed-top">
+    {{$partials->header}}
+</div>
+
+<div id="page-content" class="page-content">
+    <div class="banner">
+        <div class="jumbotron jumbotron-bg text-center rounded-0" style="background-image: url('assets/img/bg-galaxy.jpg');">
+            <div class="container">
+                <h1 class="pt-5">
+                    {{$page->title}}
+                </h1>
+                <p class="lead">
+                    {{$page->description}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="section-basic">
+        <div class="container">
+            {{$partials->content}}
+        </div>
+    </section>
+</div>
+
+<footer class="page-footer">
+    {{$partials->footer}}
+</footer>
+<a class="scroll-to-top" href="#top"><i class="fas fa-long-arrow-alt-up"></i>To Top</a>
+{{$assets->body}}
+</body>
+</html>

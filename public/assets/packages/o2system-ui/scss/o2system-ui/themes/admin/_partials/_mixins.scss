@@ -66,14 +66,14 @@
 }
 
 @mixin avatar($size){
-  width: $size;
-  height: $size;
-  margin-right: 10px;
-  overflow: hidden;
-  padding: 0;
+    width: $size;
+    height: $size;
+    margin-right: 10px;
+    overflow: hidden;
+    padding: 0;
 
-  img{
-    width: 100%;
-    height: auto;
-  }
+    img{
+        width: 100%;
+        height: auto;
+    }
 }

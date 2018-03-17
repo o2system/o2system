@@ -113,7 +113,7 @@ define( 'PATH_ROOT', dirname( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR );
  *
  * Ensure the current directory is pointing to the front controller's directory
  */
-chdir( __DIR__ );
+chdir( __DIR__ . DIRECTORY_SEPARATOR );
 
 /*
 |--------------------------------------------------------------------------
@@ -126,7 +126,6 @@ chdir( __DIR__ );
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-
 require __DIR__ . '/../vendor/autoload.php';
 
 /*

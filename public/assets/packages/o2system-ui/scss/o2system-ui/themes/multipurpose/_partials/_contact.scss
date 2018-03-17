@@ -1,0 +1,45 @@
+.contact1{
+	.form-control {
+	    padding: .75rem;
+	    border: 2px solid rgba(120, 130, 140, 0.13);
+	    font-size: 1rem;
+	}
+}
+
+.contact2 {
+	padding: 60px 0;
+	margin-bottom: 170px;
+	background-position: center top;
+	
+	.form-control {
+	    padding: .75rem;
+	    border: 2px solid rgba(120, 130, 140, 0.13);
+	    font-size: 1rem;
+	}
+	.detail-wrapper {
+		padding: 40px;
+		.round-social {
+			margin-top: 100px;
+		}
+		.round-social.light {
+			a {
+				background: transparent;
+				color: $white;
+				border: 2px solid $white;
+				margin: 0 7px;
+				height: 49px;
+				width: 49px;
+				line-height: 49px;
+			}
+		}
+	}
+	.contact-container {
+		position: relative;
+		top: 200px;
+		.links {
+			a {
+				color: $primary-color;
+			}
+		}
+	}
+}

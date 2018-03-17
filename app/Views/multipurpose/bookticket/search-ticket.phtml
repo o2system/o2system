@@ -1,0 +1,282 @@
+<div class="static-slider-type-2" style="background-color: #0064D2;">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+        	<div class="col-md-6">
+        		<i class="fa fa-arrow-circle-right"></i>
+	            <strong>
+	                Malang
+	            </strong>
+	            ke
+	            <strong>
+	                Denpasar
+	            </strong>
+	            <br>
+	            Selasa, 06 Maret 2018 | 1 Dewasa
+        	</div>
+        	<div class="col-md-6 text-right">
+        		<button class="btn btn-outline-light" data-toggle="collapse" data-target="#search-ticket"><i class="fa fa-search"></i> Ganti Pencarian</button>
+        	</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="collapse" id="search-ticket">
+        <div class="card mt-3 mb-0">
+            <div class="card-body">
+                <form method="get" role="form">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h6>
+                                Pilih Rute
+                            </h6>
+                            <div class="form-group">
+                                <label>Dari</label>
+                                <select class="form-control custom-select select2">
+                                    <option>Choose Origin</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Ke</label>
+                                <select class="form-control custom-select select2">
+                                    <option>Choose Destination</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <h6>
+                                Tanggal Keberangkatan
+                            </h6>
+                            <ul class="nav nav-tabs nav-fill" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#one-way" role="tab" aria-selected="true">Sekali Jalan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#two-way" role="tab" aria-selected="false">Pulang Pergi</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content border-0" id="departure">
+                                <div class="tab-pane fade show active" id="one-way" role="tabpanel">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="date" name="departureDate " class="form-control mydatepicker">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="two-way" role="tabpanel">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="date" name="departureDate " class="form-control mydatepicker">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="date" name="returnsDate" class="form-control mydatepicker">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4 border-0">
+                            <h6>
+                                Jumlah Penumpang
+                            </h6>
+                            <div class="form-group">
+                                <label>Dewasa</label>
+                                <input type="number" name="adults" value="1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Bayi</label>
+                                <input type="number" name="infants" value="0" class="form-control">
+                            </div>
+                            <div class="form-group mb-0">
+                                <button type="submit" class="btn btn-success btn-block"><i class="fa fa-search"></i> Cari Tiket</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <select class="form-control custom-select">
+                                    <option>Pilih Waktu Pergi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <select class="form-control custom-select">
+                                    <option>Pilih Kelas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <select class="form-control custom-select">
+                                    <option>Pilih Bus</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type="submit">Terapkan</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Bus</th>
+                                <th>Berangkat</th>
+                                <th>Tiba</th>
+                                <th>Durasi</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    <p class="mb-1">
+                                        <button class="btn btn-default btn-xs">
+                                            <strong>DPS1312</strong>
+                                        </button>
+                                        Denpasar (Terminal Denpasar) &mdash;
+                                        Malang (Terminal Malang)
+                                    </p>
+
+                                    <small style="font-size: x-small;">
+                                        <strong>Hino</strong> &mdash;
+                                        RN 285 &mdash;
+                                        Single &mdash;
+                                        28 seats
+                                    </small>
+
+                                    <br>
+
+                                    <div class="btn btn-group btn-group-xs mt-1 p-0">
+                                        
+                                        <button class="btn btn-info btn-xs">AC</button>
+                                        <button class="btn btn-info btn-xs">Audio</button>
+                                        <button class="btn btn-info btn-xs">TV</button>
+                                        <button class="btn btn-info btn-xs">Blanket</button>
+                                        <button class="btn btn-info btn-xs">Pillow</button>
+                                
+                                    </div>
+
+                                    <div class="btn btn-group btn-group-xs mt-1 p-0">
+                                        <button class="btn btn-danger btn-xs">
+                                            IDR 250.000
+                                        </button>
+                                        <button class="btn btn-default btn-xs">
+                                            Ekonomi
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h6 class="mb-0">
+                                        <strong>14:00</strong>
+                                        <small style="font-size: x-small;">WITA</small>
+                                    </h6>
+                                    <small>Terminal - Terminal</small>
+                                </td>
+                                <td>
+                                    <h6 class="mb-0">
+                                        <strong>14:00</strong>
+                                        <small style="font-size: x-small;">WITA</small>
+                                    </h6>
+                                    <small>Terminal - Terminal</small>
+                                </td>
+                                <td>
+                                    <small>
+                                        1 Jam 40 Menit
+                                    </small>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="btn btn-primary btn-block">Booking</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <p class="mb-1">
+                                        <button class="btn btn-default btn-xs">
+                                            <strong>DPS1312</strong>
+                                        </button>
+                                        Denpasar (Terminal Denpasar) &mdash;
+                                        Malang (Terminal Malang)
+                                    </p>
+
+                                    <small style="font-size: x-small;">
+                                        <strong>Hino</strong> &mdash;
+                                        RN 285 &mdash;
+                                        Single &mdash;
+                                        28 seats
+                                    </small>
+
+                                    <br>
+
+                                    <div class="btn btn-group btn-group-xs mt-1 p-0">
+                                        
+                                        <button class="btn btn-info btn-xs">AC</button>
+                                        <button class="btn btn-info btn-xs">Audio</button>
+                                        <button class="btn btn-info btn-xs">TV</button>
+                                        <button class="btn btn-info btn-xs">Blanket</button>
+                                        <button class="btn btn-info btn-xs">Pillow</button>
+                                
+                                    </div>
+
+                                    <div class="btn btn-group btn-group-xs mt-1 p-0">
+                                        <button class="btn btn-danger btn-xs">
+                                            IDR 250.000
+                                        </button>
+                                        <button class="btn btn-default btn-xs">
+                                            Ekonomi
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h6 class="mb-0">
+                                        <strong>14:00</strong>
+                                        <small style="font-size: x-small;">WITA</small>
+                                    </h6>
+                                    <small>Terminal - Terminal</small>
+                                </td>
+                                <td>
+                                    <h6 class="mb-0">
+                                        <strong>14:00</strong>
+                                        <small style="font-size: x-small;">WITA</small>
+                                    </h6>
+                                    <small>Terminal - Terminal</small>
+                                </td>
+                                <td>
+                                    <small>
+                                        1 Jam 40 Menit
+                                    </small>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="btn btn-primary btn-block">Booking</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
