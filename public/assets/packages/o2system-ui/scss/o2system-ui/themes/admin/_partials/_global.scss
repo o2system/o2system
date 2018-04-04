@@ -32,6 +32,11 @@ a {
 .main {
     padding-bottom: 20px;
 }
+
+.page-wrapper{
+    margin: -20px;
+}
+
 .breadcrumb-container {
     width: 100%;
     background: $white;
@@ -111,7 +116,6 @@ a {
     border-radius: 100%;
     width: 40px;
     height: 40px;
-    padding: 12px;
 }
 
 .img-circle {
@@ -132,17 +136,50 @@ a {
     padding: 0 10px;
     border-radius: 3px;
 }
-.preloader{
-    width: 100%;
-    height: 100%;
-    top:0px;
-    position: fixed;
-    z-index: 99999;
-    background: #fff;
-    .cssload-speeding-wheel{
-        position: absolute;
-        top: calc(50% - 3.5px);
-        left: calc(50% - 3.5px);
+
+.account-cover-navbar {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
+
+    .navbar-nav{
+        .nav-item{
+            position: relative;
+            &.active{
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: -0.5rem;
+                    left: 0;
+                    height: 4px;
+                    width: 100%;
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.pagination{
+    .page-item{
+        .page-link{
+            color: $primary-color;
+        }
+
+        &.active{
+            .page-link{
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.remove-caret{
+    &:after{
+        display: none;
     }
 }
 

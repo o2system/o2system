@@ -716,9 +716,9 @@ Checkbox
     padding-left: 20px;
     label {
         display: block;
-        padding-left: 5px;
+        padding-left: 3px;
         position: relative;
-        padding-top: 1px;
+        padding-top: 2px;
         &::before {
             -o-transition: 0.3s ease-in-out;
             -webkit-transition: 0.3s ease-in-out;
@@ -1365,6 +1365,61 @@ Form Pickers
 
         }
     }
+}
+
+.form-control{
+	&:focus{
+		box-shadow: none;
+		border-color: $brand-primary; 
+	}
+}
+
+.select2-container{
+	display: block;
+	width: 100% !important;
+}
+.select2-container--default .select2-selection--single{
+	display: block;
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	line-height: 1.25;
+	color: #495057;
+	height: auto;
+	line-height: auto;
+	background-color: #fff;
+	background-image: none;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.25rem;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+	&:focus {
+	    color: #495057;
+	    background-color: #fff;
+	    border-color: #80bdff;
+	    outline: none;
+	}
+
+	.select2-selection__rendered{
+		line-height: 1.25;
+	}
+
+	.select2-selection__arrow {
+	    height: 30px;
+	    position: absolute;
+	    top: 1px;
+	    right: 5px;
+	    width: 20px;
+	}
+}
+
+.select2-sm{
+	.select2-container--default .select2-selection--single{
+		height: calc(1.8125rem + 2px);
+		padding: 0.4rem 0.5rem;
+		line-height: 1.5;
+		border-radius: 0.2rem;
+	}
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {

@@ -160,3 +160,19 @@ section {
 select.form-control:not([size]):not([multiple]){
 	height: auto;
 }
+
+.pagination{
+	.page-item{
+		.page-link{
+			color: $primary-color;
+		}
+
+		&.active{
+			.page-link{
+				background-color: $primary-color;
+				border-color: $primary-color;
+				color: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.post-editor{
+	.editor-title{
+		border: none;
+		background-color: transparent;
+		font-size: 2rem;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: #ddd;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: #ddd;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: #ddd;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: #ddd;
+		}
+	}
+
+	.editor-slug{
+		.input-group-text, .form-control{
+			border: none;
+			background-color: transparent;
+		}
+	}
+
+	.mce-panel{
+		border: none !important;
+		background-color: transparent;
+	}
+
+	.mce-top-part::before{
+		box-shadow: none;
+	}
+
+	div.mce-toolbar-grp, .mce-inline-toolbar-grp div.mce-toolbar-grp {
+	    background-color: transparent;
+	    border-color: #d9e3ea !important;
+	    border-style: solid;
+	    border-left-width: 1px;
+	    border-right-width: 1px;
+	    padding: 0;
+	    overflow-x: auto;
+	    margin: 0 auto;
+	    border: 1px solid #d9e3ea !important;
+	}
+
+	.mce-statusbar .mce-container-body{
+		background-color: #d9e3ea;
+	}
+
+	div.mce-edit-area {
+    	background: none;
+    }
+
+	.mce-btn{
+		background-color: transparent;
+	}
+
+	.mce-content-body {
+		background-color: transparent !important;
+	}
+}

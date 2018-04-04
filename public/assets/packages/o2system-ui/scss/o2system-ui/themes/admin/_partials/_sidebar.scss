@@ -10,11 +10,7 @@ Main sidebar
     z-index: 20;
     padding-top: 60px;
     background: $sidebar;
-    /*box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);*/
-
-    .slimScrollDiv{
-        overflow: visible !important;
-    }
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
 }
 
 .fix-sidebar .sidebar{
@@ -191,7 +187,7 @@ sidebar navigation
 ******************/
 
 .sidebar-scroll {
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     padding-top: 0px;
 }
 
@@ -401,7 +397,6 @@ sidebar navigation
     position: fixed;
     right: -270px;
     width: 270px;
-    display: block;
     z-index: 1100;
     background: $white;
     padding-bottom: 20px;
@@ -409,7 +404,7 @@ sidebar navigation
     box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     top: 60px;
-    padding-bottom: 85px;
+    overflow-y: auto !important;
 
     .top-title{
         position: relative;
@@ -455,21 +450,23 @@ sidebar navigation
 
             &[aria-expanded="false"]{
                 &:after {
-                    font-family: 'FontAwesome';
+                    font-family: 'Font Awesome\ 5 Free';
                     content: "\f0d7";
                     position: absolute;
                     right: 5%;
                     top: 25%;
+                    font-weight: 900;
                 }
             }
 
             &[aria-expanded="true"]{
                 &:after {
-                    font-family: 'FontAwesome';
+                    font-family: 'Font Awesome\ 5 Free';
                     content: "\f0d8";
                     position: absolute;
                     right: 5%;
                     top: 25%;
+                    font-weight: 900;
                 }
 
                 &:hover{
@@ -513,7 +510,7 @@ sidebar navigation
     width: 54px;
     height: 50px;
     top: 20%;
-    left: -48px;
+    right: 0px; 
     text-align: center;
     line-height: 50px;
     cursor: pointer;
@@ -648,4 +645,101 @@ When click on sidebar toggler and also for tablet
         }
     }
 
+}
+
+
+/* PUSH MENU */ 
+.slinky-menu {
+    overflow: hidden;
+    transform: translateZ(0);
+    > ul {
+        left: 0;
+        position: relative;
+        transform: translateZ(0);
+    }
+    ul, li {
+        list-style: none;
+        margin: 0;
+    }
+    ul {
+        width: 100%;
+        padding: 0;
+    }
+    a {
+        align-items: center;
+        display: flex;
+        span {
+            flex: 1;
+            line-height: 1.4;
+        }
+    }
+    li ul {
+        display: none;
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .header-menu {
+        display: flex;
+        background-color: $primary-color;
+        color: $white;
+        .menu-title {
+            flex: 1;
+            line-height: 1.4;
+            margin: 0;
+            order: 1;
+        }
+    }
+}
+ // default theme 
+.slinky-theme-default {
+    .menu-title {
+        color: $white;
+        padding: 3px 10px;
+    }
+    li {
+        line-height: 1;
+        padding: 10px 15px 10px 15px;
+
+        &:hover{
+            background-color: darken($sidebar, 5%);
+
+            &.header-menu{
+                background-color: $primary-color;
+            }
+        }
+
+        &.active{
+            background-color: $primary-color;
+
+            a{
+                color: $white;
+            }
+        }
+    }
+    a:not(.back) {
+        color: $gray-dark;
+    }
+    .next::after, .back::before {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICAgIDxwYXRoIGQ9Ik0xMi4yMTkgMi4yODFMMTAuNzggMy43MiAxOC4wNjIgMTFIMnYyaDE2LjA2M2wtNy4yODIgNy4yODEgMS40MzggMS40MzggOS05IC42ODctLjcxOS0uNjg3LS43MTl6IiAvPjwvc3ZnPg==) center no-repeat;
+        background-size: 1em;
+        content: '';
+        height: 1em;
+        opacity: 0.25;
+        transition: 200ms;
+        width: 1em;
+    }
+    .next::after {
+        margin-left: 1em;
+    }
+    .back::before {
+        padding: 1em;
+        transform: scaleX(-1);
+    }
+    .next:hover::after, .back:hover::before {
+        opacity: 0.75;
+    }
+    .next:active::after, .back:active::before {
+        opacity: 1;
+    }
 }
