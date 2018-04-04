@@ -6,13 +6,11 @@
  * @copyright      Copyright (c) http://teguhrianto.com 
 */
 .navbar-nav{
-	/* .btn{
-		font-size: 1rem;
-	} */
-
-	.dropdown-menu.border-0 {
-	    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-	    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+	.dropdown-menu{
+		&.border-0 {
+	   		-webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+	    	box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+	    }
 	}
 }
 .navbar{
@@ -21,30 +19,32 @@
 			height: 50px;
 		}
 	}
-}
-.bg-transparent{
-	.navbar-nav {
-		.nav-item {
-			.nav-link {
-				color: $white !important;
-				&:hover {
-					color: $gray-lighter !important;
-				}
-			}
 
-			.btn{
-				border-color: $white;
-				color: $white;
+	&.bg-transparent{
+		.navbar-nav {
+			.nav-item {
+				.nav-link {
+					color: $white !important;
+					&:hover {
+						color: $gray-lighter !important;
+					}
+				}
+
+				.btn{
+					border-color: $white;
+					color: $white;
+				}
 			}
 		}
 	}
-}
-.bg-white{
-	box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
-	.navbar-nav {
-		.nav-item {
-			.nav-link {
-				color: $gray-light;
+
+	&.bg-white{
+		box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+		.navbar-nav {
+			.nav-item {
+				.nav-link {
+					color: $gray-light;
+				}
 			}
 		}
 	}
@@ -735,35 +735,6 @@
 		.navbar-brand{
 			img{
 				height: 30px;
-			}
-		}
-	}
-
-	.bg-transparent{
-		background: $white !important;
-		.navbar-nav {
-			.nav-item {
-				.nav-link {
-					color: $gray-light !important;
-					&:hover {
-						color: $primary-color !important;
-					}
-				}
-
-				.btn{
-					border-color: inherit;
-					color: inherit;
-				}
-			}
-		}
-
-		.navbar-brand{
-			.white{
-				display: none;
-			}
-
-			.color{
-				display: block !important;
 			}
 		}
 	}

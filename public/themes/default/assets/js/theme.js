@@ -6,11 +6,11 @@ $(document).ready(function(){
         $(document).scroll(function() {
             scrollStart = $(this).scrollTop();
             if(scrollStart > offset.top) {
-                $('#page-navigation-multipurpose').addClass('bg-white animated slideInDown').removeClass('bg-transparent');
+                $('#page-navigation-multipurpose').addClass('bg-white navbar-light animated slideInDown').removeClass('navbar-dark bg-transparent');
                 $('.navbar-brand .white').addClass('d-none');
                 $('.navbar-brand .color').removeClass('d-none');
             } else {
-                $('#page-navigation-multipurpose').addClass('bg-transparent').removeClass('bg-white animated slideInDown');
+                $('#page-navigation-multipurpose').addClass('navbar-dark bg-transparent').removeClass('bg-white navbar-light animated slideInDown');
                 $('.navbar-brand .color').addClass('d-none');
                 $('.navbar-brand .white').removeClass('d-none');
             }
