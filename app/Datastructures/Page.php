@@ -14,7 +14,7 @@ namespace App\Datastructures;
 
 // ------------------------------------------------------------------------
 
-use O2System\Framework\Http\Message\Uri;
+use O2System\Kernel\Http\Message\Uri;
 use O2System\Framework\Libraries\Ui\Components\Breadcrumb;
 use O2System\Framework\Libraries\Ui\Contents\Link;
 use O2System\Psr\Patterns\AbstractVariableStoragePattern;
