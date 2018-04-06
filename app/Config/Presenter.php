@@ -50,11 +50,11 @@ $presenter->socialGraph = false;
 $presenter->assets = [
 
     /**
-     * Combine view assets
+     * Webpack assets
      *
      * @var bool
      */
-    'combine'  => false,
+    'webpack'  => false,
 
     // --------------------------------------------------------------------
 
