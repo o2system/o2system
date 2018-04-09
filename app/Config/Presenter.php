@@ -71,16 +71,17 @@ $presenter->assets = [
         'body' => [
             'js' => [
                 'jquery.js',
-                'jquery-migrate.js',
-                'holder.js',
+                'jquery-migrate.js'
             ],
         ],
         'packages' => [
+            'jquery-ui',
             'bootstrap' => [
                 'libraries' => [
                     'popper'
                 ]
             ],
+            'tinymce',
             'o2system-ui' => [
                 'themes' => 'multipurpose'
             ]
