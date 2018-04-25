@@ -3,22 +3,49 @@ html{
 }
 body {
     font-size: 0.8rem;
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-    background: #F2F4F8;
+    font-family: "Maven Pro", Arial, sans-serif;
+    background: darken($white, 1%);
     min-height: 100%;
     position: relative;
 }
 button, input, optgroup, select, textarea {
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Maven Pro", Arial, sans-serif;
 }
 
 a {
     text-decoration: none !important;
-    outline: 0 !important;
-    &:hover, &:active, &:visited, &:focus {
+    &:hover, &:active, &:visited {
         text-decoration: none !important;
-        outline: 0 !important;
+        box-shadow: none;
     }
+
+    &:focus{
+        outline: 0 !important;
+        box-shadow: none;
+    }
+}
+
+.btn{
+    &.focus, &:focus{
+        box-shadow: none;
+    }
+}
+
+.pace {
+    .pace-progress {
+        background: $primary-color;
+    }
+    .pace-progress-inner {
+        box-shadow: 0 0 10px $primary-color, 0 0 5px $primary-color;
+    }
+    .pace-activity {
+        border-top-color: $primary-color;
+        border-left-color: $primary-color;
+    }
+}
+
+.progress-bar{
+    background-color: $primary-color;
 }
 
 .p-relative{
@@ -137,11 +164,12 @@ a {
     border-radius: 3px;
 }
 
-.account-cover-navbar {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+.page-navbar {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
     margin-bottom: 1rem;
+    border: 1px solid $gray-lighter;
 
     .navbar-nav{
         .nav-item{
@@ -165,6 +193,10 @@ a {
     .page-item{
         .page-link{
             color: $primary-color;
+
+            &:focus{
+                box-shadow: none;
+            }
         }
 
         &.active{
@@ -177,10 +209,46 @@ a {
     }
 }
 
-.remove-caret{
+.custom-dropdown-toggle{
     &:after{
-        display: none;
+        content: "\f141";
+        font-family: "Font Awesome\ 5 Free";
+        font-weight: 900;
+        border: none;
+        font-size: 1.5rem;
+        width: auto;
+        height: auto;
+        @include transition(all 0.1s ease-in-out);
+        color: $sidebar-icons; 
     }
+
+    &[aria-expanded="true"]{
+        &:after{
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.dropdown-item{
+    i{
+        width: 15px;
+    }
+    &:hover, &.active, &:active {
+        background-color: $primary-color;
+        color: #fff;
+
+        .text-muted{
+            color: $white !important;
+        }
+    }
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2rem + 1.2px);
 }
 
 @media(min-width:1024px) {
@@ -192,7 +260,7 @@ a {
 @media(max-width:1023px) {
    .main{
         margin-left:60px;
-        transition: 0.2s ease-in;
+        transition: 0.2s ease-in; 
     }
 }
 

@@ -31,7 +31,7 @@ $session = new Config(
         /**
          * Session Handler
          */
-        'handler' => 'file',
+        'handler' => 'files',
         'cookie'  => [
 
             /**

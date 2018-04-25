@@ -42,13 +42,6 @@
  * O2System User Interface (UI) Init
  */
 $(function () {
-    $("body").niceScroll({
-        cursorcolor: "#666",
-        cursorborder: "1px solid transparent",
-        cursorborderradius: "3px",
-        horizrailenabled: false
-    });
-
     $('.preloader').fadeOut();
 
     // hide scroll to top

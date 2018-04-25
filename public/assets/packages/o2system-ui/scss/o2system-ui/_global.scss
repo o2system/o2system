@@ -1,10 +1,10 @@
 body {
 	color: $gray-dark;
 	font-size: 14px;
-	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+	font-family: "Oxygen", "Helvetica Neue", Arial, sans-serif;
 }
 button, input, optgroup, select, textarea {
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Oxygen", "Helvetica Neue", Arial, sans-serif;
 }
 a {
 	text-decoration: none !important;
@@ -139,7 +139,7 @@ blockquote.alert{
 	height: 40px;
 	position: fixed;
 	bottom: 20%;
-	right: -55px;
+	right: -60px;
 	background: $primary-color;
 	color: #fff;
 	text-align: center;
@@ -155,11 +155,15 @@ blockquote.alert{
 
 	i {
 	    font-size: 1rem;
-	    margin-right: 10px;
+	    margin-right: 15px; 
 	}
 
 	&:hover{
 		right: 0;
+
+		i{
+			margin-right: 10px;
+		}
 	}
 }
 

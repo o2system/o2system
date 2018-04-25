@@ -1,13 +1,13 @@
 // color elements
-$primary-color:			#62a8ea;
-$sidebar:				#E9EFF3;
+$primary-color:			#D83B3D;
+$sidebar:				#f6f6f6;
 $sidebar-alt:			#181c22;
-$sidebar-icons: 		#a6b7bf;
+$sidebar-icons: 		#777;
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray:                   lighten($gray-base, 50%) !default; // #555
+$gray-light:             lighten($gray-base, 65%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $gray-blue:				#668eaa;
 $brand-primary:			$primary-color !default;
@@ -19,15 +19,5 @@ $brand-danger:          #f96868 !default;
 
 $white:                       #FFF !default;
 $black:                       #000 !default;
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-
-$font-size-base:          14px !default;
-$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $border: 				rgba(120, 130, 140, 0.13);

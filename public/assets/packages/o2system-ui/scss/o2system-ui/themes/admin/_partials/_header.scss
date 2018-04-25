@@ -84,7 +84,7 @@
     position: relative;
     z-index: 50;
     background: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid $gray-lighter;
 
     .top-navbar {
         min-height: 55px;

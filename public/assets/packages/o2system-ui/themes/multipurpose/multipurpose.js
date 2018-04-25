@@ -393,6 +393,9 @@ jQuery('#datepicker-autoclose').datepicker({
     autoclose: true,
     todayHighlight: true
 });
+if ( $('[type="date"]').prop('type') != 'date' ) {
+    $('.mydatepicker, #datepicker').datepicker(); //--> ganti sama yang untuk init datepicker
+}
 jQuery('#date-range').datepicker({
     toggleActive: true
 });
@@ -541,32 +544,6 @@ $(".validation-wizard").validate({
             email: !0
         }
     }
-});
-
-tinymce.init({
-    menubar: false,
-    selector: '.tinymce-full',
-    height: 400,
-    plugins: [
-        'contextmenu textcolor colorpicker advlist lists link image imagetools charmap print anchor autoresize hr',
-        'paste media emoticons spellchecker searchreplace visualblocks visualchars code table wordcount fullscreen pagebreak'
-    ],
-    toolbar1: 'styleselect | bold italic underline strikethrough forecolor backcolor code | bullist numlist outdent indent blockquote hr alignleft aligncenter alignright alignjustify | table',
-    toolbar2: 'copy paste removeformat | pagebreak anchor link unlink insertfile image media |  charmap emoticons',
-    image_advtab: true,
-    visualblocks_default_state: false,
-    contextmenu: "print code | spellchecker searchreplace fullscreen visualchars"
-});
-
-tinymce.init({
-    menubar: false,
-    selector: '.tinymce-minimal',
-    height: 200,
-    plugins: 'contextmenu textcolor visualblocks autoresize code wordcount',
-    toolbar1: 'bold italic underline strikethrough forecolor backcolor | bullist numlist outdent indent | blockquote alignleft aligncenter alignright alignjustify',
-    visualblocks_default_state: false,
-    end_container_on_empty_block: true,
-    contextmenu: "code | visualblocks"
 });
 
 $('.dropify').dropify();

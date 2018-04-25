@@ -66,7 +66,10 @@ $presenter->assets = [
     'autoload' => [
         'head' => [
             'css'   => [  ],
-            'fonts' => [ 'font-awesome' ],
+            'fonts' => [ 
+                'font-awesome',
+                'https://fonts.googleapis.com/css?family=Maven+Pro:400,700|Oxygen:400,700'
+            ],
         ],
         'body' => [
             'js' => [

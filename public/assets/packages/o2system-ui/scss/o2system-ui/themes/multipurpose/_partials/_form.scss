@@ -1422,14 +1422,14 @@ Form Pickers
 	}
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .btn:not(.btn-xs):not(.btn-sm):not(.btn-lg):not(.btn-xl){
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .btn:not(.btn-xs):not(.btn-sm):not(.btn-lg):not(.btn-xl):not(.btn-icon){
         padding: 0.54rem 0.75rem;
     }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-    .btn:not(.btn-xs):not(.btn-sm):not(.btn-lg):not(.btn-xl){
+    .btn:not(.btn-xs):not(.btn-sm):not(.btn-lg):not(.btn-xl):not(.btn-icon){
         padding: 0.54rem 0.75rem;
     }
-}
+} */

@@ -15,7 +15,6 @@ namespace App\Controllers;
 // ------------------------------------------------------------------------
 
 use App\Http\Controller;
-use O2System\Spl\Datastructures\SplArrayObject;
 
 /**
  * Class Hello

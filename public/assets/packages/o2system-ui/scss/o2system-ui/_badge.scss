@@ -1,6 +1,9 @@
+.badge{
+	padding: .5em .6em .6em .6em;
+}
 .badge-default {
-    background-color: $gray-light;
-    color: #fff;
+    background-color: $white;
+    color: $gray-dark;
 }
 .badge-primary {
     background-color: $brand-primary;
@@ -25,4 +28,8 @@
 
 .badge-danger {
     background-color: $brand-danger;
+}
+
+.badge-dark{
+    background-color: $brand-dark;
 }

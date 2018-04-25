@@ -64,6 +64,7 @@
 }
 
 .btn-dark{
+	@include button-variant($white, $brand-dark, $brand-dark);
 	&.btn-icon {
 		i{
 			background: #23272b;

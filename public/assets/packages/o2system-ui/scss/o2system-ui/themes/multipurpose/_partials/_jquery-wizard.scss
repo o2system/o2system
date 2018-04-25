@@ -1,0 +1,485 @@
+.wizard-content {
+	.wizard {
+		>.steps {
+			>ul {
+				>li {
+					&:after {
+						content: '';
+						z-index: 9;
+						display: block;
+						position: absolute;
+						right: 0;
+					}
+					&:before {
+						content: '';
+						z-index: 9;
+						display: block;
+						position: absolute;
+						left: 0;
+					}
+					display: table-cell;
+					width: auto;
+					vertical-align: top;
+					text-align: center;
+					position: relative;
+					a {
+						position: relative;
+						padding-top: 52px;
+						margin-top: 20px;
+						margin-bottom: 20px;
+						display: block;
+					}
+					&:first-child {
+						&:before {
+							content: none;
+						}
+					}
+					&:last-child {
+						&:after {
+							content: none;
+						}
+					}
+				}
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				>li.current {
+					>a {
+						color: #2f3d4a;
+						cursor: default;
+					}
+					.step {
+						border-color: $primary-color;
+						background-color: #fff;
+						color: $primary-color;
+					}
+				}
+				>li.disabled {
+					a {
+						color: #999;
+						cursor: default;
+						&:focus {
+							color: #999;
+							cursor: default;
+						}
+						&:hover {
+							color: #999;
+							cursor: default;
+						}
+					}
+				}
+				>li.done {
+					a {
+						color: #999;
+						&:focus {
+							color: #999;
+						}
+						&:hover {
+							color: #999;
+						}
+					}
+					.step {
+						background-color: $primary-color;
+						border-color: $primary-color;
+						color: #fff;
+					}
+				}
+				>li.error {
+					.step {
+						border-color: $brand-danger;
+						color: $brand-danger;
+					}
+				}
+			}
+			position: relative;
+			display: block;
+			width: 100%;
+			.current-info {
+				position: absolute;
+				left: -99999px;
+			}
+			.step {
+				background-color: #fff;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -24px;
+				z-index: 10;
+				text-align: center;
+			}
+		}
+		width: 100%;
+		overflow: hidden;
+		.content {
+			margin-left: 0 !important;
+		}
+		>.content {
+			overflow: hidden;
+			position: relative;
+			width: auto;
+			padding: 0;
+			margin: 0;
+			>.title {
+				position: absolute;
+				left: -99999px;
+			}
+			>.body {
+				padding: 0 20px;
+			}
+			>iframe {
+				border: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		>.actions {
+			position: relative;
+			display: block;
+			text-align: right;
+			padding: 0 20px 20px;
+			>ul {
+				float: right;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				&:after {
+					content: '';
+					display: table;
+					clear: both;
+				}
+				>li {
+					float: left;
+					>a {
+						background: $primary-color;
+						color: #fff;
+						display: block;
+						padding: 7px 12px;
+						border-radius: 4px;
+						border: 1px solid transparent;
+						&:focus {
+							-webkit-box-shadow: 0 0 0 100px rgba(0,0,0,.05) inset;
+							box-shadow: 0 0 0 100px rgba(0,0,0,.05) inset;
+						}
+						&:hover {
+							-webkit-box-shadow: 0 0 0 100px rgba(0,0,0,.05) inset;
+							box-shadow: 0 0 0 100px rgba(0,0,0,.05) inset;
+						}
+						&:active {
+							-webkit-box-shadow: 0 0 0 100px rgba(0,0,0,.1) inset;
+							box-shadow: 0 0 0 100px rgba(0,0,0,.1) inset;
+						}
+					}
+					>a[href="#previous"] {
+						background-color: #fff;
+						color: #54667a;
+						border: 1px solid #d9d9d9;
+						&:focus {
+							-webkit-box-shadow: 0 0 0 100px rgba(0,0,0,.02) inset;
+							box-shadow: 0 0 0 100px rgba(0,0,0,.02) inset;
+						}
+						&:hover {
+							-webkit-box-shadow: 0 0 0 100px rgba(0,0,0,.02) inset;
+							box-shadow: 0 0 0 100px rgba(0,0,0,.02) inset;
+						}
+						&:active {
+							-webkit-box-shadow: 0 0 0 100px rgba(0,0,0,.04) inset;
+							box-shadow: 0 0 0 100px rgba(0,0,0,.04) inset;
+						}
+					}
+				}
+				>li+li {
+					margin-left: 10px;
+				}
+				>li.disabled {
+					>a {
+						color: #999;
+						&:focus {
+							color: #999;
+						}
+						&:hover {
+							color: #999;
+						}
+					}
+					>a[href="#previous"] {
+						-webkit-box-shadow: none;
+						box-shadow: none;
+						&:focus {
+							-webkit-box-shadow: none;
+							box-shadow: none;
+						}
+						&:hover {
+							-webkit-box-shadow: none;
+							box-shadow: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.wizard.wizard-circle {
+		>.steps {
+			>ul {
+				>li {
+					&:after {
+						top: 45px;
+						width: 50%;
+						height: 3px;
+						background-color: $primary-color;
+					}
+					&:before {
+						top: 45px;
+						width: 50%;
+						height: 3px;
+						background-color: $primary-color;
+					}
+				}
+				>li.current {
+					&:after {
+						background-color: #F3F3F3;
+					}
+				}
+				>li.current~li {
+					&:after {
+						background-color: #F3F3F3;
+					}
+					&:before {
+						background-color: #F3F3F3;
+					}
+				}
+			}
+			.step {
+				width: 50px;
+				height: 50px;
+				line-height: 45px;
+				border: 3px solid #F3F3F3;
+				font-size: 1.3rem;
+				border-radius: 50%;
+			}
+		}
+	}
+	.wizard.wizard-notification {
+		>.steps {
+			>ul {
+				>li {
+					&:after {
+						top: 39px;
+						width: 50%;
+						height: 2px;
+						background-color: $primary-color;
+					}
+					&:before {
+						top: 39px;
+						width: 50%;
+						height: 2px;
+						background-color: $primary-color;
+					}
+				}
+				>li.current {
+					.step {
+						border: 2px solid $primary-color;
+						color: $primary-color;
+						line-height: 36px;
+						&:after {
+							border-top-color: $primary-color;
+						}
+					}
+					&:after {
+						background-color: #F3F3F3;
+					}
+				}
+				>li.done {
+					.step {
+						&:after {
+							border-top-color: $primary-color;
+						}
+						color: #FFF;
+					}
+				}
+				>li.current~li {
+					&:after {
+						background-color: #F3F3F3;
+					}
+					&:before {
+						background-color: #F3F3F3;
+					}
+				}
+			}
+			.step {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 1.3rem;
+				border-radius: 15%;
+				background-color: #F3F3F3;
+				&:after {
+					content: "";
+					width: 0;
+					height: 0;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: -8px;
+					margin-bottom: -8px;
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-top: 8px solid #F3F3F3;
+				}
+			}
+		}
+	}
+	.wizard.vertical {
+		>.steps {
+			display: inline;
+			float: left;
+			width: 20%;
+			>ul {
+				>li {
+					display: block;
+					width: 100%;
+					&:after {
+						background-color: transparent;
+					}
+					&:before {
+						background-color: transparent;
+					}
+				}
+				>li.current {
+					&:after {
+						background-color: transparent;
+					}
+					&:before {
+						background-color: transparent;
+					}
+				}
+				>li.current~li {
+					&:after {
+						background-color: transparent;
+					}
+					&:before {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width:768px) {
+	.wizard-content {
+		.wizard {
+			>.steps {
+				>ul {
+					margin-bottom: 20px;
+					>li {
+						display: table-cell;
+						width: auto;
+						vertical-align: top;
+						text-align: center;
+						position: relative;
+						float: none;
+						>a {
+							margin-bottom: 0;
+						}
+						&:first-child {
+							&:before {
+								content: '';
+							}
+						}
+						&:last-child {
+							&:after {
+								content: '';
+								background-color: $primary-color;
+							}
+						}
+					}
+				}
+			}
+
+			&.wizard-circle {
+				>.steps {
+					>ul {
+						>li {
+							&:after {
+								top: 38px;
+								width: 50%;
+								height: 3px;
+								background-color: $primary-color;
+							}
+							&:before {
+								top: 38px;
+								width: 50%;
+								height: 3px;
+								background-color: $primary-color;
+							}
+						}
+						>li.current {
+							&:after {
+								background-color: #F3F3F3;
+							}
+						}
+						>li.current~li {
+							&:after {
+								background-color: #F3F3F3;
+							}
+							&:before {
+								background-color: #F3F3F3;
+							}
+						}
+					}
+					.step {
+						width: 35px;
+						height: 35px;
+						line-height: 30px;
+						border: 3px solid #F3F3F3;
+						font-size: 0.8rem;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+		.wizard.vertical {
+			>.steps {
+				width: 15%;
+			}
+		}
+	}
+}
+@media (max-width:480px) {
+	.wizard-content {
+		.wizard {
+			>.steps {
+				>ul {
+					>li {
+						display: table-cell;
+						width: auto;
+						vertical-align: top;
+						text-align: center;
+						position: relative;
+						float: none;
+					}
+					>li.current {
+						&:after {
+							background-color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+		.wizard.vertical {
+			>.steps {
+				>ul {
+					>li {
+						display: block;
+						float: left;
+						width: 50%;
+					}
+				}
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+}

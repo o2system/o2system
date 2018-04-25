@@ -176,11 +176,34 @@
 	border: 0;
 	padding: 0.5rem 0.7rem;
 	background: none;
+	background-color: transparent;
 	color: $brand-primary;
+	box-shadow: none;
+
+	&.dropdown-toggle {
+		background: none;
+		background-color: transparent;
+
+		&:focus{
+			box-shadow: none !important; 
+		}
+	}
+
+	&:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+	.show > &.dropdown-toggle {
+  		background: none;
+		background-color: transparent;
+
+  		&:focus {
+    		box-shadow: none;
+  		}
+	}
+
 
 	&:hover, &:focus{
 		background: none;
-		color: #014c8c;
+		color: lighten($brand-primary, 5%);
 	}
 
 	&.btn-primary{
@@ -188,6 +211,18 @@
 
 		&:hover, &:focus{
 			color: lighten($brand-primary, 5%);
+		}
+
+		&.dropdown-toggle {
+		    color: $brand-primary;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $brand-primary;
 		}
 	}
 
@@ -197,6 +232,18 @@
 		&:hover, &:focus{
 			color: lighten($brand-secondary, 5%);
 		}
+
+		&.dropdown-toggle {
+		    color: $brand-secondary;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $brand-secondary;
+		}
 	}
 
 	&.btn-success{
@@ -204,6 +251,18 @@
 
 		&:hover, &:focus{
 			color: lighten($brand-success, 5%);
+		}
+
+		&.dropdown-toggle {
+		    color: $brand-success;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $brand-success;
 		}
 	}
 
@@ -213,6 +272,18 @@
 		&:hover, &:focus{
 			color: lighten($brand-info, 5%);
 		}
+
+		&.dropdown-toggle {
+		    color: $brand-info;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $brand-info;
+		}
 	}
 
 	&.btn-warning{
@@ -220,6 +291,18 @@
 
 		&:hover, &:focus{
 			color: lighten($brand-warning, 5%);
+		}
+
+		&.dropdown-toggle {
+		    color: $brand-warning;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $brand-warning;
 		}
 	}
 
@@ -229,6 +312,18 @@
 		&:hover, &:focus{
 			color: lighten($brand-danger, 5%);
 		}
+
+		&.dropdown-toggle {
+		    color: $brand-danger;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $brand-danger;
+		}
 	}
 
 	&.btn-light{
@@ -237,6 +332,18 @@
 		&:hover, &:focus{
 			color: lighten(#f8f8f8, 5%);
 		}
+
+		&.dropdown-toggle {
+		    color: #f8f8f8;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: #f8f8f8;
+		}
 	}
 
 	&.btn-dark{
@@ -244,6 +351,18 @@
 
 		&:hover, &:focus{
 			color: lighten($gray-dark, 5%);
+		}
+
+		&.dropdown-toggle {
+		    color: $gray-dark;
+		    background: none;
+			background-color: transparent;
+		}
+
+		&:not(:disabled):not(.disabled):active,
+	    &:not(:disabled):not(.disabled).active,
+		.show > &.dropdown-toggle {
+			color: $gray-dark;
 		}
 	}
 }
