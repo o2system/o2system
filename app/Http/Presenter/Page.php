@@ -10,21 +10,21 @@
  */
 // ------------------------------------------------------------------------
 
-namespace App\Datastructures;
+namespace App\Http\Presenter;
 
 // ------------------------------------------------------------------------
 
 use O2System\Kernel\Http\Message\Uri;
 use O2System\Framework\Libraries\Ui\Components\Breadcrumb;
 use O2System\Framework\Libraries\Ui\Contents\Link;
-use O2System\Psr\Patterns\AbstractVariableStoragePattern;
+use O2System\Psr\Patterns\Structural\Repository\AbstractRepository;
 
 /**
  * Class Page
  *
  * @package App\Datastructures
  */
-class Page extends AbstractVariableStoragePattern
+class Page extends AbstractRepository
 {
     /**
      * Page::__construct
@@ -54,7 +54,7 @@ class Page extends AbstractVariableStoragePattern
     {
         $header = trim( $header );
         $this->store( 'header', $header );
-        presenter()->meta->offsetSet( 'subtitle', $header );
+        presenter()->meta->store( 'subtitle', $header );
         presenter()->meta->title->append( $header );
 
         return $this;

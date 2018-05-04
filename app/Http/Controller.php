@@ -14,7 +14,7 @@ namespace App\Http;
 
 // ------------------------------------------------------------------------
 
-use App\Datastructures\Page;
+use App\Http\Presenter\Page;
 
 /**
  * Class Controller
@@ -31,6 +31,5 @@ class Controller extends \O2System\Framework\Http\Controller
         presenter()->meta->title->prepend( 'O2System Framework' );
         language()->loadFile( 'app' );
         presenter()->store( 'page', new Page() );
-
     }
 }

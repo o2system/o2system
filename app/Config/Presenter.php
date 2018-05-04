@@ -26,7 +26,7 @@ $presenter->enabled = true;
  *
  * @var bool
  */
-$presenter->debugToolBar = false;
+$presenter->debugToolBar = true;
 
 /**
  * Presenter Theme
