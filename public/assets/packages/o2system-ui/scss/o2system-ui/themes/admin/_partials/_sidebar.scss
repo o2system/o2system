@@ -585,91 +585,7 @@ When click on sidebar toggler and also for tablet
     }
 }
 
-@media(min-width:768px) {
-    .mini-sidebar{
-        .account-cover{
-            width: 60px;
-            height: 70px;
-
-            .account-cover-avatar{
-                @include avatar(40px);
-                left: 10px;
-            }
-        }
-    }
-    .mini-sidebar .sidebar-nav #sidebar-navigation li {
-        position: relative;
-    }
-    .mini-sidebar .sidebar-nav #sidebar-navigation > li > ul {
-        position: absolute;
-        left: 60px;
-        /* top: 51px; */
-        width: 200px;
-        z-index: 1001;
-        background: $sidebar-alt;
-        display: none;
-        padding-left: 1px;
-    }
-    .mini-sidebar .sidebar-nav #sidebar-navigation > li:hover > ul {
-        height: auto !important;
-
-        overflow: auto;
-    }
-    .mini-sidebar .sidebar-nav #sidebar-navigation > li:hover > ul,
-    .mini-sidebar .sidebar-nav #sidebar-navigation > li:hover > ul.collapse {
-        display: block;
-    }
-    .mini-sidebar .sidebar-nav #sidebar-navigation > li > a.has-arrow:after {
-        display: none;
-    }
-    .mini-sidebar {
-        .sidebar {
-            width: 60px;
-        }
-        .user-profile {
-            padding-bottom: 30px;
-            width: 60px;
-        }
-        .sidebar-scroll{
-            padding-bottom: 0px;
-            position: absolute;
-        }
-        .hide-menu,
-        .nav-small-cap,
-        .sidebar-footer,
-        .user-profile .profile-text {
-            display: none;
-        }
-        .nav-devider{
-            width: 60px;
-            }
-        .sidebar-nav{ background: transparent;}
-        .sidebar-nav #sidebar-navigation > li > a{
-            padding: 10px 15px 10px 15px;
-            width: 60px;
-            text-align: center;
-        }
-        .sidebar-nav #sidebar-navigation > li:hover > a {
-            width: 260px;
-            background: $primary-color;
-            color: $white;
-            border-color: $primary-color;
-            i {
-                color: $white;
-            }
-            .hide-menu {
-                display: inline;
-            }
-        }
-        .sidebar-nav #sidebar-navigation > li.active > a{
-            border-color:transparent;
-            &.active{
-                border-color:$primary-color;
-            }
-        }
-    }
-}
-@media(max-width:767px) {
+@media(max-width:1023px) {
     .sidebar-footer{
         .top-navbar {
             padding-right: 15px;
@@ -680,7 +596,7 @@ When click on sidebar toggler and also for tablet
             -webkit-align-items: center;
             .navbar-collapse {
                 display: flex;
-                width: 100%;
+                width: 100%; 
             }
             .navbar-nav {
                 flex-direction: row;
@@ -704,7 +620,9 @@ When click on sidebar toggler and also for tablet
         }
     }
     .mini-sidebar{
-        .sidebar{position: fixed;}
+        .sidebar{
+            position: fixed;
+        }
         .sidebar, .sidebar-footer{
             left:-240px;
         }

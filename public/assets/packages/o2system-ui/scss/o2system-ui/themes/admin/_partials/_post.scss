@@ -2,7 +2,8 @@
 	.editor-title{
 		border: none;
 		background-color: transparent;
-		font-size: 2rem;
+		font-size: 3rem;
+		color: $gray-dark;
 
 		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			color: #ddd;
@@ -36,14 +37,18 @@
 
 	div.mce-toolbar-grp, .mce-inline-toolbar-grp div.mce-toolbar-grp {
 	    background-color: transparent;
-	    border-color: #d9e3ea !important;
+	    border-color: #eee !important;
 	    border-style: solid;
 	    border-left-width: 1px;
 	    border-right-width: 1px;
 	    padding: 0;
 	    overflow-x: auto;
 	    margin: 0 auto;
-	    border: 1px solid #d9e3ea !important;
+	    border-bottom: 1px solid #eee !important;
+	}
+
+	.mce-btn-group:not(:first-child){
+		border-left-color: #eee;
 	}
 
 	.mce-statusbar .mce-container-body{
@@ -60,6 +65,7 @@
 
 	.mce-content-body {
 		background-color: transparent !important;
+		outline: none !important;
 	}
 }
 
