@@ -234,12 +234,13 @@ a {
 }
 
 .dropdown-item{
+    font-size: 0.8rem !important;
     i{
         width: 15px;
     }
     &:hover, &.active, &:active {
         background-color: $primary-color;
-        color: #fff;
+        color: #fff !important;
 
         .text-muted{
             color: $white !important;

@@ -190,9 +190,8 @@
                     position: absolute;
                     bottom: 15px;
                     left: 20px;
-                    border: 3px solid $white;
+                    border: 3px solid #ccc;
                     border-radius: 3px;
-                    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.3);
                     background-color: #fff;
                     border-radius: 50%;
                 }
@@ -213,7 +212,6 @@
                         position: relative;
                         color: $white;
                         text-rendering: optimizelegibility;
-                        text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
                         padding-right: 30px;
                         display: block;
                         padding: 0;
