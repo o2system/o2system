@@ -376,9 +376,6 @@ $('#check-minutes').click(function(e) {
     e.stopPropagation();
     input.clockpicker('show').clockpicker('toggleView', 'minutes');
 });
-if (/mobile/i.test(navigator.userAgent)) {
-    $('input').prop('readOnly', true);
-}
 // Colorpicker
 $(".colorpicker").asColorPicker();
 $(".complex-colorpicker").asColorPicker({
