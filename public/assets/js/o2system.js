@@ -24,8 +24,41 @@ var o2system = new Object();
      * URI Object
      */
     o2system.uri = {
+        scheme: null,
+        host: null,
+        port: 80,
+        path: null,
+        query: null,
         string: null,
         segments: null,
+        subDomain: null,
+        subDomains: [],
+        tld: null,
+        tlds: [],
+
+        getScheme: function(){
+            return this.scheme;
+        },
+
+        getHost: function(){
+            return this.host;
+        },
+
+        getHostname: function () {
+            return window.location.hostname;
+        },
+
+        getPort: function () {
+            return this.port;
+        },
+
+        getPath: function () {
+            return this.path;
+        },
+
+        getQuery: function () {
+            return this.query;
+        },
 
         getString: function () {
             return this.string;
@@ -41,6 +74,20 @@ var o2system = new Object();
             }
 
             return null;
+        },
+
+        getSubDomain: function () {
+            return this.subDomain;
+        },
+
+        getSubDomains: function (level) {
+            if (this.subDomains.hasOwnProperty(level)) {
+                return this.subDomains[level];
+            }
+        },
+
+        getTld: function () {
+            return this.tld;
         }
     };
 
@@ -58,6 +105,21 @@ var o2system = new Object();
         },
         current: function () {
             return window.location.protocol + '//' + window.location.hostname + window.location.pathname;
+        },
+
+        ipv4: function (uri) {
+            var regexp = new RegExp([
+                '^https?:\/\/([a-z0-9\\.\\-_%]+:([a-z0-9\\.\\-_%])+?@)?',
+                '((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\.){3}(25[0-5]|2[0-4',
+                '][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])?',
+                '(:[0-9]+)?(\/[^\\s]*)?$'
+            ].join(''), 'i');
+
+            if(uri == undefined) {
+                uri = window.location.protocol + '//' + window.location.hostname + '/';
+            }
+
+            return regexp.test(uri);
         }
     };
 
@@ -226,9 +288,70 @@ var o2system = new Object();
      * @private
      */
     o2system.__construct = function () {
+        // Define Uri Scheme
+        o2system.uri.scheme = window.location.protocol;
+
+        // Define Uri Host
+        o2system.uri.host = window.location.hostname;
+        o2system.uri.host = o2system.uri.host.replace('www.','');
+
+        // Define Uri Port
+        o2system.uri.port = window.location.port;
+        if(o2system.uri.port == '') {
+            if(o2system.uri.scheme === 'http:') {
+                o2system.uri.port = 80;
+            } else if(o2system.uri.scheme === 'https:') {
+                o2system.uri.port = 443;
+            }
+        }
+
+        // Define Uri Tld
+        var xHost = [];
+        if(o2system.url.ipv4() !== false || o2system.uri.host.indexOf('.') === false) {
+            xHost = [ o2system.uri.host ];
+        } else {
+            xHost = o2system.uri.host.split('.');
+        }
+
+        if(xHost.length > 1) {
+            o2system.uri.subDomains = xHost;
+            o2system.uri.subDomain = xHost[0];
+
+            xHost.forEach(function (hostname, key) {
+                if(key == (xHost.length - 1) && hostname.length <= 3) {
+                    o2system.uri.subDomains.splice(key, 1);
+                    o2system.uri.tlds.push(hostname);
+                } else if(key == (xHost.length - 2) && hostname.length <= 3) {
+                    o2system.uri.subDomains.splice(key, 1);
+                    o2system.uri.tlds.push(hostname);
+                }
+            });
+
+            if(o2system.uri.subDomains.length > 1) {
+                o2system.uri.subDomains.splice(-1, 1);
+            }
+
+            o2system.uri.tld = '.' + o2system.uri.tlds.join('.');
+            o2system.uri.host = o2system.uri.host.replace(o2system.uri.subDomain + '.','');
+        }
+
+        // Define Uri Path
+        o2system.uri.path = window.location.pathname;
+
+        // Define Uri Query
+        o2system.uri.query = window.location.search.substring(1);
+
+        // Define Uri String and Segments
         o2system.uri.string = window.location.pathname.substr(1);
+
+        var segmentsSuffixes = ['.html', '.phtml', '.php', '.htm'];
+        segmentsSuffixes.forEach(function(suffix, key){
+            o2system.uri.string = o2system.uri.string.replace(suffix, '');
+        });
+
         o2system.uri.segments = o2system.uri.string.split('/');
 
+        // Define Server Query String and Params
         o2system.server.queryString = window.location.search.substring(1);
         o2system.server.queryParams = o2system.server.queryString.split('&');
 
@@ -240,6 +363,18 @@ var o2system = new Object();
                 // unset xParams
                 delete xParams;
             }
+        }
+
+        if ('serviceWorker' in navigator && 'PushManager' in window) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register(o2system.url.base() + 'assets/js/service-worker.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(error) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
         }
     };
 
