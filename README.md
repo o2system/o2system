@@ -1,5 +1,16 @@
+
+<p align="center">
+<img src="http://o2system.id/assets/img/logo/logo-white-200px.png" alt="O2System Framework">
+</p>
+
+[![Build Status](https://scrutinizer-ci.com/g/turahe/o2system/badges/build.png?b=master)](https://scrutinizer-ci.com/g/turahe/o2system/build-status/master)
+[![Latest Stable Version](https://poser.pugx.org/o2system/o2system/v/stable)](https://packagist.org/packages/o2system/o2system)
+[![Total Downloads](https://poser.pugx.org/o2system/o2system/downloads)](https://packagist.org/packages/o2system/o2system)
+[![License](https://poser.pugx.org/o2system/o2system/license)](https://packagist.org/packages/o2system/o2system)
+
 # O2System Basic Project
 O2System Basic Project is for those who likes to make everything from scratch, build your project with this boilerplate.
+
 
 ### Composer Installation
 The best way to use this boilerplate is using [Composer](https://getcomposer.org)
