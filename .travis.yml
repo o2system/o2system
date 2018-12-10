@@ -28,6 +28,3 @@ install:
       # gmagick is not installed on travis currently
       #printf "\n" | pecl install gmagick
     fi
-script:
-  - |
-    php o2system serve
