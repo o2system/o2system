@@ -10,6 +10,9 @@
  */
 // ------------------------------------------------------------------------
 
+/**
+ * Default Database Configuration
+ */
 $database[ 'default' ] = [
     'driver'       => 'mysql',
     'dsn'          => '',

@@ -8,9 +8,8 @@
  * @author         Steeve Andrian Salim
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
-// ------------------------------------------------------------------------
 
-use O2System\Session\Datastructures\Config;
+// ------------------------------------------------------------------------
 
 /**
  * Http Session Configuration
@@ -19,65 +18,76 @@ use O2System\Session\Datastructures\Config;
  *
  * @var \O2System\Session\Datastructures\Config
  */
-$session = new Config(
-    [
+$session = new \O2System\Session\Datastructures\Config([
+    /**
+     * Session Handler
+     *
+     * Supported session handler:
+     * - Apc
+     * - Apcu
+     * - File
+     * - Memcached
+     * - Memcache
+     * - Redis
+     * - Wincache
+     * - Xcache
+     *
+     * @var string
+     */
+    'handler' => 'apcu',
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * Session Cookie
+     *
+     * @var array
+     */
+    'cookie' => [
+
         /**
-         * Session Enabled
+         * Session Cookie Lifetime
          *
-         * Auto start session as framework service.
+         * The number of SECONDS the cookie to last.
+         *
+         * @var int
          */
-        'enabled' => true,
+        'lifetime' => 7200,
 
         /**
-         * Session Handler
+         * Session Cookie Domain
+         *
+         * When set to blank or null, will automatically set base on your server hostname.
+         *
+         * @var string
          */
-        'handler' => 'files',
-        'cookie'  => [
+        'domain' => null,
 
-            /**
-             * Session Cookie Lifetime
-             *
-             * The number of SECONDS the cookie to last.
-             *
-             * @var int
-             */
-            'lifetime' => 7200,
+        /**
+         * Session Cookie Path
+         *
+         * Typically will be a forward slash.
+         *
+         * @var string
+         */
+        'path' => '/',
 
-            /**
-             * Session Cookie Domain
-             *
-             * When set to blank or null, will automatically set base on your server hostname.
-             *
-             * @var string
-             */
-            'domain'   => null,
+        /**
+         * Session Cookie Secure
+         *
+         * Cookie will only be set if a secure HTTPS connection exists.
+         *
+         * @var bool
+         */
+        'secure' => false,
 
-            /**
-             * Session Cookie Path
-             *
-             * Typically will be a forward slash.
-             *
-             * @var string
-             */
-            'path'     => '/',
-
-            /**
-             * Session Cookie Secure
-             *
-             * Cookie will only be set if a secure HTTPS connection exists.
-             *
-             * @var bool
-             */
-            'secure'   => false,
-
-            /**
-             * Session Cookie Http Only
-             *
-             * Cookie will only be accessible via HTTP(S) (no javascript).
-             *
-             * @var bool
-             */
-            'httpOnly' => false,
-        ],
-    ]
-);
+        /**
+         * Session Cookie Http Only
+         *
+         * Cookie will only be accessible via HTTP(S) (no javascript).
+         *
+         * @var bool
+         */
+        'httpOnly' => false,
+    ],
+]);

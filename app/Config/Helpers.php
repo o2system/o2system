@@ -12,7 +12,7 @@
 
 /*
 | -------------------------------------------------------------------
-|  Autoload models
+|  Autoload helpers
 | -------------------------------------------------------------------
 | These are the helpers located in the modular Helpers folder.
 |
@@ -21,4 +21,4 @@
 |	$helpers = [ 'url' ];
 */
 
-$helpers = [ 'url', 'html' ];
+$helpers = [ 'Url', 'Html', 'DateTime' ];

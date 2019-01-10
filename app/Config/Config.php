@@ -189,7 +189,7 @@ $config[ 'security' ][ 'protection' ][ 'xss' ] = false;
  *
  * @var bool
  */
-$config[ 'security' ][ 'protection' ][ 'csrf' ] = false;
+$config[ 'security' ][ 'protection' ][ 'csrf' ] = true;
 
 /**
  * Units Currency

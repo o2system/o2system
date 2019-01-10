@@ -12,6 +12,8 @@
 
 use O2System\Cache\Datastructures\Config;
 
+// ------------------------------------------------------------------------
+
 /**
  * Cache ItemPools Configuration
  *

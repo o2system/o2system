@@ -19,17 +19,15 @@ use App\Http\Presenter\Page;
 /**
  * Class Controller
  *
- * @package Cms\Http
+ * @package App\Http
  */
 class Controller extends \O2System\Framework\Http\Controller
 {
     /**
-     * Controller::__construct
+     * Controller::__reconstruct
      */
-    public function __construct()
+    public function __reconstruct()
     {
-        presenter()->meta->title->prepend( 'O2System Framework' );
-        language()->loadFile( 'app' );
-        presenter()->store( 'page', new Page() );
+        // put your logic here
     }
 }
