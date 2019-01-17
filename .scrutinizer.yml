@@ -1,9 +1,24 @@
 build:
     nodes:
-      my-tests:
-        environment:
-          php:
-            version: 7.2  # or any other released version
+        my-tests:
+            environment:
+                php:
+                    version: 7.2  # or any other released version
+                    pecl_extensions:
+                        - memcached
+        
+        functional-tests:
+            environment:
+                hosts:
+                    'local.dev': '127.0.0.1'
+
+                apache2:
+                    modules: ['rewrite']
+                    sites:
+                        o2system_app:
+                            web_root: 'public/'
+                            host: 'local.dev'
+
         analysis:
             project_setup:
                 override:
