@@ -8,11 +8,15 @@
  * @author         Steeve Andrian Salim
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
+
 // ------------------------------------------------------------------------
 
-use O2System\Kernel\Http\Router\Addresses;
-
-$addresses = new Addresses();
+/**
+ * Router Addresses Configuration
+ *
+ * @var \O2System\Kernel\Http\Router\Addresses
+ */
+$addresses = new \O2System\Kernel\Http\Router\Addresses();
 
 // ------------------------------------------------------------------------
 
