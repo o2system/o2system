@@ -27,18 +27,3 @@ use O2System\Framework\Services\Hooks;
 |        // do something.
 |    };
 */
-$hooks[ Hooks::PRE_SYSTEM ][] = function () {
-    // Modules Service Load Registry
-    if (profiler() !== false) {
-        profiler()->watch('Loading Modules Registry');
-    }
-
-    modules()->loadRegistry();
-
-    // Language Service Load Registry
-    if (profiler() !== false) {
-        profiler()->watch('Loading Language Registry');
-    }
-
-    language()->loadRegistry();
-};

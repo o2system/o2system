@@ -1,3 +1,5 @@
 .idea
-cache
-vendor
+.DS_Store
+/cache
+/node_modules
+/app/Config/Development

@@ -13,9 +13,9 @@
 /**
  * Parser Configuration
  *
- * @var \O2System\Parser\Datastructures\Config
+ * @var \O2System\Parser\DataStructures\Config
  */
-$parser = new \O2System\Parser\Datastructures\Config([
+$parser = new \O2System\Parser\DataStructures\Config([
     /**
      * Parser Driver
      *

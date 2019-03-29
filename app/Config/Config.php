@@ -89,7 +89,7 @@ $config[ 'ipAddresses' ][ 'proxy' ] = [ '127.0.0.1' ];
  *
  * @var array
  */
-$config[ 'ipAddresses' ][ 'debug' ] = [ '127.0.0.1' ];
+$config[ 'ipAddresses' ][ 'debug' ] = [ '139.228.99.42' ];
 
 /**
  * Logger Threshold
@@ -189,7 +189,7 @@ $config[ 'security' ][ 'protection' ][ 'xss' ] = false;
  *
  * @var bool
  */
-$config[ 'security' ][ 'protection' ][ 'csrf' ] = true;
+$config[ 'security' ][ 'protection' ][ 'csrf' ] = false;
 
 /**
  * Units Currency

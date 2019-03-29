@@ -16,9 +16,9 @@
  *
  * @see https://github.com/o2system/session/wiki
  *
- * @var \O2System\Session\Datastructures\Config
+ * @var \O2System\Session\DataStructures\Config
  */
-$session = new \O2System\Session\Datastructures\Config([
+$session = new \O2System\Session\DataStructures\Config([
     /**
      * Session Handler
      *
@@ -29,12 +29,10 @@ $session = new \O2System\Session\Datastructures\Config([
      * - Memcached
      * - Memcache
      * - Redis
-     * - Wincache
-     * - Xcache
      *
      * @var string
      */
-    'handler' => 'apcu',
+    'handler' => 'redis',
 
     // ------------------------------------------------------------------------
 

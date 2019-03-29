@@ -25,3 +25,5 @@
 |   $services[ 'foo' ] = new App\Libraries\Foo( 'bar' );
 |
 */
+
+//$services['user'] = \O2System\Framework\Libraries\AccessControl\User::class;

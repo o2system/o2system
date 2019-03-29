@@ -13,9 +13,9 @@
 /**
  * Access Control Library Configuration
  *
- * @var \O2System\Kernel\Datastructures\Config
+ * @var \O2System\Kernel\DataStructures\Config
  */
-$acl = new \O2System\Kernel\Datastructures\Config([
+$accessControl = new \O2System\Kernel\DataStructures\Config([
     /**
      * Password Hash Algorithm
      *

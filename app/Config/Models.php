@@ -22,3 +22,5 @@
 |
 |	$models[ 'options' ] = 'O2System\Framework\Models\Options';
 */
+
+$models[ 'users' ] = \App\Api\Models\System\Users::class;

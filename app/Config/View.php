@@ -14,17 +14,37 @@
 /**
  * Http View Configuration
  *
- * @var \O2System\Kernel\Datastructures\Config
+ * @var \O2System\Kernel\DataStructures\Config
  */
-$view = new \O2System\Kernel\Datastructures\Config([
-    /**
-     * View File Extensions
-     *
-     * @var array
-     */
-    'extensions' => ['.php', '.phtml'],
+$view = new \O2System\Kernel\DataStructures\Config([
+    'presenter' => [
+        /**
+         * Presenter Debug Toolbar
+         *
+         * @var bool
+         */
+        'debugToolBar' => true,
 
-    // ------------------------------------------------------------------------
+        // ------------------------------------------------------------------------
+
+        /**
+         * Presenter Theme
+         *
+         * @var string
+         */
+        'theme' => 'default',
+
+        // ------------------------------------------------------------------------
+
+        /**
+         * Presenter SocialGraph
+         *
+         * @var string
+         */
+        'socialGraph' => true,
+
+        // ------------------------------------------------------------------------
+    ],
 
     /**
      * View Output

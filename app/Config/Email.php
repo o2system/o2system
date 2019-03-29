@@ -12,10 +12,10 @@
 
 /**
  * Email Configuration
- * 
- * @var \O2System\Email\Datastructures\Config 
+ *
+ * @var \O2System\Email\DataStructures\Config
  */
-$email = new \O2System\Email\Datastructures\Config([
+$email = new \O2System\Email\DataStructures\Config([
     /**
      * Sender Protocol
      * Supported sender protocol mail, smtp or sendmail.
