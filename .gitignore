@@ -3,3 +3,4 @@
 /cache
 /node_modules
 /app/Config/Development
+/vendor
