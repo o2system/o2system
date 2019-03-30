@@ -8,3 +8,38 @@
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
 // ------------------------------------------------------------------------
+$primary:			#D83B3D;
+body{
+	background-color: #f3f3f3;
+}
+
+.welcome{
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}
+
+
+.nav-bottom{
+	list-style: none;
+	padding: 0;
+	margin-top: 1rem;
+	text-align: center;
+
+	li{
+		display: inline-block;
+		a{
+			text-transform: uppercase;
+			padding: 0.5rem 1rem;
+			letter-spacing: 0.1rem;
+			font-weight: 700;
+			display: block;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+}

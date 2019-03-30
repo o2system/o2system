@@ -28,7 +28,6 @@ class Hello extends Controller
      */
     public function index()
     {
-        print_out('hello');
         presenter()->page->setHeader( 'Hello World' );
 
         view('hello');
