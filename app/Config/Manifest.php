@@ -8,7 +8,6 @@
  * @author         Steeve Andrian Salim
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
-
 // ------------------------------------------------------------------------
 
 /**
@@ -43,27 +42,27 @@ $manifest = new \O2System\Kernel\DataStructures\Config([
      */
     'icons' => [
         48 => [
-            'src' => 'launcher-icon-48.png',
+            'src' => 'assets/icons/launcher-icon-48.png',
             'sizes' => '48x48',
             'type' => 'image/png'
         ],
         96 => [
-            'src' => 'launcher-icon-96.png',
+            'src' => 'assets/icons/launcher-icon-96.png',
             'sizes' => '96x96',
             'type' => 'image/png'
         ],
         144 => [
-            'src' => 'launcher-icon-144.png',
+            'src' => 'assets/icons/launcher-icon-144.png',
             'sizes' => '144x144',
             'type' => 'image/png'
         ],
         192 => [
-            'src' => 'launcher-icon-192.png',
+            'src' => 'assets/icons/launcher-icon-192.png',
             'sizes' => '192x192',
             'type' => 'image/png'
         ],
         256 => [
-            'src' => 'launcher-icon-256.png',
+            'src' => 'assets/icons/launcher-icon-256.png',
             'sizes' => '256x256',
             'type' => 'image/png'
         ],

@@ -1,0 +1,1 @@
+{"version":"1.6.39","sources":["\/private\/var\/www\/frameworks\/o2system\/boilerplates\/basic\/resources\/views\/hello.js"],"names":[],"mappings":[],"file":"body-hello.min.js","sourcesContent":["console.log('Hello World JS');"],"sourceRoot":""}

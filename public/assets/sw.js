@@ -9,11 +9,19 @@
  */
 // ------------------------------------------------------------------------
 
+const THEME_NAME = '{{$theme}}';
+const CACHE_NAME = 'o2system';
+
 self.addEventListener('install', function(event) {
     console.log('[Service Worker] Installing Service Worker ...', event);
     event.waitUntil(
-        caches.open('static').then(function(cache) {
-            cache.addAll(['/', '/index.html', '/app.js', '/manifest.json']);
+        caches.open(CACHE_NAME + '-static-cache').then(function(cache){
+            cache.addAll([
+                '/themes/' + THEME_NAME + '/theme.css',
+                '/assets/app.css',
+                '/themes/' + THEME_NAME + '/theme.js',
+                '/assets/app.js'
+            ]);
         })
     );
 });
@@ -29,7 +37,7 @@ self.addEventListener('fetch', function(event) {
                 return response;
             } else {
                 return fetch(event.request).then(function(res) {
-                    return caches.open('dynamic').then(function(cache) {
+                    return caches.open(CACHE_NAME + '-dynamic-cache').then(function(cache) {
                         cache.put(event.request.url, res.clone());
                         return res;
                     });
