@@ -20,7 +20,7 @@ unset($minPHPVersion);
 
 // ------------------------------------------------------------------------
 
-define( 'STARTUP_TIME', microtime( true ) );
+define( 'STARTUP_TIME', $_SERVER['REQUEST_TIME'] );
 define( 'STARTUP_MEMORY', memory_get_usage( true ) );
 
 /*
@@ -107,6 +107,19 @@ if ( ! defined( 'DIR_STORAGE' ) ) {
  */
 if ( ! defined( 'DIR_RESOURCES' ) ) {
     define( 'DIR_RESOURCES', 'resources' );
+}
+
+/*
+ *---------------------------------------------------------------
+ * DATABASE FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * Resources folder name.
+ *
+ * NO TRAILING SLASH!
+ */
+if ( ! defined( 'DIR_DATABASE' ) ) {
+    define( 'DIR_DATABASE', 'database' );
 }
 
 /*
