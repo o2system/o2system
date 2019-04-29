@@ -29,6 +29,5 @@ class Presenter extends \O2System\Framework\Http\Presenter
 
         $this->meta->title->prepend('O2System');
         $this->meta->offsetSet('generator', 'O2System Framework - The Next Generation of PHP Framework');
-        $this->store('page', new Page());
     }
 }

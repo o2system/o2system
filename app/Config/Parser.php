@@ -17,32 +17,38 @@
  */
 $parser = new \O2System\Parser\DataStructures\Config([
     /**
-     * Parser Driver
+     * Template Engine
      *
      * You can choose the parser driver according to your favorite template engine. The available options are:
      *
-     * noodle - Default parser engine by Steeven Andrian Salim
-     * @see http://o2system.io/documentation/parser/noodle.html
-     *
-     * mustache - Parser engine by Chris Wanstrath
-     * @see http://o2system.io/documentation/parser/mustache.html
-     * @see http://smarty.net
-     *
-     * smarty - Parser engine by New Digital Group, Inc
-     * @see http://o2system.io/documentation/parser/smarty.html
-     * @see http://smarty.net
-     *
-     * dwoo - Parser engine by David Sanchez
-     * @see http://o2system.io/documentation/parser/dwoo.html
-     * @see http://dwoo.org
-     *
-     * twig - Parser engine by SensioLabs
-     * @see http://o2system.io/documentation/parser/twig.html
-     * @see http://twig.sensiolabs.org/doc/internals.html
+     * Noodle - Default parser engine by Steeven Andrian Salim
+     * Mustache - Parser engine by Chris Wanstrath
+     * Smarty - Parser engine by New Digital Group, Inc
+     * Dwoo - Parser engine by David Sanchez
+     * Twig - Parser engine by SensioLabs
      *
      * @var string
      */
-    'driver' => 'noodle',
+    'template' => [
+        'Noodle'
+    ],
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * String Engine
+     *
+     * You can choose the parser driver according to your favorite template engine. The available options are:
+     *
+     * Shortcodes
+     * BBCode
+     * Markdown
+     *
+     * @var string
+     */
+    'template' => [
+        'Noodle'
+    ],
 
     // ------------------------------------------------------------------------
 

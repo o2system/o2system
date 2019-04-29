@@ -32,7 +32,7 @@ $session = new \O2System\Session\DataStructures\Config([
      *
      * @var string
      */
-    'handler' => 'redis',
+    'handler' => 'file',
 
     // ------------------------------------------------------------------------
 
