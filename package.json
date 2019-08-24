@@ -1,45 +1,24 @@
 {
-  "private": true,
-  "scripts": {
-    "o2system": "npm run o2system:development",
-    "o2system:development": "webpack --mode=development --config resources/config/webpack.js --watch",
-    "o2system:production": "webpack --mode=production --config resources/config/webpack.js"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/runtime": "^7.3.4",
-    "autoprefixer": "^9.4.9",
-    "babel-loader": "^8.0.5",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "clean-webpack-plugin": "^1.0.1",
-    "css-loader": "^2.1.0",
-    "eslint": "^5.14.1",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^3.0.1",
-    "jshint": "^2.10.1",
-    "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "postcss": "^7.0.14",
-    "postcss-custom-properties": "^8.0.9",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.5.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "terser-webpack-plugin": "^1.2.3",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1",
-    "webpack-hot-middleware": "^2.24.3",
-    "webpack-livereload-plugin": "^2.2.0"
-  },
-  "dependencies": {
-    "o2system-espresso": "git+https://github.com/o2system/espresso.git",
-    "o2system-venus-ui": "git+https://github.com/o2system/venus-ui.git"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "cross-env": "^5.1",
+        "o2system-venus": "^1.5.0",
+        "o2system-blender": "^2.0.0",
+        "lodash": "^4.17.13",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue": "^2.6.10"
+    }
 }
