@@ -1,7 +1,7 @@
 
 <div align="center" markdown="1">
 
-[![O2System Framework](http://o2system.id/assets/img/logo/logo-white-200px.png)](http://o2system.id/assets/img/logo/logo-white-200px.png)
+[![O2System Framework](http://o2system.id/assets/img/logo/logo-200px.png)](http://o2system.id/assets/img/logo/logo-white-200px.png)
 
 </div>
 
@@ -42,14 +42,6 @@ Please kindly submit your [issues at Github](http://github.com/o2system/o2system
 
 ### System Requirements
 
-- PHP 5.6+
+- PHP 7.2+
 - [Composer](https://getcomposer.org)
 - [O2System Framework](https://github.com/o2system/framework)
-
-### Credits
-
-|Role|Name|
-|----|----|
-|Founder and Lead Projects|[Steeven Andrian Salim](http://steevenz.com)|
-|Documentation|[Steeven Andrian Salim](http://steevenz.com)
-|Github Pages Designer| [Teguh Rianto](http://teguhrianto.tk)
