@@ -10,9 +10,12 @@
 // ------------------------------------------------------------------------
 
 let blender = require('o2system-blender');
+blender.js('./resources/app.js', 'assets')
+    .sass('./resources/app.scss', 'assets').
+    sourceMaps();
 
-blender.js('./resources/app.js', './public/assets')
-    .sass('./resources/app.scss', './public/assets');
+blender.setOutputPath('assets/');
+blender.setResourceRoot('');
 
 // Set Entry
 if (typeof process.env.npm_config_theme !== "undefined") {
@@ -45,4 +48,4 @@ if (typeof process.env.npm_config_module !== "undefined") {
     );
 }
 
-blender.version().browserSync(); // Hot reloading
+//blender.version().browserSync(); // Hot reloading
