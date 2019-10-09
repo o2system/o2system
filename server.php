@@ -20,17 +20,17 @@ $uri = urldecode(
 if ($uri !== '/' && file_exists(__DIR__ . '/public' . $uri)) {
     return false;
 } elseif ($uri !== '/' && file_exists($filePath = __DIR__ . str_replace('\\', '/', DIRECTORY_SEPARATOR))) {
-    if (strpos(dirname($filePath), 'database' !== false)) {
+    if (strpos(dirname($filePath), 'database') !== false) {
         return false;
-    } elseif (strpos(dirname($filePath), 'cache' !== false)) {
+    } elseif (strpos(dirname($filePath), 'cache') !== false) {
         return false;
-    } else {
+    } elseif(is_file($filePath)) {
         header('Content-Disposition: filename=' . pathinfo($filePath, PATHINFO_BASENAME));
         header('Content-Transfer-Encoding: binary');
         header('Last-Modified: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
         header('Content-Type: ' . filemtime($filePath));
         echo readfile($filePath);
-        exit(EXIT_SUCCESS);
+        exit(0);
     }
 }
 
