@@ -13,7 +13,7 @@ import "./app.scss";
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('service-worker.js')
+        .register('/service-worker.js')
         .then(function(registration) {
             console.info(
                 'Service Worker registration successful with scope: ',
