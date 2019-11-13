@@ -9,13 +9,12 @@
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
 // ------------------------------------------------------------------------
-
 $uri = urldecode(
     parse_url($_SERVER[ 'REQUEST_URI' ], PHP_URL_PATH)
 );
 
 // This file allows us to emulate Apache's "mod_rewrite" functionality from the
-// built-in PHP web server. This provides a convenient way to test a Laravel
+// built-in PHP web server. This provides a convenient way to test a O2System Framework
 // application without having installed a "real" web server software here.
 if ($uri !== '/' && file_exists(__DIR__ . '/public' . $uri)) {
     return false;
@@ -24,7 +23,7 @@ if ($uri !== '/' && file_exists(__DIR__ . '/public' . $uri)) {
         return false;
     } elseif (strpos(dirname($filePath), 'cache') !== false) {
         return false;
-    } elseif(is_file($filePath)) {
+    } elseif (is_file($filePath)) {
         header('Content-Disposition: filename=' . pathinfo($filePath, PATHINFO_BASENAME));
         header('Content-Transfer-Encoding: binary');
         header('Last-Modified: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
