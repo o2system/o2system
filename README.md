@@ -1,4 +1,4 @@
-[![O2System Framework](http://o2system.id/assets/img/logo/logo-200px.png)](http://o2system.id/assets/img/logo/logo-white-200px.png)
+[![O2System PWA Framework](https://repository-images.githubusercontent.com/68261457/a7faa780-0625-11ea-9b1a-8e4834ff100e)
 
 [![Build Status](https://travis-ci.org/o2system/o2system.svg?branch=master)](https://travis-ci.org/o2system/o2system)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/o2system/framework/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/o2system/framework/?branch=master)
