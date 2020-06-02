@@ -11,12 +11,15 @@
 
 // ------------------------------------------------------------------------
 
+use O2System\Kernel\Http\Message\Uri;
+use O2System\Kernel\Http\Router\Addresses;
+
 /**
  * Router Addresses Configuration
  *
  * @var \O2System\Kernel\Http\Router\Addresses
  */
-$addresses = new \O2System\Kernel\Http\Router\Addresses();
+$addresses = new Addresses();
 
 // ------------------------------------------------------------------------
 

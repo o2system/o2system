@@ -11,11 +11,18 @@
 // ------------------------------------------------------------------------
 
 /**
+ * Single Page Application Mode
+ *
+ * @var null|string
+ */
+$config[ 'spa' ] = false;
+
+/**
  * Default App
  *
  * This determine which application set is used by default.
  *
- * @var string|null
+ * @var null|string
  */
 $config[ 'app' ] = null;
 
@@ -36,7 +43,17 @@ $config[ 'charset' ] = 'UTF-8';
  *
  * @var array
  */
-$config[ 'language' ] = 'en-US';
+$config[ 'language' ][ 'default' ] = 'en-US';
+
+/**
+ * Language Options
+ *
+ * @var array
+ */
+$config[ 'language' ][ 'options' ] = [
+    'en-US' => 'English (United States)',
+    'id-ID' => 'Bahasa Indonesia'
+];
 
 /**
  * DateTime Timezone
@@ -114,7 +131,7 @@ $config[ 'ipAddresses' ][ 'debug' ] = [ '139.228.99.42' ];
  * @example Specific logging thresholds
  *          $config['logger']['threshold'] = [ LOGGER_DEBUG, LOGGER_INFO ];
  *
- * @var int|array
+ * @var array|int
  */
 $config[ 'logger' ][ 'threshold' ] = LOGGER_ALL;
 
