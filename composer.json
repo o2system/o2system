@@ -8,6 +8,9 @@
         "php": "^7.4",
         "o2system/framework": "*"
     },
+    "require-dev": {
+        "o2system/gear": "^2.1"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "app/"
