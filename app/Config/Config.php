@@ -43,7 +43,7 @@ $config[ 'charset' ] = 'UTF-8';
  *
  * @var array
  */
-$config[ 'language' ][ 'default' ] = 'id-ID';
+$config[ 'language' ][ 'default' ] = 'en-US';
 
 /**
  * Language Options

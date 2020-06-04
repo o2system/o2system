@@ -26,8 +26,8 @@ $image = new Config([
     'driver'              => 'gd', // gd | imagick | gmagick
     'maintainAspectRatio' => true,
     'scaleDirective'      => 'FIT', // FIT | UP | DOWN
-    'focus'               => 'NORTHWEST',
-    'orientation'         => 'AUTO',
-    'quality'             => 75,
+    'focus'               => 'CENTER', // CENTER | NORTH | NORTHWEST | NORTHEAST | SOUTH | SOUTHWEST | SOUTHEAST | WEST | EAST
+    'orientation'         => 'AUTO', // AUTO | LANDSCAPE |
+    'quality'             => 100,
     'cached'              => false,
 ]);

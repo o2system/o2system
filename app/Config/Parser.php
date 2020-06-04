@@ -27,7 +27,7 @@ $parser = new \O2System\Parser\DataStructures\Config([
      * Dwoo - Parser engine by David Sanchez
      * Twig - Parser engine by SensioLabs
      *
-     * @var string
+     * @var array
      */
     'template' => [
         'Noodle'
@@ -44,9 +44,9 @@ $parser = new \O2System\Parser\DataStructures\Config([
      * BBCode
      * Markdown
      *
-     * @var string
+     * @var array
      */
-    'template' => [
+    'string' => [
         'Noodle'
     ],
 
@@ -87,7 +87,7 @@ $parser = new \O2System\Parser\DataStructures\Config([
      * @example
      * $parser->allowPhpFunctions = ['base_url', 'current_url']
      *
-     * @var bool|array
+     * @var array|bool
      */
     'allowPhpFunctions' => true,
 
@@ -104,7 +104,7 @@ $parser = new \O2System\Parser\DataStructures\Config([
      * @example
      * $parser->allowPhpConstants = ['SYSTEM_NAME', 'SYSTEM_VERSION']
      *
-     * @var bool|array
+     * @var array|bool
      */
     'allowPhpConstants' => true,
 ]);

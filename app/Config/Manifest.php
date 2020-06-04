@@ -28,7 +28,7 @@ $manifest = new \O2System\Kernel\DataStructures\Config([
      * name is also a human-readable name for the application
      * and defines how the application will be listed.
      */
-    'name' => 'O2System PWA PHP Framework',
+    'name' => 'O2System PWA Framework',
 
     /**
      * description provides a general description of the web application.
@@ -64,11 +64,6 @@ $manifest = new \O2System\Kernel\DataStructures\Config([
         256 => [
             'src' => 'assets/icons/launcher-icon-256.png',
             'sizes' => '256x256',
-            'type' => 'image/png'
-        ],
-        512 => [
-            'src' => 'assets/icons/launcher-icon-512.png',
-            'sizes' => '512x512',
             'type' => 'image/png'
         ],
     ],
