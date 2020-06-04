@@ -18,7 +18,7 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "@php -r \"mkdir('cache');\""
+            "@php -r \"file_exists('cache') || mkdir('cache');\""
         ],
         "post-install-cmd": [
             "chmod 755 storage/",
